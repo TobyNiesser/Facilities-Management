@@ -1,0 +1,60 @@
+﻿@page
+@model FACILITIES.Pages.Files.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.File[0].FileName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.File[0].MimeType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.File[0].Extension)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.File[0].FileSize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.File[0].StoreLocation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.File) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MimeType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Extension)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreLocation)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.FileID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.FileID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.FileID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -102,6 +102,12 @@ namespace FACILITIES.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("CompanyID");
+
+                    b.Property<int>("OfficeID");
+
+                    b.Property<int>("PermissionID");
+
                     b.Property<string>("UserEmail");
 
                     b.Property<string>("UserName");

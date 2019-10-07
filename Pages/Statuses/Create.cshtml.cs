@@ -40,3 +40,4 @@ namespace FACILITIES.Pages.Statuses
         }
     }
 }
+

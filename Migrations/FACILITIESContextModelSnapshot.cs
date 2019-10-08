@@ -96,26 +96,7 @@ namespace FACILITIES.Migrations
                     b.ToTable("Item");
                 });
 
-            modelBuilder.Entity("FACILITIES.Models.Manager", b =>
-                {
-                    b.Property<int>("ManagerID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CompanyID");
-
-                    b.Property<int>("OfficeID");
-
-                    b.Property<int>("PermissionID");
-
-                    b.Property<string>("UserEmail");
-
-                    b.Property<string>("UserName");
-
-                    b.HasKey("ManagerID");
-
-                    b.ToTable("Manager");
-                });
+            
 
             modelBuilder.Entity("FACILITIES.Models.Office", b =>
                 {

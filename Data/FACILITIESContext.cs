@@ -30,6 +30,10 @@ namespace FACILITIES.Models
 
         public DbSet<FACILITIES.Models.Responsibility> Responsibility { get; set; }
 
+        public DbSet<FACILITIES.Models.Manager> Manager { get; set; }
+
         public DbSet<FACILITIES.Models.Office> Office { get; set; }
+
+        public DbSet<FACILITIES.Models.Setting> Setting { get; set; }
     }
 }

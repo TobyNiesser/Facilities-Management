@@ -1,0 +1,75 @@
+﻿@page
+@model FACILITIES.Pages.Settings.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Setting</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Setting.SettingID" />
+            <div class="form-group">
+                <label asp-for="Setting.OfficeID" class="control-label"></label>
+                <input asp-for="Setting.OfficeID" class="form-control" />
+                <span asp-validation-for="Setting.OfficeID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Setting.ItemID" class="control-label"></label>
+                <input asp-for="Setting.ItemID" class="form-control" />
+                <span asp-validation-for="Setting.ItemID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Setting.DueDate" class="control-label"></label>
+                <input asp-for="Setting.DueDate" class="form-control" />
+                <span asp-validation-for="Setting.DueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Setting.NextDate" class="control-label"></label>
+                <input asp-for="Setting.NextDate" class="form-control" />
+                <span asp-validation-for="Setting.NextDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Setting.FrequencyID" class="control-label"></label>
+                <input asp-for="Setting.FrequencyID" class="form-control" />
+                <span asp-validation-for="Setting.FrequencyID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Setting.CompanyID" class="control-label"></label>
+                <input asp-for="Setting.CompanyID" class="form-control" />
+                <span asp-validation-for="Setting.CompanyID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Setting.ResponsibilityID" class="control-label"></label>
+                <input asp-for="Setting.ResponsibilityID" class="form-control" />
+                <span asp-validation-for="Setting.ResponsibilityID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Setting.StatusID" class="control-label"></label>
+                <input asp-for="Setting.StatusID" class="form-control" />
+                <span asp-validation-for="Setting.StatusID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Setting.Comment" class="control-label"></label>
+                <input asp-for="Setting.Comment" class="form-control" />
+                <span asp-validation-for="Setting.Comment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

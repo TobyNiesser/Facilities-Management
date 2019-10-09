@@ -1,0 +1,84 @@
+﻿@page
+@model FACILITIES.Pages.Settings.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Setting[0].OfficeID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Setting[0].ItemID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Setting[0].DueDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Setting[0].NextDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Setting[0].FrequencyID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Setting[0].CompanyID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Setting[0].ResponsibilityID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Setting[0].StatusID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Setting[0].Comment)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Setting) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfficeID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DueDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NextDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrequencyID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResponsibilityID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatusID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
+            <td>
+                <a class="btn-sm btn-primary" asp-page="./Edit" asp-route-id="@item.SettingID">Edit</a>
+                <a class="btn-sm btn-primary" asp-page="./Details" asp-route-id="@item.SettingID">Details</a>
+                <a class="btn-sm btn-primary" asp-page="./Delete" asp-route-id="@item.SettingID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

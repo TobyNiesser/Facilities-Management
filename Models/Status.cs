@@ -10,4 +10,6 @@ namespace FACILITIES.Models
         public int StatusID { get; set; }
         public string StatusIndicator { get; set; }
     }
+
+    
 }

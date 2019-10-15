@@ -39,4 +39,5 @@ namespace FACILITIES.Pages.Settings
             return RedirectToPage("./Index");
         }
     }
+
 }

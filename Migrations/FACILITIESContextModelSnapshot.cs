@@ -15,7 +15,7 @@ namespace FACILITIES.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.4-servicing-10062")
+                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -115,6 +115,12 @@ namespace FACILITIES.Migrations
 
                     b.HasKey("ManagerID");
 
+                    b.HasIndex("CompanyID");
+
+                    b.HasIndex("OfficeID");
+
+                    b.HasIndex("PermissionID");
+
                     b.ToTable("Manager");
                 });
 
@@ -146,6 +152,10 @@ namespace FACILITIES.Migrations
 
                     b.HasKey("OfficeID");
 
+                    b.HasIndex("CompanyID");
+
+                    b.HasIndex("ManagerID");
+
                     b.ToTable("Office");
                 });
 
@@ -171,8 +181,6 @@ namespace FACILITIES.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name");
-
-                    b.Property<string>("Responsible");
 
                     b.HasKey("ResponsibilityID");
 
@@ -205,6 +213,18 @@ namespace FACILITIES.Migrations
 
                     b.HasKey("SettingID");
 
+                    b.HasIndex("CompanyID");
+
+                    b.HasIndex("FrequencyID");
+
+                    b.HasIndex("ItemID");
+
+                    b.HasIndex("OfficeID");
+
+                    b.HasIndex("ResponsibilityID");
+
+                    b.HasIndex("StatusID");
+
                     b.ToTable("Setting");
                 });
 
@@ -219,6 +239,70 @@ namespace FACILITIES.Migrations
                     b.HasKey("StatusID");
 
                     b.ToTable("Status");
+                });
+
+            modelBuilder.Entity("FACILITIES.Models.Manager", b =>
+                {
+                    b.HasOne("FACILITIES.Models.Company", "Company")
+                        .WithMany("Managers")
+                        .HasForeignKey("CompanyID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("FACILITIES.Models.Office", "Office")
+                        .WithMany()
+                        .HasForeignKey("OfficeID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("FACILITIES.Models.Permission", "Permission")
+                        .WithMany("Managers")
+                        .HasForeignKey("PermissionID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("FACILITIES.Models.Office", b =>
+                {
+                    b.HasOne("FACILITIES.Models.Company", "Company")
+                        .WithMany()
+                        .HasForeignKey("CompanyID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("FACILITIES.Models.Manager", "Manager")
+                        .WithMany()
+                        .HasForeignKey("ManagerID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("FACILITIES.Models.Setting", b =>
+                {
+                    b.HasOne("FACILITIES.Models.Company", "Company")
+                        .WithMany("Settings")
+                        .HasForeignKey("CompanyID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("FACILITIES.Models.Frequency", "Frequency")
+                        .WithMany("Settings")
+                        .HasForeignKey("FrequencyID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("FACILITIES.Models.Item", "Item")
+                        .WithMany("Settings")
+                        .HasForeignKey("ItemID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("FACILITIES.Models.Office", "Office")
+                        .WithMany("Settings")
+                        .HasForeignKey("OfficeID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("FACILITIES.Models.Responsibility", "Responsibility")
+                        .WithMany("Settings")
+                        .HasForeignKey("ResponsibilityID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("FACILITIES.Models.Status", "Status")
+                        .WithMany("Settings")
+                        .HasForeignKey("StatusID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

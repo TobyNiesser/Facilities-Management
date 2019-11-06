@@ -10,5 +10,8 @@ namespace FACILITIES.Models
         public int PermissionID { get; set; }
         public string Name { get; set; }
         public string AccountType { get; set; }
+
+        public ICollection<Manager> Managers { get; set; }
+
     }
 }

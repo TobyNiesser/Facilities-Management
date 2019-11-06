@@ -9,7 +9,8 @@ namespace FACILITIES.Models
     {
         public int ResponsibilityID { get; set; }
         public string Name { get; set; }
-        public string Responsible { get; set; }
+
+        public ICollection<Setting> Settings { get; set; }
 
     }
 }

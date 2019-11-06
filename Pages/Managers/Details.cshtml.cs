@@ -27,7 +27,10 @@ namespace FACILITIES.Pages.Managers
                 return NotFound();
             }
 
-            Manager = await _context.Manager.FirstOrDefaultAsync(m => m.ManagerID == id);
+            Manager = await _context.Manager
+                .Include(m => m.Company)
+                .Include(m => m.Office)
+                .Include(m => m.Permission).FirstOrDefaultAsync(m => m.ManagerID == id);
 
             if (Manager == null)
             {

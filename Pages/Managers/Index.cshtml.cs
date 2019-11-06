@@ -22,7 +22,10 @@ namespace FACILITIES.Pages.Managers
 
         public async Task OnGetAsync()
         {
-            Manager = await _context.Manager.ToListAsync();
+            Manager = await _context.Manager
+                .Include(m => m.Company)
+                .Include(m => m.Office)
+                .Include(m => m.Permission).ToListAsync();
         }
     }
 }

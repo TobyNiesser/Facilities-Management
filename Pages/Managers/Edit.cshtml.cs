@@ -29,12 +29,18 @@ namespace FACILITIES.Pages.Managers
                 return NotFound();
             }
 
-            Manager = await _context.Manager.FirstOrDefaultAsync(m => m.ManagerID == id);
+            Manager = await _context.Manager
+                .Include(m => m.Company)
+                .Include(m => m.Office)
+                .Include(m => m.Permission).FirstOrDefaultAsync(m => m.ManagerID == id);
 
             if (Manager == null)
             {
                 return NotFound();
             }
+           ViewData["CompanyID"] = new SelectList(_context.Company, "CompanyID", "CompanyID");
+           ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "OfficeID");
+           ViewData["PermissionID"] = new SelectList(_context.Permission, "PermissionID", "PermissionID");
             return Page();
         }
 

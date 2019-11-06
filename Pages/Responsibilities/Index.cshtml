@@ -8,16 +8,13 @@
 <h1>Index</h1>
 
 <p>
-    <a class="btn-sm btn-primary" asp-page="Create">Create New</a>
+    <a asp-page="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Responsibility[0].Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Responsibility[0].Responsible)
             </th>
             <th></th>
         </tr>
@@ -29,12 +26,9 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Responsible)
-            </td>
-            <td>
-                <a class="btn-sm btn-primary" asp-page="./Edit" asp-route-id="@item.ResponsibilityID">Edit</a>
-                <a class="btn-sm btn-primary" asp-page="./Details" asp-route-id="@item.ResponsibilityID">Details</a>
-                <a class="btn-sm btn-danger" asp-page="./Delete" asp-route-id="@item.ResponsibilityID">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.ResponsibilityID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ResponsibilityID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ResponsibilityID">Delete</a>
             </td>
         </tr>
 }

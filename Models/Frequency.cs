@@ -9,5 +9,9 @@ namespace FACILITIES.Models
     {
         public int FrequencyID { get; set; }
         public string FrequencyAmount { get; set; }
+
+        public ICollection<Setting> Settings { get; set; }
+
+
     }
 }

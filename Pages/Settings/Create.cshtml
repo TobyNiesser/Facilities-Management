@@ -3,6 +3,7 @@
 
 @{
     ViewData["Title"] = "Create";
+
 }
 
 <h1>Create</h1>
@@ -14,17 +15,16 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Setting.OfficeID" class="control-label"></label><input asp-for="Setting.OfficeID" class="form-control" />
-                <span asp-validation-for="Setting.OfficeID" class="text-danger"></span>
+                <label asp-for="Setting.OfficeID" class="control-label"></label>
+                <select asp-for="Setting.OfficeID" class ="form-control" asp-items="ViewBag.OfficeID"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Setting.ItemID" class="control-label"></label>
-                <input asp-for="Setting.ItemID" class="form-control" />
-                <span asp-validation-for="Setting.ItemID" class="text-danger"></span>
+                <select asp-for="Setting.ItemID" class ="form-control" asp-items="ViewBag.ItemID"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Setting.DueDate" class="control-label"></label>
-                <input asp-for="Setting.DueDate" class="form-control" />
+                <input asp-for="Setting.DueDate" type="date" class="form-control" />
                 <span asp-validation-for="Setting.DueDate" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -34,23 +34,19 @@
             </div>
             <div class="form-group">
                 <label asp-for="Setting.FrequencyID" class="control-label"></label>
-                <input asp-for="Setting.FrequencyID" class="form-control" />
-                <span asp-validation-for="Setting.FrequencyID" class="text-danger"></span>
+                <select asp-for="Setting.FrequencyID" class ="form-control" asp-items="ViewBag.FrequencyID"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Setting.CompanyID" class="control-label"></label>
-                <input asp-for="Setting.CompanyID" class="form-control" />
-                <span asp-validation-for="Setting.CompanyID" class="text-danger"></span>
+                <select asp-for="Setting.CompanyID" class ="form-control" asp-items="ViewBag.CompanyID"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Setting.ResponsibilityID" class="control-label"></label>
-                <input asp-for="Setting.ResponsibilityID" class="form-control" />
-                <span asp-validation-for="Setting.ResponsibilityID" class="text-danger"></span>
+                <select asp-for="Setting.ResponsibilityID" class ="form-control" asp-items="ViewBag.ResponsibilityID"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Setting.StatusID" class="control-label"></label>
-                <input asp-for="Setting.StatusID" class="form-control" />
-                <span asp-validation-for="Setting.StatusID" class="text-danger"></span>
+                <select asp-for="Setting.StatusID" class ="form-control" asp-items="ViewBag.StatusID"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Setting.Comment" class="control-label"></label>

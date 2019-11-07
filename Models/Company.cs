@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,5 +19,10 @@ namespace FACILITIES.Models
         public string Telephone { get; set; }
         public string VatNumber { get; set; }
         public string Supplier { get; set; }
+
+        public ICollection<Setting> Settings { get; set; }
+        public ICollection<Manager> Managers { get; set; }
+
+
     }
 }

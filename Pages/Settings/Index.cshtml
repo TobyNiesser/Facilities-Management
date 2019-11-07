@@ -14,10 +14,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Setting[0].OfficeID)
+                @Html.DisplayNameFor(model => model.Setting[0].Office)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Setting[0].ItemID)
+                @Html.DisplayNameFor(model => model.Setting[0].Item)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Setting[0].DueDate)
@@ -26,16 +26,16 @@
                 @Html.DisplayNameFor(model => model.Setting[0].NextDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Setting[0].FrequencyID)
+                @Html.DisplayNameFor(model => model.Setting[0].Frequency)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Setting[0].CompanyID)
+                @Html.DisplayNameFor(model => model.Setting[0].Company)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Setting[0].ResponsibilityID)
+                @Html.DisplayNameFor(model => model.Setting[0].Responsibility)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Setting[0].StatusID)
+                @Html.DisplayNameFor(model => model.Setting[0].Status)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Setting[0].Comment)
@@ -47,10 +47,10 @@
 @foreach (var item in Model.Setting) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.OfficeID)
+                @Html.DisplayFor(modelItem => item.Office.OfficeID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ItemID)
+                @Html.DisplayFor(modelItem => item.Item.ItemID)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DueDate)
@@ -59,24 +59,24 @@
                 @Html.DisplayFor(modelItem => item.NextDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FrequencyID)
+                @Html.DisplayFor(modelItem => item.Frequency.FrequencyID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CompanyID)
+                @Html.DisplayFor(modelItem => item.Company.CompanyID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ResponsibilityID)
+                @Html.DisplayFor(modelItem => item.Responsibility.ResponsibilityID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.StatusID)
+                @Html.DisplayFor(modelItem => item.Status.StatusID)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Comment)
             </td>
             <td>
-                <a class="btn-sm btn-primary" asp-page="./Edit" asp-route-id="@item.SettingID">Edit</a>
-                <a class="btn-sm btn-primary" asp-page="./Details" asp-route-id="@item.SettingID">Details</a>
-                <a class="btn-sm btn-primary" asp-page="./Delete" asp-route-id="@item.SettingID">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.SettingID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.SettingID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.SettingID">Delete</a>
             </td>
         </tr>
 }

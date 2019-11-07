@@ -20,6 +20,12 @@ namespace FACILITIES.Pages.Settings
 
         public IActionResult OnGet()
         {
+        ViewData["CompanyID"] = new SelectList(_context.Company, "CompanyID", "Name");
+        ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemName");
+        ViewData["FrequencyID"] = new SelectList(_context.Frequency, "FrequencyID", "FrequencyAmount");
+        ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "Name");
+        ViewData["ResponsibilityID"] = new SelectList(_context.Responsibility, "ResponsibilityID", "Name");
+        ViewData["StatusID"] = new SelectList(_context.Status, "StatusID", "StatusIndicator");
             return Page();
         }
 
@@ -39,5 +45,4 @@ namespace FACILITIES.Pages.Settings
             return RedirectToPage("./Index");
         }
     }
-
 }

@@ -28,7 +28,13 @@ namespace FACILITIES.Pages.Settings
                 return NotFound();
             }
 
-            Setting = await _context.Setting.FirstOrDefaultAsync(m => m.SettingID == id);
+            Setting = await _context.Setting
+                .Include(s => s.Company)
+                .Include(s => s.Frequency)
+                .Include(s => s.Item)
+                .Include(s => s.Office)
+                .Include(s => s.Responsibility)
+                .Include(s => s.Status).FirstOrDefaultAsync(m => m.SettingID == id);
 
             if (Setting == null)
             {

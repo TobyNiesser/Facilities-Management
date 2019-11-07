@@ -20,13 +20,13 @@
                 @Html.DisplayNameFor(model => model.Manager[0].UserEmail)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Manager[0].CompanyID)
+                @Html.DisplayNameFor(model => model.Manager[0].Company)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Manager[0].OfficeID)
+                @Html.DisplayNameFor(model => model.Manager[0].Office)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Manager[0].PermissionID)
+                @Html.DisplayNameFor(model => model.Manager[0].Permission)
             </th>
             <th></th>
         </tr>
@@ -41,13 +41,13 @@
                 @Html.DisplayFor(modelItem => item.UserEmail)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CompanyID)
+                @Html.DisplayFor(modelItem => item.Company.CompanyID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.OfficeID)
+                @Html.DisplayFor(modelItem => item.Office.OfficeID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PermissionID)
+                @Html.DisplayFor(modelItem => item.Permission.PermissionID)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ManagerID">Edit</a> |

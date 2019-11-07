@@ -20,6 +20,8 @@ namespace FACILITIES.Pages.Items
 
         public IActionResult OnGet()
         {
+            ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemName");
+
             return Page();
         }
 

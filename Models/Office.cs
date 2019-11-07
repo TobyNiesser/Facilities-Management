@@ -18,5 +18,11 @@ namespace FACILITIES.Models
         public string Telephone { get; set; }
         public int CompanyID { get; set; }
         public int ManagerID { get; set; }
+
+
+        public ICollection<Setting> Settings { get; set; }
+        public ICollection<Manager> Managers { get; set; }
+
+
     }
 }

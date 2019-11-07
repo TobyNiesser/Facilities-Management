@@ -57,6 +57,7 @@ namespace FACILITIES
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseDeveloperExceptionPage();
 
             app.UseMvc();
         }

@@ -13,9 +13,10 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
               crossorigin="anonymous"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/Chart.js/Chart.css" />
 </head>
 <body>
     <div class="container-fluid">
@@ -70,14 +71,45 @@
                     integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
             </script>
         </environment>
+
         <script src="~/js/site.js" asp-append-version="true"></script>
 
         @RenderSection("Scripts", required: false)
+        <script src="~/Chart.js/Chart.js" asp-append-version="true"></script>
 
 
     </div>
     
-    
+    <script>
+
+        $(document).ready(function () {
+            // Bar chart
+            new Chart(document.getElementById("bar-chart"), {
+                type: 'bar',
+                data: {
+                    labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+                    datasets: [
+                        {
+                            label: "Population (millions)",
+                            backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
+                            data: [2478, 5267, 734, 784, 433]
+                        }
+                    ]
+                },
+                options: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+                        text: 'Predicted world population (millions) in 2050'
+                    }
+                }
+            });
+
+
+        });
+
+
+    </script>
 
     
 </body>

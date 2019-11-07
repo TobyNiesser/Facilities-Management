@@ -22,7 +22,13 @@ namespace FACILITIES.Pages.Settings
 
         public async Task OnGetAsync()
         {
-            Setting = await _context.Setting.ToListAsync();
+            Setting = await _context.Setting
+                .Include(s => s.Company)
+                .Include(s => s.Frequency)
+                .Include(s => s.Item)
+                .Include(s => s.Office)
+                .Include(s => s.Responsibility)
+                .Include(s => s.Status).ToListAsync();
         }
     }
 }

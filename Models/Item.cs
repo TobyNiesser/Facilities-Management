@@ -9,5 +9,11 @@ namespace FACILITIES.Models
     {
         public int ItemID { get; set; }
         public string ItemName { get; set; }
+
+
+        
+        public ICollection<Setting> Settings { get; set; }
+
+
     }
 }

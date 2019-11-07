@@ -19,11 +19,6 @@
                 <span asp-validation-for="Responsibility.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Responsibility.Responsible" class="control-label"></label>
-                <input asp-for="Responsibility.Responsible" class="form-control" />
-                <span asp-validation-for="Responsibility.Responsible" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
@@ -31,7 +26,7 @@
 </div>
 
 <div>
-    <a class="btn-sm btn-primary" asp-page="Index">Back to List</a>
+    <a asp-page="Index">Back to List</a>
 </div>
 
 @section Scripts {

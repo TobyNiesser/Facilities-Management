@@ -24,16 +24,20 @@ namespace FACILITIES.Models
 
         public DbSet<FACILITIES.Models.Frequency> Frequency { get; set; }
 
-        public DbSet<FACILITIES.Models.Item> Item { get; set; }
-
         public DbSet<FACILITIES.Models.Permission> Permission { get; set; }
 
         public DbSet<FACILITIES.Models.Responsibility> Responsibility { get; set; }
 
-        public DbSet<FACILITIES.Models.Manager> Manager { get; set; }
-
         public DbSet<FACILITIES.Models.Office> Office { get; set; }
 
+        public DbSet<FACILITIES.Models.Manager> Manager { get; set; }
+
         public DbSet<FACILITIES.Models.Setting> Setting { get; set; }
+
+        public DbSet<FACILITIES.Models.Item> Item { get; set; }
+
+        public DbSet<FACILITIES.Models.Alpha> Alpha { get; set; }
+
+        public DbSet<FACILITIES.Models.Supplier> Supplier { get; set; }
     }
 }

@@ -18,9 +18,12 @@ namespace FACILITIES.Models
         public string Postcode { get; set; }
         public string Country { get; set; }
         public string Telephone { get; set; }
+        public string LandlordName { get; set; }
+        public string LandlordEmail { get; set; }
+        public int LandlordTelephone { get; set; }
 
         [ForeignKey("Company")]
-        public int CompanyID { get; set; }
+        public int? CompanyID { get; set; }
         public Company Company { get; set; }
 
         [ForeignKey("Manager")]
@@ -29,6 +32,7 @@ namespace FACILITIES.Models
         
 
         public ICollection<Setting> Settings { get; set; }
+        public ICollection<Manager> Managers { get; set; }
 
 
     }

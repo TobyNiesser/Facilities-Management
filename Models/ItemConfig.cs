@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 
 namespace FACILITIES.Models
 {
-    public class Alpha
+    public class ItemConfig
     {
-        public int ID { get; set; }
-        public string Example { get; set; }
+        public int ItemConfigID { get; set; }
+
+        public string Items_csv { get; set; }
     }
 }

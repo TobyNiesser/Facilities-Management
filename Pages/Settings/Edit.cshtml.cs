@@ -43,6 +43,7 @@ namespace FACILITIES.Pages.Settings
             }
            ViewData["CompanyID"] = new SelectList(_context.Company, "CompanyID", "CompanyID");
            ViewData["FrequencyID"] = new SelectList(_context.Frequency, "FrequencyID", "FrequencyID");
+           ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemID");
            ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "OfficeID");
            ViewData["ResponsibilityID"] = new SelectList(_context.Responsibility, "ResponsibilityID", "ResponsibilityID");
            ViewData["StatusID"] = new SelectList(_context.Status, "StatusID", "StatusID");

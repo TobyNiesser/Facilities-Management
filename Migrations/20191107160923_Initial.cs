@@ -4,23 +4,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FACILITIES.Migrations
 {
-    public partial class Reset : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Alpha",
-                columns: table => new
-                {
-                    ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Example = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Alpha", x => x.ID);
-                });
-
             migrationBuilder.CreateTable(
                 name: "Company",
                 columns: table => new
@@ -87,25 +74,16 @@ namespace FACILITIES.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Office",
+                name: "ItemConfig",
                 columns: table => new
                 {
-                    OfficeID = table.Column<int>(nullable: false)
+                    ItemConfigID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(nullable: true),
-                    Addr1 = table.Column<string>(nullable: true),
-                    Addr2 = table.Column<string>(nullable: true),
-                    Town = table.Column<string>(nullable: true),
-                    City = table.Column<string>(nullable: true),
-                    Postcode = table.Column<string>(nullable: true),
-                    Country = table.Column<string>(nullable: true),
-                    Telephone = table.Column<string>(nullable: true),
-                    CompanyID = table.Column<int>(nullable: false),
-                    ManagerID = table.Column<int>(nullable: false)
+                    Items_csv = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Office", x => x.OfficeID);
+                    table.PrimaryKey("PK_ItemConfig", x => x.ItemConfigID);
                 });
 
             migrationBuilder.CreateTable(
@@ -149,19 +127,6 @@ namespace FACILITIES.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Supplier",
-                columns: table => new
-                {
-                    SupplierID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    SupplierOptions = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Supplier", x => x.SupplierID);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Manager",
                 columns: table => new
                 {
@@ -169,9 +134,9 @@ namespace FACILITIES.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     UserName = table.Column<string>(nullable: true),
                     UserEmail = table.Column<string>(nullable: true),
-                    CompanyID = table.Column<int>(nullable: false),
-                    OfficeID = table.Column<int>(nullable: false),
-                    PermissionID = table.Column<int>(nullable: false)
+                    CompanyID = table.Column<int>(nullable: true),
+                    PermissionID = table.Column<int>(nullable: true),
+                    OfficeID = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -181,18 +146,49 @@ namespace FACILITIES.Migrations
                         column: x => x.CompanyID,
                         principalTable: "Company",
                         principalColumn: "CompanyID",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Manager_Office_OfficeID",
-                        column: x => x.OfficeID,
-                        principalTable: "Office",
-                        principalColumn: "OfficeID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Manager_Permission_PermissionID",
                         column: x => x.PermissionID,
                         principalTable: "Permission",
                         principalColumn: "PermissionID",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Office",
+                columns: table => new
+                {
+                    OfficeID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(nullable: true),
+                    Addr1 = table.Column<string>(nullable: true),
+                    Addr2 = table.Column<string>(nullable: true),
+                    Town = table.Column<string>(nullable: true),
+                    City = table.Column<string>(nullable: true),
+                    Postcode = table.Column<string>(nullable: true),
+                    Country = table.Column<string>(nullable: true),
+                    Telephone = table.Column<string>(nullable: true),
+                    LandlordName = table.Column<string>(nullable: true),
+                    LandlordEmail = table.Column<string>(nullable: true),
+                    LandlordTelephone = table.Column<int>(nullable: false),
+                    CompanyID = table.Column<int>(nullable: true),
+                    ManagerID = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Office", x => x.OfficeID);
+                    table.ForeignKey(
+                        name: "FK_Office_Company_CompanyID",
+                        column: x => x.CompanyID,
+                        principalTable: "Company",
+                        principalColumn: "CompanyID",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Office_Manager_ManagerID",
+                        column: x => x.ManagerID,
+                        principalTable: "Manager",
+                        principalColumn: "ManagerID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -202,14 +198,14 @@ namespace FACILITIES.Migrations
                 {
                     SettingID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    OfficeID = table.Column<int>(nullable: false),
-                    ItemID = table.Column<int>(nullable: false),
+                    OfficeID = table.Column<int>(nullable: true),
+                    ItemID = table.Column<int>(nullable: true),
                     DueDate = table.Column<DateTime>(nullable: false),
                     NextDate = table.Column<DateTime>(nullable: false),
-                    FrequencyID = table.Column<int>(nullable: false),
-                    CompanyID = table.Column<int>(nullable: false),
-                    ResponsibilityID = table.Column<int>(nullable: false),
-                    StatusID = table.Column<int>(nullable: false),
+                    FrequencyID = table.Column<int>(nullable: true),
+                    CompanyID = table.Column<int>(nullable: true),
+                    ResponsibilityID = table.Column<int>(nullable: true),
+                    StatusID = table.Column<int>(nullable: true),
                     Comment = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -220,37 +216,37 @@ namespace FACILITIES.Migrations
                         column: x => x.CompanyID,
                         principalTable: "Company",
                         principalColumn: "CompanyID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Setting_Frequency_FrequencyID",
                         column: x => x.FrequencyID,
                         principalTable: "Frequency",
                         principalColumn: "FrequencyID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Setting_Item_ItemID",
                         column: x => x.ItemID,
                         principalTable: "Item",
                         principalColumn: "ItemID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Setting_Office_OfficeID",
                         column: x => x.OfficeID,
                         principalTable: "Office",
                         principalColumn: "OfficeID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Setting_Responsibility_ResponsibilityID",
                         column: x => x.ResponsibilityID,
                         principalTable: "Responsibility",
                         principalColumn: "ResponsibilityID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Setting_Status_StatusID",
                         column: x => x.StatusID,
                         principalTable: "Status",
                         principalColumn: "StatusID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -267,6 +263,16 @@ namespace FACILITIES.Migrations
                 name: "IX_Manager_PermissionID",
                 table: "Manager",
                 column: "PermissionID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Office_CompanyID",
+                table: "Office",
+                column: "CompanyID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Office_ManagerID",
+                table: "Office",
+                column: "ManagerID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Setting_CompanyID",
@@ -297,30 +303,38 @@ namespace FACILITIES.Migrations
                 name: "IX_Setting_StatusID",
                 table: "Setting",
                 column: "StatusID");
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Manager_Office_OfficeID",
+                table: "Manager",
+                column: "OfficeID",
+                principalTable: "Office",
+                principalColumn: "OfficeID",
+                onDelete: ReferentialAction.Restrict);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Alpha");
+            migrationBuilder.DropForeignKey(
+                name: "FK_Manager_Company_CompanyID",
+                table: "Manager");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Office_Company_CompanyID",
+                table: "Office");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Manager_Office_OfficeID",
+                table: "Manager");
 
             migrationBuilder.DropTable(
                 name: "File");
 
             migrationBuilder.DropTable(
-                name: "Manager");
+                name: "ItemConfig");
 
             migrationBuilder.DropTable(
                 name: "Setting");
-
-            migrationBuilder.DropTable(
-                name: "Supplier");
-
-            migrationBuilder.DropTable(
-                name: "Permission");
-
-            migrationBuilder.DropTable(
-                name: "Company");
 
             migrationBuilder.DropTable(
                 name: "Frequency");
@@ -329,13 +343,22 @@ namespace FACILITIES.Migrations
                 name: "Item");
 
             migrationBuilder.DropTable(
-                name: "Office");
-
-            migrationBuilder.DropTable(
                 name: "Responsibility");
 
             migrationBuilder.DropTable(
                 name: "Status");
+
+            migrationBuilder.DropTable(
+                name: "Company");
+
+            migrationBuilder.DropTable(
+                name: "Office");
+
+            migrationBuilder.DropTable(
+                name: "Manager");
+
+            migrationBuilder.DropTable(
+                name: "Permission");
         }
     }
 }

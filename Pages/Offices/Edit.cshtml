@@ -55,13 +55,28 @@
                 <span asp-validation-for="Office.Telephone" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Office.LandlordName" class="control-label"></label>
+                <input asp-for="Office.LandlordName" class="form-control" />
+                <span asp-validation-for="Office.LandlordName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.LandlordEmail" class="control-label"></label>
+                <input asp-for="Office.LandlordEmail" class="form-control" />
+                <span asp-validation-for="Office.LandlordEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.LandlordTelephone" class="control-label"></label>
+                <input asp-for="Office.LandlordTelephone" class="form-control" />
+                <span asp-validation-for="Office.LandlordTelephone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Office.CompanyID" class="control-label"></label>
-                <input asp-for="Office.CompanyID" class="form-control" />
+                <select asp-for="Office.CompanyID" class="form-control" asp-items="ViewBag.CompanyID"></select>
                 <span asp-validation-for="Office.CompanyID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Office.ManagerID" class="control-label"></label>
-                <input asp-for="Office.ManagerID" class="form-control" />
+                <select asp-for="Office.ManagerID" class="form-control" asp-items="ViewBag.ManagerID"></select>
                 <span asp-validation-for="Office.ManagerID" class="text-danger"></span>
             </div>
             <div class="form-group">

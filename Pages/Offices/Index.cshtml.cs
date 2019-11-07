@@ -22,7 +22,9 @@ namespace FACILITIES.Pages.Offices
 
         public async Task OnGetAsync()
         {
-            Office = await _context.Office.ToListAsync();
+            Office = await _context.Office
+                .Include(o => o.Company)
+                .Include(o => o.Manager).ToListAsync();
         }
     }
 }

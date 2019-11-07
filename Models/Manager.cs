@@ -16,18 +16,13 @@ namespace FACILITIES.Models
         public string UserEmail { get; set; }
 
         [ForeignKey("Company")]
-        public int CompanyID { get; set; }
+        public int? CompanyID { get; set; }
         public Company Company { get; set; }
 
-        [ForeignKey("Office")]
-        public int OfficeID { get; set; }
-        public Office Office { get; set; }
-
         [ForeignKey("Permission")]
-        public int PermissionID { get; set; }
+        public int? PermissionID { get; set; }
         public Permission Permission { get; set; }
 
-        public ICollection<Setting> Settings { get; set; }
 
     }
 }

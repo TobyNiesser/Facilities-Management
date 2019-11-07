@@ -38,10 +38,19 @@
                 @Html.DisplayNameFor(model => model.Office[0].Telephone)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Office[0].CompanyID)
+                @Html.DisplayNameFor(model => model.Office[0].LandlordName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Office[0].ManagerID)
+                @Html.DisplayNameFor(model => model.Office[0].LandlordEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Office[0].LandlordTelephone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Office[0].Company)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Office[0].Manager)
             </th>
             <th></th>
         </tr>
@@ -74,10 +83,19 @@
                 @Html.DisplayFor(modelItem => item.Telephone)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CompanyID)
+                @Html.DisplayFor(modelItem => item.LandlordName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ManagerID)
+                @Html.DisplayFor(modelItem => item.LandlordEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LandlordTelephone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company.CompanyID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manager.ManagerID)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.OfficeID">Edit</a> |

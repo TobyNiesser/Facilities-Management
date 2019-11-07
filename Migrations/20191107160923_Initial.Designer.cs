@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FACILITIES.Migrations
 {
     [DbContext(typeof(FACILITIESContext))]
-    [Migration("20191105161223_Item")]
-    partial class Item
+    [Migration("20191107160923_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -99,17 +99,30 @@ namespace FACILITIES.Migrations
                     b.ToTable("Item");
                 });
 
+            modelBuilder.Entity("FACILITIES.Models.ItemConfig", b =>
+                {
+                    b.Property<int>("ItemConfigID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Items_csv");
+
+                    b.HasKey("ItemConfigID");
+
+                    b.ToTable("ItemConfig");
+                });
+
             modelBuilder.Entity("FACILITIES.Models.Manager", b =>
                 {
                     b.Property<int>("ManagerID")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CompanyID");
+                    b.Property<int?>("CompanyID");
 
-                    b.Property<int>("OfficeID");
+                    b.Property<int?>("OfficeID");
 
-                    b.Property<int>("PermissionID");
+                    b.Property<int?>("PermissionID");
 
                     b.Property<string>("UserEmail");
 
@@ -138,9 +151,15 @@ namespace FACILITIES.Migrations
 
                     b.Property<string>("City");
 
-                    b.Property<int>("CompanyID");
+                    b.Property<int?>("CompanyID");
 
                     b.Property<string>("Country");
+
+                    b.Property<string>("LandlordEmail");
+
+                    b.Property<string>("LandlordName");
+
+                    b.Property<int>("LandlordTelephone");
 
                     b.Property<int>("ManagerID");
 
@@ -197,21 +216,21 @@ namespace FACILITIES.Migrations
 
                     b.Property<string>("Comment");
 
-                    b.Property<int>("CompanyID");
+                    b.Property<int?>("CompanyID");
 
                     b.Property<DateTime>("DueDate");
 
-                    b.Property<int>("FrequencyID");
+                    b.Property<int?>("FrequencyID");
 
-                    b.Property<int>("ItemID");
+                    b.Property<int?>("ItemID");
 
                     b.Property<DateTime>("NextDate");
 
-                    b.Property<int>("OfficeID");
+                    b.Property<int?>("OfficeID");
 
-                    b.Property<int>("ResponsibilityID");
+                    b.Property<int?>("ResponsibilityID");
 
-                    b.Property<int>("StatusID");
+                    b.Property<int?>("StatusID");
 
                     b.HasKey("SettingID");
 
@@ -243,43 +262,26 @@ namespace FACILITIES.Migrations
                     b.ToTable("Status");
                 });
 
-            modelBuilder.Entity("FACILITIES.Models.Supplier", b =>
-                {
-                    b.Property<int>("SupplierID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("SupplierOptions");
-
-                    b.HasKey("SupplierID");
-
-                    b.ToTable("Supplier");
-                });
-
             modelBuilder.Entity("FACILITIES.Models.Manager", b =>
                 {
                     b.HasOne("FACILITIES.Models.Company", "Company")
-                        .WithMany("Managers")
-                        .HasForeignKey("CompanyID")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("FACILITIES.Models.Office", "Office")
                         .WithMany()
-                        .HasForeignKey("OfficeID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("CompanyID");
+
+                    b.HasOne("FACILITIES.Models.Office")
+                        .WithMany("Managers")
+                        .HasForeignKey("OfficeID");
 
                     b.HasOne("FACILITIES.Models.Permission", "Permission")
                         .WithMany("Managers")
-                        .HasForeignKey("PermissionID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("PermissionID");
                 });
 
             modelBuilder.Entity("FACILITIES.Models.Office", b =>
                 {
                     b.HasOne("FACILITIES.Models.Company", "Company")
                         .WithMany()
-                        .HasForeignKey("CompanyID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("CompanyID");
 
                     b.HasOne("FACILITIES.Models.Manager", "Manager")
                         .WithMany()
@@ -291,33 +293,27 @@ namespace FACILITIES.Migrations
                 {
                     b.HasOne("FACILITIES.Models.Company", "Company")
                         .WithMany("Settings")
-                        .HasForeignKey("CompanyID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("CompanyID");
 
                     b.HasOne("FACILITIES.Models.Frequency", "Frequency")
                         .WithMany("Settings")
-                        .HasForeignKey("FrequencyID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("FrequencyID");
 
                     b.HasOne("FACILITIES.Models.Item", "Item")
                         .WithMany("Settings")
-                        .HasForeignKey("ItemID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("ItemID");
 
                     b.HasOne("FACILITIES.Models.Office", "Office")
                         .WithMany("Settings")
-                        .HasForeignKey("OfficeID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("OfficeID");
 
                     b.HasOne("FACILITIES.Models.Responsibility", "Responsibility")
                         .WithMany("Settings")
-                        .HasForeignKey("ResponsibilityID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("ResponsibilityID");
 
                     b.HasOne("FACILITIES.Models.Status", "Status")
                         .WithMany("Settings")
-                        .HasForeignKey("StatusID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("StatusID");
                 });
 #pragma warning restore 612, 618
         }

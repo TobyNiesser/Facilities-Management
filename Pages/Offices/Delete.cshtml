@@ -61,16 +61,34 @@
             @Html.DisplayFor(model => model.Office.Telephone)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Office.CompanyID)
+            @Html.DisplayNameFor(model => model.Office.LandlordName)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Office.CompanyID)
+            @Html.DisplayFor(model => model.Office.LandlordName)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Office.ManagerID)
+            @Html.DisplayNameFor(model => model.Office.LandlordEmail)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Office.ManagerID)
+            @Html.DisplayFor(model => model.Office.LandlordEmail)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Office.LandlordTelephone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Office.LandlordTelephone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Office.Company)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Office.Company.CompanyID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Office.Manager)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Office.Manager.ManagerID)
         </dd>
     </dl>
     

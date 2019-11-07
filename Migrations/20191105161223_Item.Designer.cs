@@ -4,14 +4,16 @@ using FACILITIES.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FACILITIES.Migrations
 {
     [DbContext(typeof(FACILITIESContext))]
-    partial class FACILITIESContextModelSnapshot : ModelSnapshot
+    [Migration("20191105161223_Item")]
+    partial class Item
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -239,6 +241,19 @@ namespace FACILITIES.Migrations
                     b.HasKey("StatusID");
 
                     b.ToTable("Status");
+                });
+
+            modelBuilder.Entity("FACILITIES.Models.Supplier", b =>
+                {
+                    b.Property<int>("SupplierID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("SupplierOptions");
+
+                    b.HasKey("SupplierID");
+
+                    b.ToTable("Supplier");
                 });
 
             modelBuilder.Entity("FACILITIES.Models.Manager", b =>

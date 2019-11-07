@@ -225,16 +225,6 @@ L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\FACILITIES.dll
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\FACILITIES.pdb
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\FACILITIES.csproj.CopyComplete
-L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\AlphaTest\Create.g.cshtml.cs
-L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\AlphaTest\Delete.g.cshtml.cs
-L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\AlphaTest\Details.g.cshtml.cs
-L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\AlphaTest\Edit.g.cshtml.cs
-L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\AlphaTest\Index.g.cshtml.cs
-L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Suppliers\Create.g.cshtml.cs
-L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Suppliers\Delete.g.cshtml.cs
-L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Suppliers\Details.g.cshtml.cs
-L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Suppliers\Edit.g.cshtml.cs
-L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Suppliers\Index.g.cshtml.cs
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Managers\Create.g.cshtml.cs
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Managers\Delete.g.cshtml.cs
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Managers\Details.g.cshtml.cs

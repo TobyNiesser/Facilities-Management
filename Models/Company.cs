@@ -21,7 +21,6 @@ namespace FACILITIES.Models
         public string Supplier { get; set; }
 
         public ICollection<Setting> Settings { get; set; }
-        public ICollection<Manager> Managers { get; set; }
 
 
     }

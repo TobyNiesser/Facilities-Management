@@ -27,5 +27,7 @@ namespace FACILITIES.Models
         public int PermissionID { get; set; }
         public Permission Permission { get; set; }
 
+        public ICollection<Setting> Settings { get; set; }
+
     }
 }

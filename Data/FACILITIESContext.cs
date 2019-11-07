@@ -35,9 +35,5 @@ namespace FACILITIES.Models
         public DbSet<FACILITIES.Models.Setting> Setting { get; set; }
 
         public DbSet<FACILITIES.Models.Item> Item { get; set; }
-
-        public DbSet<FACILITIES.Models.Alpha> Alpha { get; set; }
-
-        public DbSet<FACILITIES.Models.Supplier> Supplier { get; set; }
     }
 }

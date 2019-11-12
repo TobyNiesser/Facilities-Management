@@ -235,3 +235,4 @@ L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Offices\Details.g.cshtml.cs
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Offices\Edit.g.cshtml.cs
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Offices\Index.g.cshtml.cs
+L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Offices\ItemConfig.g.cshtml.cs

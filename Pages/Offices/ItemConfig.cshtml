@@ -1,0 +1,57 @@
+﻿@page
+@model FACILITIES.Pages.Offices.ItemConfig
+@{
+    ViewData["Title"] = "ItemConfig";
+}
+
+<h1>Item Configuration</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Office.OfficeID" class="control-label"></label>
+                <select asp-for="Office.OfficeID" class="form-control" asp-items="ViewBag.OfficeID"></select>
+            </div>
+
+            <div class="container">
+                <h4>Select Item</h4>
+                <input type="checkbox" name="office_item" value="Access Control" onclick="return ValidatePetSelection();">Access Control<br>
+                <input type="checkbox" name="office_item" value="Boiler / Gas" onclick="return ValidatePetSelection();">Boiler / Gas<br>
+                <input type="checkbox" name="office_item" value="CCTV" onclick="return ValidatePetSelection();">CCTV<br>
+                <br>
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    function ValidatePetSelection() {
+        var checkboxes = document.getElementsByName("office_item");
+        var numberOfCheckedItems = 0;
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked)
+                numberOfCheckedItems++;
+        }
+        if (numberOfCheckedItems > 2) {
+            alert("You can't select more than two favorite pets!");
+            return false;
+        }
+    }
+</script>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

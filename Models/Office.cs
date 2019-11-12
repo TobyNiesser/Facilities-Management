@@ -27,12 +27,17 @@ namespace FACILITIES.Models
         public Company Company { get; set; }
 
         [ForeignKey("Manager")]
-        public int ManagerID { get; set; }
+        public int? ManagerID { get; set; }
         public Manager Manager { get; set; }
-        
+
+        [ForeignKey("ItemConfig")]
+        public int? ItemConfigID { get; set; }
+        public ItemConfig ItemConfig { get; set; }
 
         public ICollection<Setting> Settings { get; set; }
         public ICollection<Manager> Managers { get; set; }
+        
+
 
 
     }

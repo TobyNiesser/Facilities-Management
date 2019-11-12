@@ -22,7 +22,6 @@ namespace FACILITIES.Models
         [ForeignKey("Permission")]
         public int? PermissionID { get; set; }
         public Permission Permission { get; set; }
-
-
+        
     }
 }

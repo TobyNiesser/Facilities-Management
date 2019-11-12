@@ -7,26 +7,27 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using FACILITIES.Models;
 
-namespace FACILITIES.Pages.Managers
+namespace FACILITIES.Pages.Offices
 {
-    public class CreateModel : PageModel
+    public class ItemConfig : PageModel
     {
         private readonly FACILITIES.Models.FACILITIESContext _context;
 
-        public CreateModel(FACILITIES.Models.FACILITIESContext context)
+        public ItemConfig(FACILITIES.Models.FACILITIESContext context)
         {
             _context = context;
         }
 
         public IActionResult OnGet()
         {
-        ViewData["CompanyID"] = new SelectList(_context.Company, "CompanyID", "Name");
-        ViewData["PermissionID"] = new SelectList(_context.Permission, "PermissionID", "AccountType");
+            ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "Name");
+            ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemName");
             return Page();
         }
 
         [BindProperty]
-        public Manager Manager { get; set; }
+        public Office Office { get; set; }
+        public Item Item { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -35,10 +36,13 @@ namespace FACILITIES.Pages.Managers
                 return Page();
             }
 
-            _context.Manager.Add(Manager);
+            _context.Office.Add(Office);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
         }
+
+        
+
     }
 }

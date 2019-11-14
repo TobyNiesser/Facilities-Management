@@ -13,8 +13,10 @@ namespace FACILITIES.Models
 
         public string Items_csv { get; set; }
 
-        public ICollection<Office> Offices { get; set; }
+        [ForeignKey("Office")]
+        public int? OfficeID { get; set; }
+        public Office Office { get; set; }
 
-
+        
     }
 }

@@ -30,15 +30,10 @@ namespace FACILITIES.Models
         public int? ManagerID { get; set; }
         public Manager Manager { get; set; }
 
-        [ForeignKey("ItemConfig")]
-        public int? ItemConfigID { get; set; }
-        public ItemConfig ItemConfig { get; set; }
+
 
         public ICollection<Setting> Settings { get; set; }
         public ICollection<Manager> Managers { get; set; }
         
-
-
-
     }
 }

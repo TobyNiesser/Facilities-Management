@@ -73,19 +73,7 @@ namespace FACILITIES.Migrations
                     table.PrimaryKey("PK_Item", x => x.ItemID);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "ItemConfig",
-                columns: table => new
-                {
-                    ItemConfigID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Items_csv = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ItemConfig", x => x.ItemConfigID);
-                });
-
+            
             migrationBuilder.CreateTable(
                 name: "Permission",
                 columns: table => new
@@ -329,9 +317,6 @@ namespace FACILITIES.Migrations
 
             migrationBuilder.DropTable(
                 name: "File");
-
-            migrationBuilder.DropTable(
-                name: "ItemConfig");
 
             migrationBuilder.DropTable(
                 name: "Setting");

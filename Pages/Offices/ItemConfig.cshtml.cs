@@ -27,9 +27,10 @@ namespace FACILITIES.Pages.Offices
 
         [BindProperty]
         public Office Office { get; set; }
-        public Item Item { get; set; }
+        public List<Item> Items { get; set; } = new List<Item>();
 
-        public async Task<IActionResult> OnPostAsync()
+
+    public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {

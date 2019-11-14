@@ -97,19 +97,6 @@ namespace FACILITIES.Migrations
                     b.ToTable("Item");
                 });
 
-            modelBuilder.Entity("FACILITIES.Models.ItemConfig", b =>
-                {
-                    b.Property<int>("ItemConfigID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Items_csv");
-
-                    b.HasKey("ItemConfigID");
-
-                    b.ToTable("ItemConfig");
-                });
-
             modelBuilder.Entity("FACILITIES.Models.Manager", b =>
                 {
                     b.Property<int>("ManagerID")
@@ -159,7 +146,7 @@ namespace FACILITIES.Migrations
 
                     b.Property<int>("LandlordTelephone");
 
-                    b.Property<int>("ManagerID");
+                    b.Property<int?>("ManagerID");
 
                     b.Property<string>("Name");
 
@@ -283,8 +270,7 @@ namespace FACILITIES.Migrations
 
                     b.HasOne("FACILITIES.Models.Manager", "Manager")
                         .WithMany()
-                        .HasForeignKey("ManagerID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("ManagerID");
                 });
 
             modelBuilder.Entity("FACILITIES.Models.Setting", b =>

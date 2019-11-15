@@ -1,4 +1,4 @@
-﻿@page "{id:int?}"
+﻿@page
 @model FACILITIES.Pages.Companies.CreateModel
 
 @{
@@ -59,9 +59,8 @@
                 <span asp-validation-for="Company.VatNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Company.Supplier" class="control-label"></label>
-                <input asp-for="Company.Supplier" class="form-control" />
-                <span asp-validation-for="Company.Supplier" class="text-danger"></span>
+                <label asp-for="Company.OfficeID" class="control-label"></label>
+                <select asp-for="Company.OfficeID" class ="form-control" asp-items="ViewBag.OfficeID"></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -71,7 +70,7 @@
 </div>
 
 <div>
-    <a class="btn-sm btn-primary" asp-page="Index">Back to List</a>
+    <a asp-page="Index">Back to List</a>
 </div>
 
 @section Scripts {

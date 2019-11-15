@@ -9,28 +9,6 @@ namespace FACILITIES.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Company",
-                columns: table => new
-                {
-                    CompanyID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(nullable: true),
-                    Addr1 = table.Column<string>(nullable: true),
-                    Addr2 = table.Column<string>(nullable: true),
-                    Town = table.Column<string>(nullable: true),
-                    City = table.Column<string>(nullable: true),
-                    Postcode = table.Column<string>(nullable: true),
-                    Country = table.Column<string>(nullable: true),
-                    Telephone = table.Column<string>(nullable: true),
-                    VatNumber = table.Column<string>(nullable: true),
-                    Supplier = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Company", x => x.CompanyID);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "File",
                 columns: table => new
                 {
@@ -73,7 +51,6 @@ namespace FACILITIES.Migrations
                     table.PrimaryKey("PK_Item", x => x.ItemID);
                 });
 
-            
             migrationBuilder.CreateTable(
                 name: "Permission",
                 columns: table => new
@@ -130,12 +107,6 @@ namespace FACILITIES.Migrations
                 {
                     table.PrimaryKey("PK_Manager", x => x.ManagerID);
                     table.ForeignKey(
-                        name: "FK_Manager_Company_CompanyID",
-                        column: x => x.CompanyID,
-                        principalTable: "Company",
-                        principalColumn: "CompanyID",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
                         name: "FK_Manager_Permission_PermissionID",
                         column: x => x.PermissionID,
                         principalTable: "Permission",
@@ -161,23 +132,65 @@ namespace FACILITIES.Migrations
                     LandlordEmail = table.Column<string>(nullable: true),
                     LandlordTelephone = table.Column<int>(nullable: false),
                     CompanyID = table.Column<int>(nullable: true),
-                    ManagerID = table.Column<int>(nullable: false)
+                    ManagerID = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Office", x => x.OfficeID);
                     table.ForeignKey(
-                        name: "FK_Office_Company_CompanyID",
-                        column: x => x.CompanyID,
-                        principalTable: "Company",
-                        principalColumn: "CompanyID",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
                         name: "FK_Office_Manager_ManagerID",
                         column: x => x.ManagerID,
                         principalTable: "Manager",
                         principalColumn: "ManagerID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Company",
+                columns: table => new
+                {
+                    CompanyID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(nullable: true),
+                    Addr1 = table.Column<string>(nullable: true),
+                    Addr2 = table.Column<string>(nullable: true),
+                    Town = table.Column<string>(nullable: true),
+                    City = table.Column<string>(nullable: true),
+                    Postcode = table.Column<string>(nullable: true),
+                    Country = table.Column<string>(nullable: true),
+                    Telephone = table.Column<string>(nullable: true),
+                    VatNumber = table.Column<string>(nullable: true),
+                    OfficeID = table.Column<int>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Company", x => x.CompanyID);
+                    table.ForeignKey(
+                        name: "FK_Company_Office_OfficeID",
+                        column: x => x.OfficeID,
+                        principalTable: "Office",
+                        principalColumn: "OfficeID",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ItemConfig",
+                columns: table => new
+                {
+                    ItemConfigID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Items_csv = table.Column<string>(nullable: true),
+                    OfficeID = table.Column<int>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ItemConfig", x => x.ItemConfigID);
+                    table.ForeignKey(
+                        name: "FK_ItemConfig_Office_OfficeID",
+                        column: x => x.OfficeID,
+                        principalTable: "Office",
+                        principalColumn: "OfficeID",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -236,6 +249,16 @@ namespace FACILITIES.Migrations
                         principalColumn: "StatusID",
                         onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Company_OfficeID",
+                table: "Company",
+                column: "OfficeID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ItemConfig_OfficeID",
+                table: "ItemConfig",
+                column: "OfficeID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Manager_CompanyID",
@@ -299,17 +322,29 @@ namespace FACILITIES.Migrations
                 principalTable: "Office",
                 principalColumn: "OfficeID",
                 onDelete: ReferentialAction.Restrict);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Manager_Company_CompanyID",
+                table: "Manager",
+                column: "CompanyID",
+                principalTable: "Company",
+                principalColumn: "CompanyID",
+                onDelete: ReferentialAction.Restrict);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Office_Company_CompanyID",
+                table: "Office",
+                column: "CompanyID",
+                principalTable: "Company",
+                principalColumn: "CompanyID",
+                onDelete: ReferentialAction.Restrict);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Manager_Company_CompanyID",
-                table: "Manager");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Office_Company_CompanyID",
-                table: "Office");
+                name: "FK_Company_Office_OfficeID",
+                table: "Company");
 
             migrationBuilder.DropForeignKey(
                 name: "FK_Manager_Office_OfficeID",
@@ -317,6 +352,9 @@ namespace FACILITIES.Migrations
 
             migrationBuilder.DropTable(
                 name: "File");
+
+            migrationBuilder.DropTable(
+                name: "ItemConfig");
 
             migrationBuilder.DropTable(
                 name: "Setting");
@@ -334,13 +372,13 @@ namespace FACILITIES.Migrations
                 name: "Status");
 
             migrationBuilder.DropTable(
-                name: "Company");
-
-            migrationBuilder.DropTable(
                 name: "Office");
 
             migrationBuilder.DropTable(
                 name: "Manager");
+
+            migrationBuilder.DropTable(
+                name: "Company");
 
             migrationBuilder.DropTable(
                 name: "Permission");

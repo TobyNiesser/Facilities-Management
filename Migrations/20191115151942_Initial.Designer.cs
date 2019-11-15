@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FACILITIES.Migrations
 {
     [DbContext(typeof(FACILITIESContext))]
-    [Migration("20191107160923_Initial")]
+    [Migration("20191115151942_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,9 +37,9 @@ namespace FACILITIES.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<string>("Postcode");
+                    b.Property<int?>("OfficeID");
 
-                    b.Property<string>("Supplier");
+                    b.Property<string>("Postcode");
 
                     b.Property<string>("Telephone");
 
@@ -48,6 +48,8 @@ namespace FACILITIES.Migrations
                     b.Property<string>("VatNumber");
 
                     b.HasKey("CompanyID");
+
+                    b.HasIndex("OfficeID");
 
                     b.ToTable("Company");
                 });
@@ -107,7 +109,11 @@ namespace FACILITIES.Migrations
 
                     b.Property<string>("Items_csv");
 
+                    b.Property<int?>("OfficeID");
+
                     b.HasKey("ItemConfigID");
+
+                    b.HasIndex("OfficeID");
 
                     b.ToTable("ItemConfig");
                 });
@@ -161,7 +167,7 @@ namespace FACILITIES.Migrations
 
                     b.Property<int>("LandlordTelephone");
 
-                    b.Property<int>("ManagerID");
+                    b.Property<int?>("ManagerID");
 
                     b.Property<string>("Name");
 
@@ -262,6 +268,20 @@ namespace FACILITIES.Migrations
                     b.ToTable("Status");
                 });
 
+            modelBuilder.Entity("FACILITIES.Models.Company", b =>
+                {
+                    b.HasOne("FACILITIES.Models.Office", "Office")
+                        .WithMany()
+                        .HasForeignKey("OfficeID");
+                });
+
+            modelBuilder.Entity("FACILITIES.Models.ItemConfig", b =>
+                {
+                    b.HasOne("FACILITIES.Models.Office", "Office")
+                        .WithMany()
+                        .HasForeignKey("OfficeID");
+                });
+
             modelBuilder.Entity("FACILITIES.Models.Manager", b =>
                 {
                     b.HasOne("FACILITIES.Models.Company", "Company")
@@ -285,8 +305,7 @@ namespace FACILITIES.Migrations
 
                     b.HasOne("FACILITIES.Models.Manager", "Manager")
                         .WithMany()
-                        .HasForeignKey("ManagerID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("ManagerID");
                 });
 
             modelBuilder.Entity("FACILITIES.Models.Setting", b =>

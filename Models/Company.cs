@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -18,7 +20,12 @@ namespace FACILITIES.Models
         public string Country { get; set; }
         public string Telephone { get; set; }
         public string VatNumber { get; set; }
-        public string Supplier { get; set; }
+
+
+        [ForeignKey("Office")]
+        public int? OfficeID { get; set; }
+        public Office Office { get; set; }
+
 
         public ICollection<Setting> Settings { get; set; }
 

@@ -22,12 +22,13 @@ namespace FACILITIES.Pages.Offices
         {
             ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "Name");
             ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemName");
+                      
             return Page();
         }
 
         [BindProperty]
         public Office Office { get; set; }
-        public List<Item> Items { get; set; } = new List<Item>();
+        public Item Item { get; set; }
 
 
     public async Task<IActionResult> OnPostAsync()
@@ -41,6 +42,7 @@ namespace FACILITIES.Pages.Offices
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
+          
         }
 
         

@@ -17,6 +17,6 @@ namespace FACILITIES.Models
         public int? OfficeID { get; set; }
         public Office Office { get; set; }
 
-        
+
     }
 }

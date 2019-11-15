@@ -35,9 +35,9 @@ namespace FACILITIES.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<string>("Postcode");
+                    b.Property<int?>("OfficeID");
 
-                    b.Property<string>("Supplier");
+                    b.Property<string>("Postcode");
 
                     b.Property<string>("Telephone");
 
@@ -46,6 +46,8 @@ namespace FACILITIES.Migrations
                     b.Property<string>("VatNumber");
 
                     b.HasKey("CompanyID");
+
+                    b.HasIndex("OfficeID");
 
                     b.ToTable("Company");
                 });
@@ -95,6 +97,23 @@ namespace FACILITIES.Migrations
                     b.HasKey("ItemID");
 
                     b.ToTable("Item");
+                });
+
+            modelBuilder.Entity("FACILITIES.Models.ItemConfig", b =>
+                {
+                    b.Property<int>("ItemConfigID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Items_csv");
+
+                    b.Property<int?>("OfficeID");
+
+                    b.HasKey("ItemConfigID");
+
+                    b.HasIndex("OfficeID");
+
+                    b.ToTable("ItemConfig");
                 });
 
             modelBuilder.Entity("FACILITIES.Models.Manager", b =>
@@ -245,6 +264,20 @@ namespace FACILITIES.Migrations
                     b.HasKey("StatusID");
 
                     b.ToTable("Status");
+                });
+
+            modelBuilder.Entity("FACILITIES.Models.Company", b =>
+                {
+                    b.HasOne("FACILITIES.Models.Office", "Office")
+                        .WithMany()
+                        .HasForeignKey("OfficeID");
+                });
+
+            modelBuilder.Entity("FACILITIES.Models.ItemConfig", b =>
+                {
+                    b.HasOne("FACILITIES.Models.Office", "Office")
+                        .WithMany()
+                        .HasForeignKey("OfficeID");
                 });
 
             modelBuilder.Entity("FACILITIES.Models.Manager", b =>

@@ -30,6 +30,7 @@ namespace FACILITIES.Models
         public int? ManagerID { get; set; }
         public Manager Manager { get; set; }
 
+       
 
 
         public ICollection<Setting> Settings { get; set; }

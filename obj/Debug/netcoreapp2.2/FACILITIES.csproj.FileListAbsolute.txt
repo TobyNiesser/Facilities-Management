@@ -171,11 +171,6 @@ L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\FACILITIES.TagHelpers.input.cache
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\FACILITIES.TagHelpers.output.cache
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\FACILITIES.RazorCoreGenerate.cache
-L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Companies\Create.g.cshtml.cs
-L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Companies\Delete.g.cshtml.cs
-L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Companies\Details.g.cshtml.cs
-L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Companies\Edit.g.cshtml.cs
-L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Companies\Index.g.cshtml.cs
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Error.g.cshtml.cs
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Files\Create.g.cshtml.cs
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Files\Delete.g.cshtml.cs
@@ -236,3 +231,8 @@ L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Offices\Edit.g.cshtml.cs
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Offices\Index.g.cshtml.cs
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Offices\ItemConfig.g.cshtml.cs
+L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Companies\Create.g.cshtml.cs
+L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Companies\Delete.g.cshtml.cs
+L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Companies\Details.g.cshtml.cs
+L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Companies\Edit.g.cshtml.cs
+L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Companies\Index.g.cshtml.cs

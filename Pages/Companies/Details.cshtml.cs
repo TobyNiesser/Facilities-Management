@@ -27,7 +27,8 @@ namespace FACILITIES.Pages.Companies
                 return NotFound();
             }
 
-            Company = await _context.Company.FirstOrDefaultAsync(m => m.CompanyID == id);
+            Company = await _context.Company
+                .Include(c => c.Office).FirstOrDefaultAsync(m => m.CompanyID == id);
 
             if (Company == null)
             {

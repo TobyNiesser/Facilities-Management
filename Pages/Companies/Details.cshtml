@@ -1,4 +1,4 @@
-﻿@page "{id:int?}"
+﻿@page
 @model FACILITIES.Pages.Companies.DetailsModel
 
 @{
@@ -66,14 +66,14 @@
             @Html.DisplayFor(model => model.Company.VatNumber)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Company.Supplier)
+            @Html.DisplayNameFor(model => model.Company.Office)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Company.Supplier)
+            @Html.DisplayFor(model => model.Company.Office.OfficeID)
         </dd>
     </dl>
 </div>
 <div>
-    <a class="btn-sm btn-primary" asp-page="./Edit" asp-route-id="@Model.Company.CompanyID">Edit</a>
-    <a class="btn-sm btn-primary" asp-page="./Index">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.Company.CompanyID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
 </div>

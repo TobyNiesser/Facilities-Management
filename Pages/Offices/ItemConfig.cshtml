@@ -13,7 +13,6 @@
             <br />
             <div class="form-group">
                 <h4>Select Office</h4>
-                @*<label asp-for="Office.OfficeID" class="control-label"></label>*@
                 <select asp-for="Office.OfficeID" class="form-control" asp-items="ViewBag.OfficeID"></select>
             </div>
         </form>
@@ -22,26 +21,36 @@
         <div class="container">
             <h4>Select Applicable Item(s)</h4>
             <form method="post">
-                @for (var i = 1; i <= 34; i++)
+                @for (var i = 1; i <= 10; i++)
                 {
                     <input name="AreChecked" type="checkbox" value="@i" /> @i<br />
                 }
 
-                <button>Click</button>
-
             </form>
+
+            @*@model FACILITIES.Models.Item
+            <form asp-action="Index" asp-controller="Group" method="get">
+                <ul>
+                    @for (var i = 0; i < Model.Item.Count; i++)
+                    {
+                        <li>
+                            <input type="checkbox" asp-for="@Model.Item[i].Selected" />
+                            <label asp-for="@Model.Filters[i].Selected">@Model.Filters[i].Name</label>
+                            <input type="hidden" asp-for="@Model.Filters[i].Id" />
+                            <input type="hidden" asp-for="@Model.Filters[i].Name" />
+                        </li>
+                    }
+                </ul>
+                <button type="submit" name="action">Filtrer</button>
+            </form>*@
         </div>
     </div>
-
 </div>
-
-
 
 <div class="form-group">
     <input type="submit" value="Submit" class="btn btn-primary" />
+    @*<a asp-action="Edit" asp-route-id="@item.ID">Edit</a>*@
 </div>
-
-
 
 <div>
     <a asp-page="Index">Back to List</a>

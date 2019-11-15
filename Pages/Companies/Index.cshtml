@@ -1,4 +1,4 @@
-﻿@page "{id:int?}"
+﻿@page
 @model FACILITIES.Pages.Companies.IndexModel
 
 @{
@@ -8,7 +8,7 @@
 <h1>Index</h1>
 
 <p>
-    <a class="btn-sm btn-primary" asp-page="Create">Create New</a>
+    <a asp-page="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -41,7 +41,7 @@
                 @Html.DisplayNameFor(model => model.Company[0].VatNumber)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Company[0].Supplier)
+                @Html.DisplayNameFor(model => model.Company[0].Office)
             </th>
             <th></th>
         </tr>
@@ -77,12 +77,12 @@
                 @Html.DisplayFor(modelItem => item.VatNumber)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Supplier)
+                @Html.DisplayFor(modelItem => item.Office.OfficeID)
             </td>
             <td>
-                <a class="btn-sm btn-primary" asp-page="./Edit" asp-route-id="@item.CompanyID">Edit</a>
-                <a class="btn-sm btn-primary" asp-page="./Details" asp-route-id="@item.CompanyID">Details</a>
-                <a class="btn-sm btn-danger" asp-page="./Delete" asp-route-id="@item.CompanyID">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.CompanyID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CompanyID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CompanyID">Delete</a>
             </td>
         </tr>
 }

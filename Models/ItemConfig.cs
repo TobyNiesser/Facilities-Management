@@ -16,7 +16,6 @@ namespace FACILITIES.Models
         [ForeignKey("Office")]
         public int? OfficeID { get; set; }
         public Office Office { get; set; }
-
-
+        
     }
 }

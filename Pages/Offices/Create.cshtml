@@ -5,80 +5,84 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Office</h1>
 
-<h4>Set Up/Create New Office</h4>
+
+<h1>Create</h1>
+
+<h4>Office</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <h6>Name</h6>
+                <label asp-for="Office.Name" class="control-label"></label>
                 <input asp-for="Office.Name" class="form-control" />
                 <span asp-validation-for="Office.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <h6>Address Line 1</h6>
+                <label asp-for="Office.Addr1" class="control-label"></label>
                 <input asp-for="Office.Addr1" class="form-control" />
                 <span asp-validation-for="Office.Addr1" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <h6>Address Line 2</h6>
+                <label asp-for="Office.Addr2" class="control-label"></label>
                 <input asp-for="Office.Addr2" class="form-control" />
                 <span asp-validation-for="Office.Addr2" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <h6>Town</h6>
+                <label asp-for="Office.Town" class="control-label"></label>
                 <input asp-for="Office.Town" class="form-control" />
                 <span asp-validation-for="Office.Town" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <h6>City</h6>
+                <label asp-for="Office.City" class="control-label"></label>
                 <input asp-for="Office.City" class="form-control" />
                 <span asp-validation-for="Office.City" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <h6>Postcode</h6>
+                <label asp-for="Office.Postcode" class="control-label"></label>
                 <input asp-for="Office.Postcode" class="form-control" />
                 <span asp-validation-for="Office.Postcode" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <h6>Country</h6>
+                <label asp-for="Office.Country" class="control-label"></label>
                 <input asp-for="Office.Country" class="form-control" />
                 <span asp-validation-for="Office.Country" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <h6>Tel</h6>
+                <label asp-for="Office.Telephone" class="control-label"></label>
                 <input asp-for="Office.Telephone" class="form-control" />
                 <span asp-validation-for="Office.Telephone" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <h6>Landlord Name</h6>
+                <label asp-for="Office.LandlordName" class="control-label"></label>
                 <input asp-for="Office.LandlordName" class="form-control" />
                 <span asp-validation-for="Office.LandlordName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <h6>Landlord Email</h6>
+                <label asp-for="Office.LandlordEmail" class="control-label"></label>
                 <input asp-for="Office.LandlordEmail" class="form-control" />
                 <span asp-validation-for="Office.LandlordEmail" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <h6>Landlord Tel</h6>
+                <label asp-for="Office.LandlordTelephone" class="control-label"></label>
                 <input asp-for="Office.LandlordTelephone" class="form-control" />
                 <span asp-validation-for="Office.LandlordTelephone" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <h6>Company</h6>
-                <select asp-for="Office.CompanyID" class ="form-control" asp-items="ViewBag.CompanyID"></select>
+                <label asp-for="Office.CompanyID" class="control-label"></label>
+                <select asp-for="Office.CompanyID" class="form-control" asp-items="ViewBag.CompanyID"></select>
             </div>
             <div class="form-group">
-                <h6>Manager</h6>
-                <select asp-for="Office.ManagerID" class ="form-control" asp-items="ViewBag.ManagerID"></select>
+                <label asp-for="Office.ManagerID" class="control-label"></label>
+                <select asp-for="Office.ManagerID" class="form-control" asp-items="ViewBag.ManagerID"></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
+
+           
         </form>
     </div>
 </div>

@@ -20,8 +20,8 @@ namespace FACILITIES.Pages.Offices
 
         public IActionResult OnGet()
         {
-        ViewData["CompanyID"] = new SelectList(_context.Company, "CompanyID", "Name");
-        ViewData["ManagerID"] = new SelectList(_context.Manager, "ManagerID", "UserName");
+        ViewData["CompanyID"] = new SelectList(_context.Company, "CompanyID", "CompanyID");
+        ViewData["ManagerID"] = new SelectList(_context.Manager, "ManagerID", "ManagerID");
             return Page();
         }
 

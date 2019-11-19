@@ -18,20 +18,20 @@ namespace FACILITIES.Pages.Offices
             _context = context;
         }
 
+        [BindProperty]
+        public Office Office { get; set; }
+        public List<Item> Items { get; set; }
+
         public IActionResult OnGet()
         {
             ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "Name");
             ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemName");
-                      
+
             return Page();
         }
 
-        [BindProperty]
-        public Office Office { get; set; }
-        public Item Item { get; set; }
-
-
-    public async Task<IActionResult> OnPostAsync()
+        
+        public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
@@ -42,10 +42,12 @@ namespace FACILITIES.Pages.Offices
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
-          
+
         }
 
-        
+
 
     }
 }
+
+

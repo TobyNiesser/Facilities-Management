@@ -1,0 +1,42 @@
+﻿@page
+@model FACILITIES.Pages.ItemConfigs.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemConfig[0].Items_csv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemConfig[0].Office)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ItemConfig) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Items_csv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Office.OfficeID)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ItemConfigID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ItemConfigID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ItemConfigID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

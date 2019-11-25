@@ -13,3 +13,38 @@
         <button type="button" class="btn btn-primary">Login</button>
     </div>
 </div>
+
+<form class="form-horizontal" method="post">
+    <table class="table table-striped">
+        <tr>
+            <th>
+                First Name
+            </th>
+            <th>
+                Last Name
+            </th>
+            <th>
+                Email
+            </th>
+        </tr>
+        @for (var i = 0; i < 5; i++)
+        {
+        <tr>
+            <td>
+                <input type="text" name="[@i].FirstName" />
+            </td>
+            <td>
+                <input type="text" name="[@i].LasttName" />
+            </td>
+            <td>
+                <input type="text" name="[@i].Email" />
+            </td>
+        </tr>
+        }
+    </table>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+    </div>
+</form>

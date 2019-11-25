@@ -7,30 +7,27 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using FACILITIES.Models;
 
-namespace FACILITIES.Pages.Offices
+namespace FACILITIES.Pages.ItemConfigs
 {
-    public class ItemConfig : PageModel
+    public class CreateModel : PageModel
     {
         private readonly FACILITIES.Models.FACILITIESContext _context;
 
-        public ItemConfig(FACILITIES.Models.FACILITIESContext context)
+        public CreateModel(FACILITIES.Models.FACILITIESContext context)
         {
             _context = context;
         }
-
-        [BindProperty]
-        public Office Office { get; set; }
-        public bool ItemID { get; set; }
-
+        
         public IActionResult OnGet()
         {
-            ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "Name");
-            ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemName");
-
+        ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "OfficeID");
             return Page();
         }
 
-        
+        [BindProperty]
+        public ItemConfig ItemConfig { get; set; }
+        public List<Item> ItemID { get; set; } = new List<Item>();
+
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
@@ -38,14 +35,10 @@ namespace FACILITIES.Pages.Offices
                 return Page();
             }
 
-            _context.Office.Add(Office);
+            _context.ItemConfig.Add(ItemConfig);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
-
         }
-
-
-
     }
 }

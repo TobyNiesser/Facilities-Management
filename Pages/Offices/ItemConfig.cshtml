@@ -8,7 +8,7 @@
 
 <div class="row">
     <div class="col-md-6">
-        <form method="post">
+        <form method="post" id="itemconfig">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <br />
             <div class="form-group">
@@ -18,7 +18,9 @@
             </div>
 
             <br />
-            @*Checkbox List*@
+
+
+            
             <div class="form-group">
                 <label for="ItemID" class="col-sm-2 control-label"></label>
                 <h4>Tick Applicable Items</h4>
@@ -32,13 +34,39 @@
                     <input type="checkbox" name="ItemID" value="6"> Fixed Wire<br />
                     <input type="checkbox" name="ItemID" value="7"> Intruder Alarm<br />
                     <input type="checkbox" name="ItemID" value="8"> PAT Testing<br />
+                    <input type="checkbox" name="ItemID" value="9"> Water Pump<br />
+                    <input type="checkbox" name="ItemID" value="10"> Written Legionella Risk Assessment<br />
+                    <input type="checkbox" name="ItemID" value="11"> Temp Checks<br />
+                    <input type="checkbox" name="ItemID" value="12"> Inspection Of Cold Water Tank<br />
+                    <input type="checkbox" name="ItemID" value="13"> Clean & Dissimfect Cold Water Store<br />
+                    <input type="checkbox" name="ItemID" value="14"> Testing Of Stored Drinking Water<br />
+                    <input type="checkbox" name="ItemID" value="15"> Inspection Of Water Heaters<br />
+                    <input type="checkbox" name="ItemID" value="16"> Check Temp Taps<br />
+                    <input type="checkbox" name="ItemID" value="17"> Check Temp Of Calorifier<br />
+                    <input type="checkbox" name="ItemID" value="18"> Descale & Clean Shower Heads<br />
+                    <input type="checkbox" name="ItemID" value="19"> Test Mixing Valves<br />
+                    <input type="checkbox" name="ItemID" value="20"> Inspection Of Expansion Vessels<br />
+                    <input type="checkbox" name="ItemID" value="21"> Aircon<br />
+                    <input type="checkbox" name="ItemID" value="22"> AHU<br />
+                    <input type="checkbox" name="ItemID" value="23"> Hand Dryers<br />
+                    <input type="checkbox" name="ItemID" value="24"> Sanitary Bins<br />
+                    <input type="checkbox" name="ItemID" value="25"> Washing Machine Clean<br />
+                    <input type="checkbox" name="ItemID" value="26"> Dishwasher Clean<br />
+                    <input type="checkbox" name="ItemID" value="27"> Fire Extinguisher Test<br />
+                    <input type="checkbox" name="ItemID" value="28"> Fire Safety Check<br />
+                    <input type="checkbox" name="ItemID" value="29"> Gym Service<br />
+                    <input type="checkbox" name="ItemID" value="30"> Zip Tap<br />
+                    <input type="checkbox" name="ItemID" value="31"> Car Charging Points<br />
+                    <input type="checkbox" name="ItemID" value="32"> Bug Spray<br />
+                    <input type="checkbox" name="ItemID" value="33"> Pest Control<br />
+                    <input type="checkbox" name="ItemID" value="34"> TV Licence<br />
                 </div>
             </div>
 
             @*Submit Button*@
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <input type="submit" class="btn btn-primary" onclick=""/>
+                    <input type="submit" class="btn btn-primary" onclick="" id="itemconfig" />
                 </div>
             </div>
 
@@ -48,27 +76,52 @@
 
     </div>
 
-    
+    <div class="col-md-6 shadow-sm p-4 mb-4 bg-white" style="background-color: #f2f2f2;">
+        <div class="container">
+            <h4>Select Applicable Item(s)</h4>
+            <form method="post">
+
+
+
+                @for (var i = 0; i <= 5; i++)
+                {
+                    <input name="ItemID" type="checkbox" value="@i" /> @i<br />
+
+                }
+
+
+
+            </form>
+        </div>
+
+        
+
+    </div>
+
+
 
     @*<div class="col-md-6 shadow-sm p-4 mb-4 bg-white" style="background-color: #f2f2f2;">
-             <div class="container">
-                    <h4>Select Applicable Item(s)</h4>
-                    <form method="post">
-                        @for (var i = 0; i <= 5; i++)
-                        {
-                            <input name="AreChecked" type="checkbox" value="@i" /> @i<br />
-                        }
+            <div class="container">
+                <h4>Select Applicable Item(s)</h4>
+                <form method="post">
+                    @for (var i = 0; i <= 5; i++)
+                    {
+                        <input name="AreChecked" type="checkbox" value="@i" /> @i<br />
+                    }
 
 
 
-                    </form>
-             </div>
+                </form>
+            </div>
 
-    </div>*@
+        </div>*@
 </div>
 
 
-        
+
+
+
+
 <div>
     <a asp-page="Index">Back to List</a>
 </div>

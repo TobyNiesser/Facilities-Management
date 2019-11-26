@@ -132,11 +132,18 @@ namespace FACILITIES.Migrations
                     LandlordEmail = table.Column<string>(nullable: true),
                     LandlordTelephone = table.Column<int>(nullable: false),
                     CompanyID = table.Column<int>(nullable: true),
-                    ManagerID = table.Column<int>(nullable: true)
+                    ManagerID = table.Column<int>(nullable: true),
+                    ItemID = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Office", x => x.OfficeID);
+                    table.ForeignKey(
+                        name: "FK_Office_Item_ItemID",
+                        column: x => x.ItemID,
+                        principalTable: "Item",
+                        principalColumn: "ItemID",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Office_Manager_ManagerID",
                         column: x => x.ManagerID,
@@ -180,11 +187,19 @@ namespace FACILITIES.Migrations
                     ItemConfigID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Items_csv = table.Column<string>(nullable: true),
-                    OfficeID = table.Column<int>(nullable: true)
+                    IsChecked = table.Column<bool>(nullable: false),
+                    OfficeID = table.Column<int>(nullable: true),
+                    ItemID = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ItemConfig", x => x.ItemConfigID);
+                    table.ForeignKey(
+                        name: "FK_ItemConfig_Item_ItemID",
+                        column: x => x.ItemID,
+                        principalTable: "Item",
+                        principalColumn: "ItemID",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_ItemConfig_Office_OfficeID",
                         column: x => x.OfficeID,
@@ -256,6 +271,11 @@ namespace FACILITIES.Migrations
                 column: "OfficeID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_ItemConfig_ItemID",
+                table: "ItemConfig",
+                column: "ItemID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_ItemConfig_OfficeID",
                 table: "ItemConfig",
                 column: "OfficeID");
@@ -279,6 +299,11 @@ namespace FACILITIES.Migrations
                 name: "IX_Office_CompanyID",
                 table: "Office",
                 column: "CompanyID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Office_ItemID",
+                table: "Office",
+                column: "ItemID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Office_ManagerID",
@@ -363,9 +388,6 @@ namespace FACILITIES.Migrations
                 name: "Frequency");
 
             migrationBuilder.DropTable(
-                name: "Item");
-
-            migrationBuilder.DropTable(
                 name: "Responsibility");
 
             migrationBuilder.DropTable(
@@ -373,6 +395,9 @@ namespace FACILITIES.Migrations
 
             migrationBuilder.DropTable(
                 name: "Office");
+
+            migrationBuilder.DropTable(
+                name: "Item");
 
             migrationBuilder.DropTable(
                 name: "Manager");

@@ -37,5 +37,7 @@ namespace FACILITIES.Models
         public DbSet<FACILITIES.Models.Item> Item { get; set; }
 
         public DbSet<FACILITIES.Models.ItemConfig> ItemConfig { get; set; }
+
+
     }
 }

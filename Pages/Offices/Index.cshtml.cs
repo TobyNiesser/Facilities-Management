@@ -24,6 +24,7 @@ namespace FACILITIES.Pages.Offices
         {
             Office = await _context.Office
                 .Include(o => o.Company)
+                .Include(o => o.Item)
                 .Include(o => o.Manager).ToListAsync();
         }
     }

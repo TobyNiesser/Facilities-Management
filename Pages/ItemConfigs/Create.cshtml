@@ -18,33 +18,22 @@
                 <input asp-for="ItemConfig.Items_csv" class="form-control" />
                 <span asp-validation-for="ItemConfig.Items_csv" class="text-danger"></span>
             </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ItemConfig.IsChecked" /> @Html.DisplayNameFor(model => model.ItemConfig.IsChecked))
+                </label>
+            </div>
             <div class="form-group">
                 <label asp-for="ItemConfig.OfficeID" class="control-label"></label>
                 <select asp-for="ItemConfig.OfficeID" class="form-control" asp-items="ViewBag.OfficeID"></select>
             </div>
-
             <div class="form-group">
-                <label for="ItemID" class="col-sm-2 control-label"></label>
-                <h4>Tick Applicable Items</h4>
-                <br />
-                <div class="col-sm-10">
-                    <input type="checkbox" name="ItemID" value="1"> Access Control<br />
-                    <input type="checkbox" name="ItemID" value="2"> Boiler/Gas<br />
-                    <input type="checkbox" name="ItemID" value="3"> CCTV<br />
-                    <input type="checkbox" name="ItemID" value="4"> Emergency Lighting<br />
-                    <input type="checkbox" name="ItemID" value="5"> Fire Alarm<br />
-                    <input type="checkbox" name="ItemID" value="6"> Fixed Wire<br />
-                    <input type="checkbox" name="ItemID" value="7"> Intruder Alarm<br />
-                    <input type="checkbox" name="ItemID" value="8"> PAT Testing<br />
-                </div>
+                <label asp-for="ItemConfig.ItemID" class="control-label"></label>
+                <select asp-for="ItemConfig.ItemID" class="form-control" asp-items="ViewBag.ItemID"></select>
             </div>
-
-           
-
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
-
         </form>
     </div>
 </div>

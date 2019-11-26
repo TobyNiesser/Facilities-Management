@@ -11,8 +11,10 @@ namespace FACILITIES.Models
     {
         public int ManagerID { get; set; }
 
+        [Display(Name = "Manager Name")]
         public string UserName { get; set; }
 
+        [Display(Name = "Manager Email")]
         public string UserEmail { get; set; }
 
         [ForeignKey("Company")]

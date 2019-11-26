@@ -23,6 +23,7 @@ namespace FACILITIES.Pages.ItemConfigs
         public async Task OnGetAsync()
         {
             ItemConfig = await _context.ItemConfig
+                .Include(i => i.Item)
                 .Include(i => i.Office).ToListAsync();
         }
     }

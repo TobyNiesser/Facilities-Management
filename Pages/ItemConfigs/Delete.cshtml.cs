@@ -29,6 +29,7 @@ namespace FACILITIES.Pages.ItemConfigs
             }
 
             ItemConfig = await _context.ItemConfig
+                .Include(i => i.Item)
                 .Include(i => i.Office).FirstOrDefaultAsync(m => m.ItemConfigID == id);
 
             if (ItemConfig == null)

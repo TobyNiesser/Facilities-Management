@@ -17,7 +17,13 @@
                 @Html.DisplayNameFor(model => model.ItemConfig[0].Items_csv)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.ItemConfig[0].IsChecked)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.ItemConfig[0].Office)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemConfig[0].Item)
             </th>
             <th></th>
         </tr>
@@ -29,7 +35,13 @@
                 @Html.DisplayFor(modelItem => item.Items_csv)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.IsChecked)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Office.OfficeID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item.ItemID)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ItemConfigID">Edit</a> |

@@ -10,9 +10,13 @@ namespace FACILITIES.Models
     public class Item
     {
         public int ItemID { get; set; }
+
+        [Display(Name = "Item Name")]
         public string ItemName { get; set; }
 
         public ICollection<Setting> Settings { get; set; }
+        public ICollection<ItemConfig> ItemConfigs { get; set; }
+        public ICollection<Office> Offices { get; set; }
 
 
     }

@@ -30,12 +30,14 @@ namespace FACILITIES.Pages.ItemConfigs
             }
 
             ItemConfig = await _context.ItemConfig
+                .Include(i => i.Item)
                 .Include(i => i.Office).FirstOrDefaultAsync(m => m.ItemConfigID == id);
 
             if (ItemConfig == null)
             {
                 return NotFound();
             }
+           ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemID");
            ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "OfficeID");
             return Page();
         }

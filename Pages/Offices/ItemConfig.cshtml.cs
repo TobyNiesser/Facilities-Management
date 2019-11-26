@@ -30,7 +30,7 @@ namespace FACILITIES.Pages.Offices
             return Page();
         }
 
-        
+
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)

@@ -31,6 +31,7 @@ namespace FACILITIES.Pages.Offices
 
             Office = await _context.Office
                 .Include(o => o.Company)
+                .Include(o => o.Item)
                 .Include(o => o.Manager).FirstOrDefaultAsync(m => m.OfficeID == id);
 
             if (Office == null)
@@ -38,6 +39,7 @@ namespace FACILITIES.Pages.Offices
                 return NotFound();
             }
            ViewData["CompanyID"] = new SelectList(_context.Company, "CompanyID", "CompanyID");
+           ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemID");
            ViewData["ManagerID"] = new SelectList(_context.Manager, "ManagerID", "ManagerID");
             return Page();
         }

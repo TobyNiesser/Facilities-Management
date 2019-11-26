@@ -17,16 +17,21 @@ namespace FACILITIES.Pages.ItemConfigs
         {
             _context = context;
         }
-        
+
         public IActionResult OnGet()
         {
-        ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "OfficeID");
+            ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemName");
+            ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "Name");
+
+
+
+
             return Page();
         }
+        
 
         [BindProperty]
         public ItemConfig ItemConfig { get; set; }
-        public List<Item> ItemID { get; set; } = new List<Item>();
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -40,5 +45,8 @@ namespace FACILITIES.Pages.ItemConfigs
 
             return RedirectToPage("./Index");
         }
+        
     }
+
+   
 }

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FACILITIES.Migrations
 {
     [DbContext(typeof(FACILITIESContext))]
-    [Migration("20191119152400_Initial")]
+    [Migration("20191125153006_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -107,11 +107,17 @@ namespace FACILITIES.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<bool>("IsChecked");
+
+                    b.Property<int?>("ItemID");
+
                     b.Property<string>("Items_csv");
 
                     b.Property<int?>("OfficeID");
 
                     b.HasKey("ItemConfigID");
+
+                    b.HasIndex("ItemID");
 
                     b.HasIndex("OfficeID");
 
@@ -161,6 +167,8 @@ namespace FACILITIES.Migrations
 
                     b.Property<string>("Country");
 
+                    b.Property<int?>("ItemID");
+
                     b.Property<string>("LandlordEmail");
 
                     b.Property<string>("LandlordName");
@@ -180,6 +188,8 @@ namespace FACILITIES.Migrations
                     b.HasKey("OfficeID");
 
                     b.HasIndex("CompanyID");
+
+                    b.HasIndex("ItemID");
 
                     b.HasIndex("ManagerID");
 
@@ -277,6 +287,10 @@ namespace FACILITIES.Migrations
 
             modelBuilder.Entity("FACILITIES.Models.ItemConfig", b =>
                 {
+                    b.HasOne("FACILITIES.Models.Item", "Item")
+                        .WithMany("ItemConfigs")
+                        .HasForeignKey("ItemID");
+
                     b.HasOne("FACILITIES.Models.Office", "Office")
                         .WithMany()
                         .HasForeignKey("OfficeID");
@@ -302,6 +316,10 @@ namespace FACILITIES.Migrations
                     b.HasOne("FACILITIES.Models.Company", "Company")
                         .WithMany()
                         .HasForeignKey("CompanyID");
+
+                    b.HasOne("FACILITIES.Models.Item", "Item")
+                        .WithMany("Offices")
+                        .HasForeignKey("ItemID");
 
                     b.HasOne("FACILITIES.Models.Manager", "Manager")
                         .WithMany()

@@ -52,6 +52,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Office[0].Manager)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Office[0].Item)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -96,6 +99,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Manager.ManagerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item.ItemID)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.OfficeID">Edit</a> |

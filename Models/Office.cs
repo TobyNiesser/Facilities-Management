@@ -10,16 +10,33 @@ namespace FACILITIES.Models
     public class Office
     {
         public int OfficeID { get; set; }
+
+        [Display(Name = "Office Name")]
         public string Name { get; set; }
+
+        [Display(Name = "Address Line 1")]
         public string Addr1 { get; set; }
+
+        [Display(Name = "Address Line 2")]
         public string Addr2 { get; set; }
+
         public string Town { get; set; }
+
         public string City { get; set; }
+
         public string Postcode { get; set; }
+
         public string Country { get; set; }
+
         public string Telephone { get; set; }
+
+        [Display(Name = "Landlord Name")]
         public string LandlordName { get; set; }
+
+        [Display(Name = "Landlord Email")]
         public string LandlordEmail { get; set; }
+
+        [Display(Name = "Landlord Telephone")]
         public int LandlordTelephone { get; set; }
 
         [ForeignKey("Company")]
@@ -30,7 +47,9 @@ namespace FACILITIES.Models
         public int? ManagerID { get; set; }
         public Manager Manager { get; set; }
 
-        public bool ItemID { get; set; }
+        [ForeignKey("Item")]
+        public int? ItemID { get; set; }
+        public Item Item { get; set; }
 
 
 
@@ -38,6 +57,11 @@ namespace FACILITIES.Models
         public ICollection<Setting> Settings { get; set; }
         public ICollection<Manager> Managers { get; set; }
 
+    }
+
+    public class ItemIDList
+    {
+        public List<Item> ItemID { get; set; }
     }
 }
 

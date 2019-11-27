@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using FACILITIES.Models;
+using System.Configuration;
+
 
 namespace FACILITIES.Pages.Offices
 {
@@ -25,6 +27,23 @@ namespace FACILITIES.Pages.Offices
         ViewData["ManagerID"] = new SelectList(_context.Manager, "ManagerID", "UserName");
             return Page();
         }
+
+        public ActionResult ItemCheckList()
+        {
+            var item = new Office()
+            {
+
+            };
+
+            item.Items = new List<ItemCheckList>();
+            item.Items.Add(new ItemCheckList() { Name = "Access Control", IsChecked = false });
+            item.Items.Add(new ItemCheckList() { Name = "CCTV", IsChecked = false });
+            item.Items.Add(new ItemCheckList() { Name = "Boiler/Gas", IsChecked = false });
+
+
+            return Page();
+        }
+
 
         [BindProperty]
         public Office Office { get; set; }

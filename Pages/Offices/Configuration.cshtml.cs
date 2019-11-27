@@ -9,11 +9,11 @@ using FACILITIES.Models;
 
 namespace FACILITIES.Pages.Offices
 {
-    public class ItemConfig : PageModel
+    public class Configuration : PageModel
     {
         private readonly FACILITIES.Models.FACILITIESContext _context;
 
-        public ItemConfig(FACILITIES.Models.FACILITIESContext context)
+        public Configuration(FACILITIES.Models.FACILITIESContext context)
         {
             _context = context;
         }

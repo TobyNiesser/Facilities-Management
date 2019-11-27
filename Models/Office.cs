@@ -51,18 +51,22 @@ namespace FACILITIES.Models
         public int? ItemID { get; set; }
         public Item Item { get; set; }
 
-
-
+        public List<ItemCheckList> Items { get; set; }
 
         public ICollection<Setting> Settings { get; set; }
         public ICollection<Manager> Managers { get; set; }
 
     }
 
-    public class ItemIDList
+    public class ItemCheckList
     {
-        public List<Item> ItemID { get; set; }
+        public int ID { get; set; }
+
+        public string Name { get; set; }
+
+        public bool IsChecked { get; set; }
     }
+    
 }
 
 

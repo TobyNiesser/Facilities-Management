@@ -23,9 +23,7 @@ namespace FACILITIES.Models
         public int? ItemID { get; set; }
         public Item Item { get; set; }
 
-        
 
-        
     }
     
 }

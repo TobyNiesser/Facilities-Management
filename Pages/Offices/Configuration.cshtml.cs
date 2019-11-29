@@ -18,6 +18,9 @@ namespace FACILITIES.Pages.Offices
             _context = context;
         }
 
+        
+        List<Item> Items = new List<Item>();
+
         [BindProperty]
         public Office Office { get; set; }
 
@@ -48,5 +51,4 @@ namespace FACILITIES.Pages.Offices
 
 
     }
-    
 }

@@ -20,7 +20,6 @@ namespace FACILITIES.Pages.Offices
 
         [BindProperty]
         public Office Office { get; set; }
-        public bool ItemID { get; set; }
 
         public IActionResult OnGet()
         {
@@ -29,6 +28,7 @@ namespace FACILITIES.Pages.Offices
 
             return Page();
         }
+        
 
 
         public async Task<IActionResult> OnPostAsync()
@@ -48,4 +48,5 @@ namespace FACILITIES.Pages.Offices
 
 
     }
+    
 }

@@ -105,8 +105,6 @@ namespace FACILITIES.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<bool>("IsChecked");
-
                     b.Property<int?>("ItemID");
 
                     b.Property<string>("Items_csv");

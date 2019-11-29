@@ -14,9 +14,6 @@ namespace FACILITIES.Models
         
         [Display(Name = "Item CSV")]
         public string Items_csv { get; set; }
-
-        public bool IsChecked { get; set; }
-
         
         [ForeignKey("Office")]
         public int? OfficeID { get; set; }
@@ -25,6 +22,8 @@ namespace FACILITIES.Models
         [ForeignKey("Item")]
         public int? ItemID { get; set; }
         public Item Item { get; set; }
+
+        
 
         
     }

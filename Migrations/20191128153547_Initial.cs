@@ -187,7 +187,6 @@ namespace FACILITIES.Migrations
                     ItemConfigID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Items_csv = table.Column<string>(nullable: true),
-                    IsChecked = table.Column<bool>(nullable: false),
                     OfficeID = table.Column<int>(nullable: true),
                     ItemID = table.Column<int>(nullable: true)
                 },

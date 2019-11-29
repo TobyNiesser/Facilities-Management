@@ -27,23 +27,7 @@ namespace FACILITIES.Pages.Offices
         ViewData["ManagerID"] = new SelectList(_context.Manager, "ManagerID", "UserName");
             return Page();
         }
-
-        public ActionResult ItemCheckList()
-        {
-            var item = new Office()
-            {
-
-            };
-
-            item.Items = new List<ItemCheckList>();
-            item.Items.Add(new ItemCheckList() { Name = "Access Control", IsChecked = false });
-            item.Items.Add(new ItemCheckList() { Name = "CCTV", IsChecked = false });
-            item.Items.Add(new ItemCheckList() { Name = "Boiler/Gas", IsChecked = false });
-
-
-            return Page();
-        }
-
+        
 
         [BindProperty]
         public Office Office { get; set; }
@@ -60,5 +44,6 @@ namespace FACILITIES.Pages.Offices
 
             return RedirectToPage("./Index");
         }
+        
     }
 }

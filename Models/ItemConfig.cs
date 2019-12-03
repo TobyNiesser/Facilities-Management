@@ -11,7 +11,9 @@ namespace FACILITIES.Models
     {
         public int ItemConfigID { get; set; }
 
-        
+        [NotMapped]
+        public bool Checked { get; set; }
+
         [Display(Name = "Item CSV")]
         public string Items_csv { get; set; }
         
@@ -23,7 +25,7 @@ namespace FACILITIES.Models
         public int? ItemID { get; set; }
         public Item Item { get; set; }
 
-
     }
+    
     
 }

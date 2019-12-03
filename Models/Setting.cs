@@ -18,13 +18,15 @@ namespace FACILITIES.Models
         [ForeignKey("Item")]
         public int? ItemID { get; set; }
         public Item Item { get; set; }
-    
+
+        [Display(Name ="Due Date")]
+        [DataType(DataType.Date)]
         public DateTime DueDate { get; set; }
-        [DataType(DataType.Date)]
 
+        [Display(Name = "Next Date")]
+        [DataType(DataType.Date)]
         public DateTime NextDate { get; set; }
-        [DataType(DataType.Date)]
-
+        
         [ForeignKey("Frequency")]
         public int? FrequencyID { get; set; }
         public Frequency Frequency { get; set; }

@@ -1,4 +1,4 @@
-﻿@page
+﻿@page 
 @model FACILITIES.Pages.Items.IndexModel
 
 @{
@@ -26,9 +26,9 @@
                 @Html.DisplayFor(modelItem => item.ItemName)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ItemID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ItemID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ItemID">Delete</a>
+                <a class="btn-sm btn-primary" asp-page="./Edit" asp-route-id="@item.ItemID">Edit</a>
+                <a class="btn-sm btn-primary" asp-page="./Details" asp-route-id="@item.ItemID">Details</a>
+                <a class="btn-sm btn-danger" asp-page="./Delete" asp-route-id="@item.ItemID">Delete</a>
             </td>
         </tr>
 }

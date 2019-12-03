@@ -50,24 +50,12 @@ namespace FACILITIES.Models
         [ForeignKey("Item")]
         public int? ItemID { get; set; }
         public Item Item { get; set; }
-
+        
         public ICollection<Setting> Settings { get; set; }
         public ICollection<Manager> Managers { get; set; }
-        
+
     }
-    
-    //public class Configurations
-    //{
-       
-    //    public int ConfigurationsID { get; set; }
-
-    //    public List<Item> Item { get; set; }
-
-    //    [ForeignKey("Company")]
-    //    public int? CompanyID { get; set; }
-    //    public Company Company { get; set; }
-
-    //}
+   
     
 }
 

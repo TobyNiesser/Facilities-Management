@@ -20,13 +20,18 @@ namespace FACILITIES.Pages.ItemConfigs
 
         public IActionResult OnGet()
         {
-        ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemID");
-        ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "OfficeID");
+        ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemName");
+        ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "Name");
             return Page();
         }
 
         [BindProperty]
         public ItemConfig ItemConfig { get; set; }
+
+        [BindProperty]
+        public List<Item> Items { get; set; } = new List<Item>();
+
+
 
         public async Task<IActionResult> OnPostAsync()
         {

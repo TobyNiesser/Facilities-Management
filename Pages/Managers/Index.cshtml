@@ -19,12 +19,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.Manager[0].UserEmail)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.Manager[0].Company)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Manager[0].Permission)
-            </th>
+            </th>*@
             <th></th>
         </tr>
     </thead>
@@ -37,12 +37,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.UserEmail)
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.Company.CompanyID)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Permission.PermissionID)
-            </td>
+            </td>*@
             <td>
                 <a class="btn-sm btn-primary" asp-page="./Edit" asp-route-id="@item.ManagerID">Edit</a>
                 <a class="btn-sm btn-primary" asp-page="./Details" asp-route-id="@item.ManagerID">Details</a>

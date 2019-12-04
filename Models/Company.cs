@@ -34,7 +34,7 @@ namespace FACILITIES.Models
         [Display(Name = "VAT No.")]
         public string VatNumber { get; set; }
 
-
+        
         [ForeignKey("Office")]
         public int? OfficeID { get; set; }
         public Office Office { get; set; }

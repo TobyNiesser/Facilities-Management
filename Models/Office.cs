@@ -39,14 +39,17 @@ namespace FACILITIES.Models
         [Display(Name = "Landlord Telephone")]
         public int LandlordTelephone { get; set; }
 
+        
         [ForeignKey("Company")]
         public int? CompanyID { get; set; }
         public Company Company { get; set; }
 
+        
         [ForeignKey("Manager")]
         public int? ManagerID { get; set; }
         public Manager Manager { get; set; }
-
+        
+        
         [ForeignKey("Item")]
         public int? ItemID { get; set; }
         public Item Item { get; set; }
@@ -54,6 +57,7 @@ namespace FACILITIES.Models
         public ICollection<Setting> Settings { get; set; }
         public ICollection<Manager> Managers { get; set; }
 
+        
     }
    
     

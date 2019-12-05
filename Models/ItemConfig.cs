@@ -10,9 +10,10 @@ namespace FACILITIES.Models
     public class ItemConfig
     {
         public int ItemConfigID { get; set; }
+        
 
         [NotMapped]
-        public bool Checked { get; set; }
+        public bool IsChecked { get; set; }
 
         [Display(Name = "Item CSV")]
         public string Items_csv { get; set; }

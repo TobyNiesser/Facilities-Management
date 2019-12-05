@@ -25,6 +25,11 @@ namespace FACILITIES.Models
         public int? ItemID { get; set; }
         public Item Item { get; set; }
 
+        public class Items
+        {
+            public ICollection<string> MyItems { get; set; }
+        }
+
     }
     
     

@@ -38,7 +38,6 @@ namespace FACILITIES.Models
 
         [Display(Name = "Landlord Telephone")]
         public int LandlordTelephone { get; set; }
-
         
         [ForeignKey("Company")]
         public int? CompanyID { get; set; }

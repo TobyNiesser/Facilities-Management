@@ -18,6 +18,7 @@ namespace FACILITIES.Pages.Settings
         {
             _context = context;
         }
+        
 
         [BindProperty]
         public Setting Setting { get; set; }
@@ -41,12 +42,12 @@ namespace FACILITIES.Pages.Settings
             {
                 return NotFound();
             }
-           ViewData["CompanyID"] = new SelectList(_context.Company, "CompanyID", "CompanyID");
-           ViewData["FrequencyID"] = new SelectList(_context.Frequency, "FrequencyID", "FrequencyID");
-           ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemID");
-           ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "OfficeID");
-           ViewData["ResponsibilityID"] = new SelectList(_context.Responsibility, "ResponsibilityID", "ResponsibilityID");
-           ViewData["StatusID"] = new SelectList(_context.Status, "StatusID", "StatusID");
+           ViewData["CompanyID"] = new SelectList(_context.Company, "CompanyID", "Name");
+           ViewData["FrequencyID"] = new SelectList(_context.Frequency, "FrequencyID", "FrequencyAmount");
+           ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemName");
+           ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "Name");
+           ViewData["ResponsibilityID"] = new SelectList(_context.Responsibility, "ResponsibilityID", "Name");
+           ViewData["StatusID"] = new SelectList(_context.Status, "StatusID", "StatusIndicator");
             return Page();
         }
 

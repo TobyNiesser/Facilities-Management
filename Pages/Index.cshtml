@@ -4,15 +4,44 @@
     ViewData["Title"] = "Home page";
 }
 
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
 <div class="container-fluid">
-        <div style="display: flex; justify-content: center;" >
-            <img src="https://i.ibb.co/PtRqCzd/FM-Banner.jpg" />
+    <div class="row">
+        <div class="col-md-12 shadow-sm text-center mb-3 pt-3" style="background-color: #f1f1f2;">
+            <img src="https://i.ibb.co/bNppkxJ/FM-Logo-SMALL.jpg" width="250" height="250" />
+            <br />
+            <br />
+            <h2 class="display-4">Facilities Management</h2>
+            <h2><small>Online Checklist</small></h2>
         </div>
-        <br />
-        <div class="text-center">
-            <a href="https://localhost:44339/settings/create">
-                <input type="button" class="btn btn-primary" value="Login" />
-            </a>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 shadow-sm text-center pt-lg-5 pb-lg-5" style="background-color: #f1f1f2;">
+            <h2><small>Login</small></h2>
+            <p>Login to user account</p>
+            <button type="button" class="btn btn-primary btn-block">Login</button>
         </div>
-    
+        <div class="col-md-4 shadow-sm text-center pt-lg-5 pb-lg-5" style="background-color: #f1f1f2;">
+            <h2><small>Dashboard</small></h2>
+            <p>View live stats for all offices</p>
+            <button type="button" class="btn btn-primary btn-block">Dashboard</button>
+        </div>
+        <div class="col-md-4 shadow-sm text-center pt-lg-5 pb-lg-5" style="background-color: #f1f1f2;">
+            <h2><small>Register</small></h2>
+            <p>Set up a New Account</p>
+            <button type="button" class="btn btn-primary btn-block">Register</button>
+        </div>
+    </div>
 </div>
+

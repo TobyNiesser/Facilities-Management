@@ -47,10 +47,10 @@
 @foreach (var item in Model.Setting) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Office.OfficeID)
+                @Html.DisplayFor(modelItem => item.Office.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Item.ItemID)
+                @Html.DisplayFor(modelItem => item.Item.ItemName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DueDate)
@@ -59,16 +59,16 @@
                 @Html.DisplayFor(modelItem => item.NextDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Frequency.FrequencyID)
+                @Html.DisplayFor(modelItem => item.Frequency.FrequencyAmount)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Company.CompanyID)
+                @Html.DisplayFor(modelItem => item.Company.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Responsibility.ResponsibilityID)
+                @Html.DisplayFor(modelItem => item.Responsibility.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Status.StatusID)
+                @Html.DisplayFor(modelItem => item.Status.StatusIndicator)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Comment)

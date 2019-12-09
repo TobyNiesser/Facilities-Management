@@ -37,8 +37,8 @@ namespace FACILITIES.Pages.ItemConfigs
             {
                 return NotFound();
             }
-           ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemID");
-           ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "OfficeID");
+           ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemName");
+           ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "Name");
             return Page();
         }
 

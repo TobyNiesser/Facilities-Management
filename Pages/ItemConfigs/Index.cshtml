@@ -22,6 +22,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.ItemConfig[0].Item)
             </th>
+            
         </tr>
     </thead>
     <tbody>
@@ -31,14 +32,15 @@
                 @Html.DisplayFor(modelItem => item.Items_csv)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Office.OfficeID)
+                @Html.DisplayFor(modelItem => item.Office.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Item.ItemID)
+                @Html.DisplayFor(modelItem => item.Item.ItemName)
             </td>
+          
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ItemConfigID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ItemConfigID">Details</a> |
+                <a asp-page="./Edit" asp-route-id="@item.ItemConfigID">Edit</a>
+                <a asp-page="./Details" asp-route-id="@item.ItemConfigID">Details</a>
                 <a asp-page="./Delete" asp-route-id="@item.ItemConfigID">Delete</a>
             </td>
         </tr>

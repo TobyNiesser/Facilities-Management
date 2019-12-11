@@ -22,7 +22,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.ItemConfig[0].Item)
             </th>
-            
+            <th>
+                @Html.DisplayNameFor(model => model.ItemConfig[0].Item)
+            </th>
+
         </tr>
     </thead>
     <tbody>
@@ -37,7 +40,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Item.ItemName)
             </td>
-          
+
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ItemConfigID">Edit</a>
                 <a asp-page="./Details" asp-route-id="@item.ItemConfigID">Details</a>

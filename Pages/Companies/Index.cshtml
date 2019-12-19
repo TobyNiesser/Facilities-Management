@@ -76,9 +76,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.VatNumber)
             </td>
-            @*<td>
-                @Html.DisplayFor(modelItem => item.Office.OfficeID)
-            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Office.Name)
+            </td>
             <td>
                 <a class="btn-sm btn-primary" asp-page="./Edit" asp-route-id="@item.CompanyID">Edit</a>
                 <a class="btn-sm btn-primary" asp-page="./Details" asp-route-id="@item.CompanyID">Details</a>

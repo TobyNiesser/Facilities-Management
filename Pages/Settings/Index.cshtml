@@ -74,9 +74,9 @@
                 @Html.DisplayFor(modelItem => item.Comment)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.SettingID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.SettingID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.SettingID">Delete</a>
+                <a class="btn-sm btn-primary" asp-page="./Edit" asp-route-id="@item.SettingID">Edit</a>
+                <a class="btn-sm btn-primary" asp-page="./Details" asp-route-id="@item.SettingID">Details</a>
+                <a class="btn-sm btn-danger" asp-page="./Delete" asp-route-id="@item.SettingID">Delete</a>
             </td>
         </tr>
 }

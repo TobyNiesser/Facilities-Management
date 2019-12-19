@@ -11,10 +11,6 @@ namespace FACILITIES.Models
     {
         public int ItemConfigID { get; set; }
         
-
-        [NotMapped]
-        public bool IsChecked { get; set; }
-
         [Display(Name = "Item CSV")]
         public string Items_csv { get; set; }
         
@@ -25,12 +21,11 @@ namespace FACILITIES.Models
         [ForeignKey("Item")]
         public int? ItemID { get; set; }
         public Item Item { get; set; }
-
+       
         public class Items
         {
             public ICollection<string> MyItems { get; set; }
         }
-
     }
     
     

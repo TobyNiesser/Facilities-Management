@@ -69,21 +69,21 @@
                 <input asp-for="Office.LandlordTelephone" class="form-control" />
                 <span asp-validation-for="Office.LandlordTelephone" class="text-danger"></span>
             </div>
-            @*<div class="form-group">
+            <div class="form-group">
                 <label asp-for="Office.CompanyID" class="control-label"></label>
                 <select asp-for="Office.CompanyID" class="form-control" asp-items="ViewBag.CompanyID"></select>
                 <span asp-validation-for="Office.CompanyID" class="text-danger"></span>
-            </div>*@
+            </div>
             <div class="form-group">
                 <label asp-for="Office.ManagerID" class="control-label"></label>
                 <select asp-for="Office.ManagerID" class="form-control" asp-items="ViewBag.ManagerID"></select>
                 <span asp-validation-for="Office.ManagerID" class="text-danger"></span>
             </div>
-            @*<div class="form-group">
+            <div class="form-group">
                 <label asp-for="Office.ItemID" class="control-label"></label>
                 <select asp-for="Office.ItemID" class="form-control" asp-items="ViewBag.ItemID"></select>
                 <span asp-validation-for="Office.ItemID" class="text-danger"></span>
-            </div>*@
+            </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
@@ -95,6 +95,3 @@
     <a asp-page="./Index">Back to List</a>
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

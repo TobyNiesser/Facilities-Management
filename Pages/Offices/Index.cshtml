@@ -46,15 +46,15 @@
             <th>
                 @Html.DisplayNameFor(model => model.Office[0].LandlordTelephone)
             </th>
-            @*<th>
+            <th>
                 @Html.DisplayNameFor(model => model.Office[0].Company)
-            </th>*@
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Office[0].Manager)
             </th>
-            @*<th>
+            <th>
                 @Html.DisplayNameFor(model => model.Office[0].Item)
-            </th>*@
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -94,15 +94,15 @@
             <td>
                 @Html.DisplayFor(modelItem => item.LandlordTelephone)
             </td>
-            @*<td>
-                @Html.DisplayFor(modelItem => item.Company.CompanyID)
-            </td>*@
             <td>
-                @Html.DisplayFor(modelItem => item.Manager.ManagerID)
+                @Html.DisplayFor(modelItem => item.Company.Name)
             </td>
-            @*<td>
-                @Html.DisplayFor(modelItem => item.Item.ItemID)
-            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Manager.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item.ItemName)
+            </td>
             <td>
                 <a class="btn-sm btn-primary" asp-page="./Edit" asp-route-id="@item.OfficeID">Edit</a>
                 <a class="btn-sm btn-primary" asp-page="./Details" asp-route-id="@item.OfficeID">Details</a>

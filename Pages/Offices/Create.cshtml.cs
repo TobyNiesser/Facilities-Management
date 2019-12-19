@@ -6,8 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using FACILITIES.Models;
-using System.Configuration;
-
 
 namespace FACILITIES.Pages.Offices
 {
@@ -27,7 +25,6 @@ namespace FACILITIES.Pages.Offices
         ViewData["ManagerID"] = new SelectList(_context.Manager, "ManagerID", "UserName");
             return Page();
         }
-        
 
         [BindProperty]
         public Office Office { get; set; }
@@ -44,6 +41,5 @@ namespace FACILITIES.Pages.Offices
 
             return RedirectToPage("./Index");
         }
-        
     }
 }

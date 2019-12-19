@@ -20,7 +20,7 @@ namespace FACILITIES.Pages.Companies
 
         public IActionResult OnGet()
         {
-        ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "OfficeID");
+        ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "Name");
             return Page();
         }
 

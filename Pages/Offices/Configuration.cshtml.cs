@@ -18,7 +18,7 @@ namespace FACILITIES.Pages.Offices
             _context = context;
         }
 
-        
+
         List<Item> Items = new List<Item>();
 
         [BindProperty]
@@ -31,7 +31,7 @@ namespace FACILITIES.Pages.Offices
 
             return Page();
         }
-        
+
 
 
         public async Task<IActionResult> OnPostAsync()

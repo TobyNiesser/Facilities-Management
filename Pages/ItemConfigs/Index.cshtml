@@ -22,10 +22,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.ItemConfig[0].Item)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ItemConfig[0].Item)
-            </th>
-
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -40,11 +37,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Item.ItemName)
             </td>
-
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ItemConfigID">Edit</a>
-                <a asp-page="./Details" asp-route-id="@item.ItemConfigID">Details</a>
-                <a asp-page="./Delete" asp-route-id="@item.ItemConfigID">Delete</a>
+                <a class="btn-sm btn-primary" asp-page="./Edit" asp-route-id="@item.ItemConfigID">Edit</a>
+                <a class="btn-sm btn-primary" asp-page="./Details" asp-route-id="@item.ItemConfigID">Details</a>
+                <a class="btn-sm btn-danger" asp-page="./Delete" asp-route-id="@item.ItemConfigID">Delete</a>
             </td>
         </tr>
 }

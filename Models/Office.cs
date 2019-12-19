@@ -11,28 +11,37 @@ namespace FACILITIES.Models
     {
         public int OfficeID { get; set; }
 
+        
         [Display(Name = "Office Name")]
         public string Name { get; set; }
 
+        
         [Display(Name = "Address Line 1")]
         public string Addr1 { get; set; }
 
         [Display(Name = "Address Line 2")]
         public string Addr2 { get; set; }
 
+        
         public string Town { get; set; }
 
+        
         public string City { get; set; }
 
+        
         public string Postcode { get; set; }
 
+        
         public string Country { get; set; }
 
+        
         public string Telephone { get; set; }
 
+        
         [Display(Name = "Landlord Name")]
         public string LandlordName { get; set; }
 
+        
         [Display(Name = "Landlord Email")]
         public string LandlordEmail { get; set; }
 

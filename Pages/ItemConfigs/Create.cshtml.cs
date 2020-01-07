@@ -20,8 +20,8 @@ namespace FACILITIES.Pages.ItemConfigs
 
         public IActionResult OnGet()
         {
-        ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemID");
-        ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "OfficeID");
+        ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemName");
+        ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "Name");
             return Page();
         }
 
@@ -40,5 +40,9 @@ namespace FACILITIES.Pages.ItemConfigs
 
             return RedirectToPage("./Index");
         }
+
+        
     }
+
+
 }

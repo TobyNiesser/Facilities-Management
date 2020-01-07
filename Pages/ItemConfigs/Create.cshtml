@@ -13,22 +13,39 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+            <label asp-for="ItemConfig.Items_csv" class="control-label"></label>
+            <input asp-for="ItemConfig.Items_csv" class="form-control" />
+            <span asp-validation-for="ItemConfig.Items_csv" class="text-danger"></span>
+        </div>*@
             <div class="form-group">
-                <label asp-for="ItemConfig.Items_csv" class="control-label"></label>
-                <input asp-for="ItemConfig.Items_csv" class="form-control" />
-                <span asp-validation-for="ItemConfig.Items_csv" class="text-danger"></span>
-            </div>
-            <div class="form-group">
+                <h4>Select Office</h4>
                 <label asp-for="ItemConfig.OfficeID" class="control-label"></label>
-                <select asp-for="ItemConfig.OfficeID" class ="form-control" asp-items="ViewBag.OfficeID"></select>
+                <select asp-for="ItemConfig.OfficeID" class="form-control" asp-items="ViewBag.OfficeID"></select>
             </div>
-            <div class="form-group">
-                <label asp-for="ItemConfig.ItemID" class="control-label"></label>
-                <select asp-for="ItemConfig.ItemID" class ="form-control" asp-items="ViewBag.ItemID"></select>
+            @*<div class="form-group">
+            <label asp-for="ItemConfig.ItemID" class="control-label"></label>
+            <select asp-for="ItemConfig.ItemID" class ="form-control" asp-items="ViewBag.ItemID"></select>
+        </div>*@
+
+            <!--ITEMS CHECKBOX CODE-->
+            <div class="form-group col-md-12 shadow-sm p-4 mb-4 bg-white">
+                <h4>Select Applicable Item(s)</h4>
+                <br />
+                @foreach (var item in ViewBag.ItemID)
+                {
+                    <label asp-for="ItemConfig.ItemID" class="control-label">
+                        <input type="checkbox" name="MyItems" value="@item" /><span>@item.Text</span>
+                    </label>
+                    <br />
+                }
             </div>
+
+            <!--SUBMIT BUTTON-->
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
+
         </form>
     </div>
 </div>

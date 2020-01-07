@@ -14,20 +14,36 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ItemConfig.ItemConfigID" />
-            <div class="form-group">
-                <label asp-for="ItemConfig.Items_csv" class="control-label"></label>
-                <input asp-for="ItemConfig.Items_csv" class="form-control" />
-                <span asp-validation-for="ItemConfig.Items_csv" class="text-danger"></span>
-            </div>
+            @*<div class="form-group">
+            <label asp-for="ItemConfig.Items_csv" class="control-label"></label>
+            <input asp-for="ItemConfig.Items_csv" class="form-control" />
+            <span asp-validation-for="ItemConfig.Items_csv" class="text-danger"></span>
+        </div>*@
             <div class="form-group">
                 <label asp-for="ItemConfig.OfficeID" class="control-label"></label>
                 <select asp-for="ItemConfig.OfficeID" class="form-control" asp-items="ViewBag.OfficeID"></select>
                 <span asp-validation-for="ItemConfig.OfficeID" class="text-danger"></span>
             </div>
+            @*<div class="form-group">
+            <label asp-for="ItemConfig.ItemID" class="control-label"></label>
+            <select asp-for="ItemConfig.ItemID" class="form-control" asp-items="ViewBag.ItemID"></select>
+            <span asp-validation-for="ItemConfig.ItemID" class="text-danger"></span>
+        </div>*@
+            <div class="form-group col-md-12 shadow-sm p-4 mb-4 bg-white">
+                <h4>Select Applicable Item(s)</h4>
+                <br />
+
+                @foreach (var o in ViewBag.ItemID)
+                {
+                    <label>
+                        <input type="checkbox" name="MyItems" value="@o.Value" /><span>@o.Text</span>
+                    </label>
+                    <br />
+                }
+
+            </div>
             <div class="form-group">
-                <label asp-for="ItemConfig.ItemID" class="control-label"></label>
-                <select asp-for="ItemConfig.ItemID" class="form-control" asp-items="ViewBag.ItemID"></select>
-                <span asp-validation-for="ItemConfig.ItemID" class="text-danger"></span>
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

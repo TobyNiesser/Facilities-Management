@@ -9,6 +9,9 @@ namespace FACILITIES.Models
 {
     public class Item
     {
+        internal string Text;
+        internal string Value;
+
         public int ItemID { get; set; }
 
         [Display(Name = "Item Name")]

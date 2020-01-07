@@ -27,4 +27,6 @@ namespace FACILITIES.Pages.ItemConfigs
                 .Include(i => i.Office).ToListAsync();
         }
     }
+
+    
 }

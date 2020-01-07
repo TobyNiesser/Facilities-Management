@@ -13,27 +13,32 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.ItemConfig[0].Items_csv)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.ItemConfig[0].Office)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.ItemConfig[0].Item)
+            </th>*@
+            <th>
+                <h4>TestItems</h4>
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model.ItemConfig) {
         <tr>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.Items_csv)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Office.Name)
             </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Item.ItemName)
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Item.ItemName)
             </td>

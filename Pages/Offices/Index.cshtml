@@ -100,9 +100,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Manager.UserName)
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.Item.ItemName)
-            </td>
+            </td>*@
             <td>
                 <a class="btn-sm btn-primary" asp-page="./Edit" asp-route-id="@item.OfficeID">Edit</a>
                 <a class="btn-sm btn-primary" asp-page="./Details" asp-route-id="@item.OfficeID">Details</a>

@@ -38,9 +38,9 @@ namespace FACILITIES.Pages.Offices
             {
                 return NotFound();
             }
-           ViewData["CompanyID"] = new SelectList(_context.Company, "CompanyID", "CompanyID");
-           ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemID");
-           ViewData["ManagerID"] = new SelectList(_context.Manager, "ManagerID", "ManagerID");
+           ViewData["CompanyID"] = new SelectList(_context.Company, "CompanyID", "Name");
+           ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemName");
+           ViewData["ManagerID"] = new SelectList(_context.Manager, "ManagerID", "UserName");
             return Page();
         }
 

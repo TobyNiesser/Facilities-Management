@@ -5,10 +5,15 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<h1>Managers</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create" style="color: #0275d8;" class="btn border border-primary"><span class="glyphicon glyphicon-plus" style="color: #0275d8;"></span> Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -20,35 +25,37 @@
                 @Html.DisplayNameFor(model => model.Manager[0].UserEmail)
             </th>
             @*<th>
-                @Html.DisplayNameFor(model => model.Manager[0].Company)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Manager[0].Permission)
-            </th>*@
+                    @Html.DisplayNameFor(model => model.Manager[0].Company)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Manager[0].Permission)
+                </th>*@
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Manager) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserEmail)
-            </td>
-            @*<td>
-                @Html.DisplayFor(modelItem => item.Company.CompanyID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Permission.PermissionID)
-            </td>*@
-            <td>
-                <a class="btn-sm btn-primary" asp-page="./Edit" asp-route-id="@item.ManagerID">Edit</a>
-                <a class="btn-sm btn-primary" asp-page="./Details" asp-route-id="@item.ManagerID">Details</a>
-                <a class="btn-sm btn-danger" asp-page="./Delete" asp-route-id="@item.ManagerID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Manager)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserEmail)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Company.CompanyID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Permission.PermissionID)
+                    </td>*@
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ManagerID"><span class="btn glyphicon glyphicon-cog" style="color: #0275d8;"></span></a>
+                    <a asp-page="./Details" asp-route-id="@item.ManagerID"><span class="btn glyphicon glyphicon-th-list" style="color: #0275d8;"></span></a>
+                    <a asp-page="./Delete" asp-route-id="@item.ManagerID"><span class="btn glyphicon glyphicon-remove" style="color: #d9534f;"></span></a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+

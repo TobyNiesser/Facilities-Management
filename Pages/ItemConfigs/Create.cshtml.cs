@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using FACILITIES.Models;
+using System.Diagnostics;
 
 namespace FACILITIES.Pages.ItemConfigs
 {
@@ -28,6 +29,11 @@ namespace FACILITIES.Pages.ItemConfigs
         [BindProperty]
         public ItemConfig ItemConfig { get; set; }
 
+        [BindProperty]
+        public List<FACILITIES.Models.ItemConfig.Items> Items { get; set; }
+
+
+
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
@@ -35,7 +41,13 @@ namespace FACILITIES.Pages.ItemConfigs
                 return Page();
             }
 
-            _context.ItemConfig.Add(ItemConfig);
+            string selected = Request.Form["MyItems"].ToString();
+            string[] selectedList = selected.Split(',');
+            foreach (var temp in selectedList)
+
+
+
+                _context.ItemConfig.Add(ItemConfig);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

@@ -42,8 +42,9 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    font-family: 'Raleway', sans-serif;
 }
 .footer {
   position: absolute;
@@ -65,3 +66,4 @@ body {
     width: 100%;
     left: 0;
 }
+

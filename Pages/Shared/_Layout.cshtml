@@ -17,13 +17,20 @@
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/Chart.js/Chart.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container-fluid">
         <header>
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
                 <div class="container-fluid">
-                    <a class="navbar-brand" asp-area="" asp-page="/Index">FACILITIES MANAGEMENT</a>
+                    <a class="navbar-brand" asp-area="" asp-page="/Index"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -63,11 +70,21 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-page="/Statuses/Index">Statuses</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light btn-sm btn-success" asp-area="" asp-page="/Dashboard/Index">Dashboard</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light btn-sm btn-danger" asp-area="" asp-page="/Logout/Index">Log Out</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Settings
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" asp-page="/Companies/Index">Companies</a>
+                                    <a class="dropdown-item" asp-page="/Frequencies/Index">Frequencies</a>
+                                    <a class="dropdown-item" asp-page="/ItemConfigs/Index">Item Configs</a>
+                                    <a class="dropdown-item" asp-page="/Managers/Index">Managers</a>
+                                    <a class="dropdown-item" asp-page="/Offices/Index">Offices</a>
+                                    <a class="dropdown-item" asp-page="/Permissions/Index">Permissions</a>
+                                    <a class="dropdown-item" asp-page="/Responsibilities/Index">Responsibilities</a>
+                                    <a class="dropdown-item" asp-page="/Statuses/Index">Statuses</a>
+
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -113,36 +130,7 @@
 
     </div>
     
-    <script>
-
-        $(document).ready(function () {
-            // Bar chart
-            new Chart(document.getElementById("bar-chart"), {
-                type: 'bar',
-                data: {
-                    labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
-                    datasets: [
-                        {
-                            label: "Population (millions)",
-                            backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
-                            data: [2478, 5267, 734, 784, 433]
-                        }
-                    ]
-                },
-                options: {
-                    legend: { display: false },
-                    title: {
-                        display: true,
-                        text: 'Predicted world population (millions) in 2050'
-                    }
-                }
-            });
-
-
-        });
-
-
-    </script>
+    
 
     
 </body>

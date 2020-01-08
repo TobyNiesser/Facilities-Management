@@ -5,10 +5,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Responsibilities</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create" style="color: #0275d8;" class="btn border border-primary"><span class="glyphicon glyphicon-plus" style="color: #0275d8;"></span> Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -26,9 +26,9 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                <a class="btn-sm btn-primary" asp-page="./Edit" asp-route-id="@item.ResponsibilityID">Edit</a>
-                <a class="btn-sm btn-primary" asp-page="./Details" asp-route-id="@item.ResponsibilityID">Details</a>
-                <a class="btn-sm btn-danger" asp-page="./Delete" asp-route-id="@item.ResponsibilityID">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.ResponsibilityID"><span class="btn glyphicon glyphicon-cog" style="color: #0275d8;"></span></a>
+                <a asp-page="./Details" asp-route-id="@item.ResponsibilityID"><span class="btn glyphicon glyphicon-th-list" style="color: #0275d8;"></span></a>
+                <a asp-page="./Delete" asp-route-id="@item.ResponsibilityID"><span class="btn glyphicon glyphicon-remove" style="color: #d9534f;"></span></a>
             </td>
         </tr>
 }

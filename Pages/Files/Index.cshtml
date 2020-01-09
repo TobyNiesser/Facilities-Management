@@ -5,11 +5,13 @@
     ViewData["Title"] = "Index";
 }
 <br />
-<h1>Files</h1>
-
-<p>
-    <a asp-page="Create"><span class="glyphicon glyphicon-plus"></span> Create New</a>
-</p>
+<div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
+    <h2>Files</h2>
+    <h4>Summary</h4>
+    <br />
+    <a asp-page="Create" style="color: #0275d8;" class="btn border border-primary"> Upload File</a>
+</div>
+<br />
 <table class="table">
     <thead>
         <tr>
@@ -32,29 +34,30 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.File) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FileName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MimeType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Extension)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FileSize)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StoreLocation)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.FileID"><i class="btn far fa-edit" style="color: #0275d8;"></i></a>
-                <a asp-page="./Details" asp-route-id="@item.FileID"><i class="btn fas fa-info" style="color: #0275d8;"></i></a>
-                <a asp-page="./Delete" asp-route-id="@item.FileID"><i class="btn far fa-trash-alt" style="color: #d9534f;"></i></a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.File)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FileName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MimeType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Extension)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FileSize)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StoreLocation)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.FileID"><i class="btn far fa-edit" style="color: #0275d8;"></i></a>
+                    <a asp-page="./Details" asp-route-id="@item.FileID"><i class="btn fas fa-info" style="color: #0275d8;"></i></a>
+                    <a asp-page="./Delete" asp-route-id="@item.FileID"><i class="btn far fa-trash-alt" style="color: #d9534f;"></i></a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

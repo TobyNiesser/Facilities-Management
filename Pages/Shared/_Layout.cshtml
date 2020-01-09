@@ -18,11 +18,6 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/Chart.js/Chart.css" />
 
-    @*<meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>*@
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
 </head>
@@ -45,13 +40,16 @@
                                 <a class="nav-link text-dark" asp-area="" asp-page="/Companies/Index">Companies</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Files/Index">Files</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-page="/Frequencies/Index">Frequencies</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-page="/Items/Index">Items</a>
+                                <a class="nav-link text-dark" asp-area="" asp-page="/ItemConfigs/Index">ItemConfigs</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-page="/ItemConfigs/Index">Itemconfigs</a>
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Items/Index">Items</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-page="/Managers/Index">Managers</a>
@@ -72,20 +70,20 @@
                                 <a class="nav-link text-dark" asp-area="" asp-page="/Statuses/Index">Statuses</a>
                             </li>
                             @*<li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Settings
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" asp-page="/Companies/Index">Companies</a>
-                                    <a class="dropdown-item" asp-page="/Frequencies/Index">Frequencies</a>
-                                    <a class="dropdown-item" asp-page="/ItemConfigs/Index">Item Configs</a>
-                                    <a class="dropdown-item" asp-page="/Managers/Index">Managers</a>
-                                    <a class="dropdown-item" asp-page="/Offices/Index">Offices</a>
-                                    <a class="dropdown-item" asp-page="/Permissions/Index">Permissions</a>
-                                    <a class="dropdown-item" asp-page="/Responsibilities/Index">Responsibilities</a>
-                                    <a class="dropdown-item" asp-page="/Statuses/Index">Statuses</a>
-                                </div>
-                            </li>*@
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Settings
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" asp-page="/Companies/Index">Companies</a>
+                <a class="dropdown-item" asp-page="/Frequencies/Index">Frequencies</a>
+                <a class="dropdown-item" asp-page="/ItemConfigs/Index">Item Configs</a>
+                <a class="dropdown-item" asp-page="/Managers/Index">Managers</a>
+                <a class="dropdown-item" asp-page="/Offices/Index">Offices</a>
+                <a class="dropdown-item" asp-page="/Permissions/Index">Permissions</a>
+                <a class="dropdown-item" asp-page="/Responsibilities/Index">Responsibilities</a>
+                <a class="dropdown-item" asp-page="/Statuses/Index">Statuses</a>
+            </div>
+        </li>*@
                         </ul>
                     </div>
                 </div>

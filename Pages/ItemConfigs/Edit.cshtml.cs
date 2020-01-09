@@ -57,28 +57,28 @@ namespace FACILITIES.Pages.ItemConfigs
 
             //if (Items_csv != null)
             //{
-            string selected_load = ItemConfig.Items_csv;
-            string[] selectedList = selected_load.Split(',');
+            //    string selected_load = ItemConfig.Items_csv;
+            //    string[] selectedList = selected_load.Split(',');
 
 
-            foreach (SelectListItem item in list)
-            {
-                foreach (var integer in selectedList)
-                {
+            //    foreach (SelectListItem item in list)
+            //    {
+            //        foreach (var integer in selectedList)
+            //        {
 
-                    if (item.Value == integer)
-                    {
-                        item.Selected = true;
-                        break;
-                    }
-                }
-            }
+            //            if (item.Value == integer)
+            //            {
+            //                item.Selected = true;
+            //                break;
+            //            }
+            //        }
+            //    }
 
             //}
 
-       
 
-            ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "Name");
+
+        ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "Name");
             return Page();
 
 

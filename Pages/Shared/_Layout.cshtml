@@ -18,12 +18,13 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/Chart.js/Chart.css" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    @*<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>*@
 
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
 </head>
 <body>
     <div class="container-fluid">
@@ -70,7 +71,7 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-page="/Statuses/Index">Statuses</a>
                             </li>
-                            <li class="nav-item dropdown">
+                            @*<li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Settings
                                 </a>
@@ -83,9 +84,8 @@
                                     <a class="dropdown-item" asp-page="/Permissions/Index">Permissions</a>
                                     <a class="dropdown-item" asp-page="/Responsibilities/Index">Responsibilities</a>
                                     <a class="dropdown-item" asp-page="/Statuses/Index">Statuses</a>
-
                                 </div>
-                            </li>
+                            </li>*@
                         </ul>
                     </div>
                 </div>
@@ -98,7 +98,11 @@
             </main>
         </div>
 
-        <footer class="border-top footer text-muted">
+        <br />
+        <br />
+        <br />
+
+        <footer class="border-top footer text-muted mt-4 w-100">
             <div class="container-fluid">
                 &copy; 2019 - FACILITIES - <a asp-area="" asp-page="/Privacy">Privacy</a>
             </div>

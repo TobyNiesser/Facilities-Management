@@ -4,11 +4,12 @@
 @{
     ViewData["Title"] = "Edit";
 }
-
-<h1>Edit</h1>
-
-<h4>Office</h4>
-<hr />
+<br />
+<div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
+    <h2>Offices</h2>
+    <h4>Edit Office</h4>
+</div>
+<br />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
@@ -80,10 +81,10 @@
                 <span asp-validation-for="Office.ManagerID" class="text-danger"></span>
             </div>
             @*<div class="form-group">
-                <label asp-for="Office.ItemID" class="control-label"></label>
-                <select asp-for="Office.ItemID" class="form-control" asp-items="ViewBag.ItemName"></select>
-                <span asp-validation-for="Office.ItemID" class="text-danger"></span>
-            </div>*@
+                    <label asp-for="Office.ItemID" class="control-label"></label>
+                    <select asp-for="Office.ItemID" class="form-control" asp-items="ViewBag.ItemName"></select>
+                    <span asp-validation-for="Office.ItemID" class="text-danger"></span>
+                </div>*@
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>

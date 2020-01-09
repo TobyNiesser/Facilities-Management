@@ -4,11 +4,14 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>Responsibilities</h1>
-
+<br />
+<div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
+    <h2>Responsibilities</h2>
+    <h4>Summary</h4>
+</div>
+<br />
 <p>
-    <a asp-page="Create" style="color: #0275d8;" class="btn border border-primary"><span class="glyphicon glyphicon-plus" style="color: #0275d8;"></span> Create New</a>
+    <a asp-page="Create" style="color: #0275d8;" class="btn border border-primary"> Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -20,17 +23,18 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Responsibility) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.ResponsibilityID"><span class="btn glyphicon glyphicon-cog" style="color: #0275d8;"></span></a>
-                <a asp-page="./Details" asp-route-id="@item.ResponsibilityID"><span class="btn glyphicon glyphicon-th-list" style="color: #0275d8;"></span></a>
-                <a asp-page="./Delete" asp-route-id="@item.ResponsibilityID"><span class="btn glyphicon glyphicon-remove" style="color: #d9534f;"></span></a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Responsibility)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ResponsibilityID"><i class="btn far fa-edit" style="color: #0275d8;"></i></a>
+                    <a asp-page="./Details" asp-route-id="@item.ResponsibilityID"><i class="btn fas fa-info" style="color: #0275d8;"></i></a>
+                    <a asp-page="./Delete" asp-route-id="@item.ResponsibilityID"><i class="btn far fa-trash-alt" style="color: #d9534f;"></i></a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

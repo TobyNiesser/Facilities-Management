@@ -25,7 +25,5 @@ namespace FACILITIES.Models
 
         [Display(Name = "Store Location")]
         public string StoreLocation { get; set; }
-
-        public string TestColumn { get; set; }
     }
 }

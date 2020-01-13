@@ -34,7 +34,7 @@
                 @Html.DisplayNameFor(model => model.Company[0].Postcode)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Company[0].Country)
+                @Html.DisplayNameFor(model => model.Company[0].County)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Company[0].Telephone)
@@ -42,6 +42,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Company[0].VatNumber)
             </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -67,7 +68,7 @@
                     @Html.DisplayFor(modelItem => item.Postcode)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Country)
+                    @Html.DisplayFor(modelItem => item.County)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Telephone)
@@ -83,4 +84,7 @@
             </tr>
         }
     </tbody>
+    <tfoot></tfoot>
 </table>
+
+

@@ -19,6 +19,17 @@ namespace FACILITIES.Pages.ItemConfigs
             _context = context;
         }
 
+        [FromRoute]
+        public int? Id { get; set; }
+
+        [BindProperty]
+        public ItemConfig OfficeID { get; set; }
+
+        public int? page_id;
+
+        [BindProperty]
+        public ItemConfig ItemConfig { get; set; }
+
         public IActionResult OnGet()
         {
         ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemName");
@@ -26,12 +37,9 @@ namespace FACILITIES.Pages.ItemConfigs
             return Page();
         }
 
-        [BindProperty]
-        public ItemConfig ItemConfig { get; set; }
-
+        
         [BindProperty]
         public List<FACILITIES.Models.ItemConfig.Items> Items { get; set; }
-
 
 
         public async Task<IActionResult> OnPostAsync()

@@ -45,9 +45,9 @@
                 <span asp-validation-for="Company.Postcode" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Company.Country" class="control-label"></label>
-                <input asp-for="Company.Country" class="form-control" />
-                <span asp-validation-for="Company.Country" class="text-danger"></span>
+                <label asp-for="Company.County" class="control-label"></label>
+                <input asp-for="Company.County" class="form-control" />
+                <span asp-validation-for="Company.County" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Company.Telephone" class="control-label"></label>
@@ -59,12 +59,18 @@
                 <input asp-for="Company.VatNumber" class="form-control" />
                 <span asp-validation-for="Company.VatNumber" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <br />
+            <div class="form-group border pt-3 pb-2 pr-2 pl-2">
+                <label class="control-label">
+                        <input type="checkbox" name="ApprovedSupplier" /><span> Approved Supplier</span>
+                </label>
+            </div>
+            @*<div class="form-group">
                 <label asp-for="Company.OfficeID" class="control-label"></label>
                 <select asp-for="Company.OfficeID" class ="form-control" asp-items="ViewBag.OfficeID"></select>
-            </div>
+            </div>*@
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-sm btn-primary" />
             </div>
         </form>
     </div>

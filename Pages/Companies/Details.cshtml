@@ -49,10 +49,10 @@
             @Html.DisplayFor(model => model.Company.Postcode)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Company.Country)
+            @Html.DisplayNameFor(model => model.Company.County)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Company.Country)
+            @Html.DisplayFor(model => model.Company.County)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Company.Telephone)
@@ -75,6 +75,6 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Company.CompanyID">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.Company.CompanyID" class="btn btn-sm btn-primary">Edit</a>
+    <a asp-page="./Index" class="btn btn-sm btn-danger">Back to List</a>
 </div>

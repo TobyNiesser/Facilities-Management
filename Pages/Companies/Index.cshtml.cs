@@ -18,6 +18,8 @@ namespace FACILITIES.Pages.Companies
             _context = context;
         }
 
+        
+
         public IList<Company> Company { get;set; }
 
         public async Task OnGetAsync()

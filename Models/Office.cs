@@ -38,7 +38,7 @@ namespace FACILITIES.Models
         public string Telephone { get; set; }
 
         
-        [Display(Name = "Landlord Name")]
+        [Display(Name = "Tenant Name")]
         public string LandlordName { get; set; }
 
         

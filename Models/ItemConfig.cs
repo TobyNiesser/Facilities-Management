@@ -11,7 +11,7 @@ namespace FACILITIES.Models
     {
         public int ItemConfigID { get; set; }
 
-        [Display(Name = "Item CSV")]
+        [Display(Name = "Selected Items")]
         public string Items_csv { get; set; }
         
         [ForeignKey("Office")]

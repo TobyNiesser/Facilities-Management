@@ -33,10 +33,13 @@ namespace FACILITIES.Models
         public string Postcode { get; set; }
 
         
-        public string Country { get; set; }
+        public string County { get; set; }
 
        
         public string Telephone { get; set; }
+
+        //[Display(Name = "Approved Supplier?")]
+        //public bool ApprovedSupplier { get; set; } 
 
         [Display(Name = "VAT No.")]
         public string VatNumber { get; set; }

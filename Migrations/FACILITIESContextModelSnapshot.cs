@@ -31,7 +31,7 @@ namespace FACILITIES.Migrations
 
                     b.Property<string>("City");
 
-                    b.Property<string>("Country");
+                    b.Property<string>("County");
 
                     b.Property<string>("Name");
 
@@ -67,6 +67,8 @@ namespace FACILITIES.Migrations
                     b.Property<string>("MimeType");
 
                     b.Property<string>("StoreLocation");
+
+                    b.Property<string>("TestColumn");
 
                     b.HasKey("FileID");
 

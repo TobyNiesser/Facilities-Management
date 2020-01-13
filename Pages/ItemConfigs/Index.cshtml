@@ -15,36 +15,37 @@
 <table class="table">
     <thead>
         <tr>
-            @*<th>
-                    @Html.DisplayNameFor(model => model.ItemConfig[0].Items_csv)
-                </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.ItemConfig[0].Office)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ItemConfig[0].Item)
+                @Html.DisplayNameFor(model => model.ItemConfig[0].Items_csv)
             </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.ItemConfig[0].Item)
+            </th>*@
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model.ItemConfig)
         {
-            <tr>
-                @*<td>
-                        @Html.DisplayFor(modelItem => item.Items_csv)
-                    </td>*@
-                <td>
-                    @Html.DisplayFor(modelItem => item.Office.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Item.ItemName)
-                </td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@item.ItemConfigID"><i class="btn far fa-edit" style="color: #0275d8;"></i></a>
-                    <a asp-page="./Details" asp-route-id="@item.ItemConfigID"><i class="btn fas fa-info" style="color: #0275d8;"></i></a>
-                    <a asp-page="./Delete" asp-route-id="@item.ItemConfigID"><i class="btn far fa-trash-alt" style="color: #d9534f;"></i></a>
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Office.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Items_csv)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Item.ItemName)
+            </td>*@
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ItemConfigID"><i class="btn far fa-edit" style="color: #0275d8;"></i></a>
+                <a asp-page="./Details" asp-route-id="@item.ItemConfigID"><i class="btn fas fa-info" style="color: #0275d8;"></i></a>
+                <a asp-page="" asp-route-id=""><i class="btn fas fa-file-export" style="color: #0275d8;"></i></a>
+                <a asp-page="./Delete" asp-route-id="@item.ItemConfigID"><i class="btn far fa-trash-alt" style="color: #d9534f;"></i></a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>

@@ -39,7 +39,7 @@ namespace FACILITIES.Models
         public string Telephone { get; set; }
 
         //[Display(Name = "Approved Supplier?")]
-        //public bool ApprovedSupplier { get; set; } 
+        //public bool ApprovedSupplier { get; set; }
 
         [Display(Name = "VAT No.")]
         public string VatNumber { get; set; }

@@ -137,9 +137,15 @@
         <script scr="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>*@
 
+        
+
         <script>
-            $(document).ready(function () {
-                $('.table').DataTable();
+            $('.table:not(.notable)').dataTable( {
+                "order": [],
+                "columnDefs": [ {
+                  "FrequencyAmount"  : 'no-sort',
+                  "orderable": false,
+                }]
             });
         </script>
 

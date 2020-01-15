@@ -18,6 +18,8 @@ namespace FACILITIES.Pages.ItemConfigs
             _context = context;
         }
 
+
+
         public IList<ItemConfig> ItemConfig { get;set; }
 
         public async Task OnGetAsync()
@@ -26,6 +28,10 @@ namespace FACILITIES.Pages.ItemConfigs
                 .Include(i => i.Item)
                 .Include(i => i.Office).ToListAsync();
         }
+
+
+        
+
     }
 
     

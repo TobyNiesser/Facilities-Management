@@ -1,15 +1,14 @@
 ﻿@page
-@model FACILITIES.Pages.Companies.CreateModel
+@model FACILITIES.CreateModel
 
 @{
     ViewData["Title"] = "Create";
 }
-<br />
-<div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
-    <h2>Companies</h2>
-    <h4>Create New Company</h4>
-</div>
-<br />
+
+<h1>Create</h1>
+
+<h4>Company</h4>
+<hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
@@ -59,24 +58,25 @@
                 <input asp-for="Company.VatNumber" class="form-control" />
                 <span asp-validation-for="Company.VatNumber" class="text-danger"></span>
             </div>
-            
-            <br />
-            <div class="form-group border border-warning pt-3 pb-2 pr-2 pl-2" style="background-color: #FFF4D1;">
-                <label class="control-label">
-                    <input type="checkbox" name="ApprovedSupplier" id="aSupplier" value="" /><span> Approved Supplier</span>
+            <div class="form-group">
+                <label asp-for="Company.Website" class="control-label"></label>
+                <input asp-for="Company.Website" class="form-control" />
+                <span asp-validation-for="Company.Website" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Company.ApprovedSupplier" /> @Html.DisplayNameFor(model => model.Company.ApprovedSupplier))
                 </label>
             </div>
-            @*<div class="form-group">
-                    <label asp-for="Company.OfficeID" class="control-label"></label>
-                    <select asp-for="Company.OfficeID" class ="form-control" asp-items="ViewBag.OfficeID"></select>
-                </div>*@
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-sm btn-primary" />
+                <label asp-for="Company.OfficeID" class="control-label"></label>
+                <select asp-for="Company.OfficeID" class ="form-control" asp-items="ViewBag.OfficeID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
-
-    
 </div>
 
 <div>

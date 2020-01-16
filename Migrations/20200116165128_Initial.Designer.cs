@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FACILITIES.Migrations
 {
     [DbContext(typeof(FACILITIESContext))]
-    [Migration("20191204102953_Initial")]
+    [Migration("20200116165128_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,9 +31,11 @@ namespace FACILITIES.Migrations
 
                     b.Property<string>("Addr2");
 
+                    b.Property<bool>("ApprovedSupplier");
+
                     b.Property<string>("City");
 
-                    b.Property<string>("Country");
+                    b.Property<string>("County");
 
                     b.Property<string>("Name");
 
@@ -46,6 +48,8 @@ namespace FACILITIES.Migrations
                     b.Property<string>("Town");
 
                     b.Property<string>("VatNumber");
+
+                    b.Property<string>("Website");
 
                     b.HasKey("CompanyID");
 

@@ -1,15 +1,14 @@
 ﻿@page
-@model FACILITIES.Pages.Companies.EditModel
+@model FACILITIES.EditModel
 
 @{
     ViewData["Title"] = "Edit";
 }
-<br />
-<div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
-    <h2>Companies</h2>
-    <h4>Edit Company</h4>
-</div>
-<br />
+
+<h1>Edit</h1>
+
+<h4>Company</h4>
+<hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
@@ -61,12 +60,22 @@
                 <span asp-validation-for="Company.VatNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Company.Website" class="control-label"></label>
+                <input asp-for="Company.Website" class="form-control" />
+                <span asp-validation-for="Company.Website" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Company.ApprovedSupplier" /> @Html.DisplayNameFor(model => model.Company.ApprovedSupplier)
+                </label>
+            </div>
+            <div class="form-group">
                 <label asp-for="Company.OfficeID" class="control-label"></label>
                 <select asp-for="Company.OfficeID" class="form-control" asp-items="ViewBag.OfficeID"></select>
                 <span asp-validation-for="Company.OfficeID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-sm btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FACILITIES.Models;
 
-namespace FACILITIES.Pages.Companies
+namespace FACILITIES
 {
     public class EditModel : PageModel
     {
@@ -36,7 +36,7 @@ namespace FACILITIES.Pages.Companies
             {
                 return NotFound();
             }
-           ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "Name");
+           ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "OfficeID");
             return Page();
         }
 

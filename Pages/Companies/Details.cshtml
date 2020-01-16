@@ -1,16 +1,15 @@
 ﻿@page
-@model FACILITIES.Pages.Companies.DetailsModel
+@model FACILITIES.DetailsModel
 
 @{
     ViewData["Title"] = "Details";
 }
-<br />
-<div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
-    <h2>Companies</h2>
-    <h4>Details</h4>
-</div>
-<br />
+
+<h1>Details</h1>
+
 <div>
+    <h4>Company</h4>
+    <hr />
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Company.Name)
@@ -67,14 +66,26 @@
             @Html.DisplayFor(model => model.Company.VatNumber)
         </dd>
         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Company.Website)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Company.Website)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Company.ApprovedSupplier)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Company.ApprovedSupplier)
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Company.Office)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Company.Office.Name)
+            @Html.DisplayFor(model => model.Company.Office.OfficeID)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Company.CompanyID" class="btn btn-sm btn-primary">Edit</a>
-    <a asp-page="./Index" class="btn btn-sm btn-danger">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.Company.CompanyID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
 </div>

@@ -164,9 +164,11 @@ namespace FACILITIES.Migrations
                     Town = table.Column<string>(nullable: true),
                     City = table.Column<string>(nullable: true),
                     Postcode = table.Column<string>(nullable: true),
-                    Country = table.Column<string>(nullable: true),
+                    County = table.Column<string>(nullable: true),
                     Telephone = table.Column<string>(nullable: true),
                     VatNumber = table.Column<string>(nullable: true),
+                    Website = table.Column<string>(nullable: true),
+                    ApprovedSupplier = table.Column<bool>(nullable: false),
                     OfficeID = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
@@ -366,46 +368,7 @@ namespace FACILITIES.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Company_Office_OfficeID",
-                table: "Company");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Manager_Office_OfficeID",
-                table: "Manager");
-
-            migrationBuilder.DropTable(
-                name: "File");
-
-            migrationBuilder.DropTable(
-                name: "ItemConfig");
-
-            migrationBuilder.DropTable(
-                name: "Setting");
-
-            migrationBuilder.DropTable(
-                name: "Frequency");
-
-            migrationBuilder.DropTable(
-                name: "Responsibility");
-
-            migrationBuilder.DropTable(
-                name: "Status");
-
-            migrationBuilder.DropTable(
-                name: "Office");
-
-            migrationBuilder.DropTable(
-                name: "Item");
-
-            migrationBuilder.DropTable(
-                name: "Manager");
-
-            migrationBuilder.DropTable(
-                name: "Company");
-
-            migrationBuilder.DropTable(
-                name: "Permission");
+           
         }
     }
 }

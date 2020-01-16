@@ -37,6 +37,8 @@ namespace FACILITIES.Migrations
 
                     b.Property<string>("Name");
 
+                    b.Property<int?>("OfficeID");
+
                     b.Property<string>("Postcode");
 
                     b.Property<string>("Telephone");
@@ -48,6 +50,8 @@ namespace FACILITIES.Migrations
                     b.Property<string>("Website");
 
                     b.HasKey("CompanyID");
+
+                    b.HasIndex("OfficeID");
 
                     b.ToTable("Company");
                 });
@@ -183,9 +187,7 @@ namespace FACILITIES.Migrations
 
                     b.HasKey("OfficeID");
 
-                    b.HasIndex("CompanyID")
-                        .IsUnique()
-                        .HasFilter("[CompanyID] IS NOT NULL");
+                    b.HasIndex("CompanyID");
 
                     b.HasIndex("ItemID");
 
@@ -276,6 +278,13 @@ namespace FACILITIES.Migrations
                     b.ToTable("Status");
                 });
 
+            modelBuilder.Entity("FACILITIES.Models.Company", b =>
+                {
+                    b.HasOne("FACILITIES.Models.Office", "Office")
+                        .WithMany()
+                        .HasForeignKey("OfficeID");
+                });
+
             modelBuilder.Entity("FACILITIES.Models.ItemConfig", b =>
                 {
                     b.HasOne("FACILITIES.Models.Item", "Item")
@@ -305,8 +314,8 @@ namespace FACILITIES.Migrations
             modelBuilder.Entity("FACILITIES.Models.Office", b =>
                 {
                     b.HasOne("FACILITIES.Models.Company", "Company")
-                        .WithOne("Office")
-                        .HasForeignKey("FACILITIES.Models.Office", "CompanyID");
+                        .WithMany()
+                        .HasForeignKey("CompanyID");
 
                     b.HasOne("FACILITIES.Models.Item", "Item")
                         .WithMany("Offices")

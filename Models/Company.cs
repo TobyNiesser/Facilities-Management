@@ -16,7 +16,6 @@ namespace FACILITIES.Models
         [Display(Name = "Company Name")]
         public string Name { get; set; }
 
-    
         [Display(Name = "Address Line 1")]
         public string Addr1 { get; set; }
 
@@ -35,13 +34,19 @@ namespace FACILITIES.Models
         
         public string County { get; set; }
 
-       
         public string Telephone { get; set; }
 
 
         [Display(Name = "VAT No.")]
         public string VatNumber { get; set; }
 
+        //public string Website { get; set; }
+
+        //[Required]
+        //[Display(Name = "Approved Supplier?")]
+        //public bool ApprovedSupplier { get; set; }
+
+        
         [ForeignKey("Office")]
         public int? OfficeID { get; set; }
         public Office Office { get; set; }

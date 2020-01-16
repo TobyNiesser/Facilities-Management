@@ -29,13 +29,13 @@ namespace FACILITIES.Migrations
 
                     b.Property<string>("Addr2");
 
+                    b.Property<bool>("ApprovedSupplier");
+
                     b.Property<string>("City");
 
                     b.Property<string>("County");
 
                     b.Property<string>("Name");
-
-                    b.Property<int?>("OfficeID");
 
                     b.Property<string>("Postcode");
 
@@ -45,9 +45,9 @@ namespace FACILITIES.Migrations
 
                     b.Property<string>("VatNumber");
 
-                    b.HasKey("CompanyID");
+                    b.Property<string>("Website");
 
-                    b.HasIndex("OfficeID");
+                    b.HasKey("CompanyID");
 
                     b.ToTable("Company");
                 });
@@ -67,8 +67,6 @@ namespace FACILITIES.Migrations
                     b.Property<string>("MimeType");
 
                     b.Property<string>("StoreLocation");
-
-                    b.Property<string>("TestColumn");
 
                     b.HasKey("FileID");
 
@@ -185,7 +183,9 @@ namespace FACILITIES.Migrations
 
                     b.HasKey("OfficeID");
 
-                    b.HasIndex("CompanyID");
+                    b.HasIndex("CompanyID")
+                        .IsUnique()
+                        .HasFilter("[CompanyID] IS NOT NULL");
 
                     b.HasIndex("ItemID");
 
@@ -276,13 +276,6 @@ namespace FACILITIES.Migrations
                     b.ToTable("Status");
                 });
 
-            modelBuilder.Entity("FACILITIES.Models.Company", b =>
-                {
-                    b.HasOne("FACILITIES.Models.Office", "Office")
-                        .WithMany()
-                        .HasForeignKey("OfficeID");
-                });
-
             modelBuilder.Entity("FACILITIES.Models.ItemConfig", b =>
                 {
                     b.HasOne("FACILITIES.Models.Item", "Item")
@@ -312,8 +305,8 @@ namespace FACILITIES.Migrations
             modelBuilder.Entity("FACILITIES.Models.Office", b =>
                 {
                     b.HasOne("FACILITIES.Models.Company", "Company")
-                        .WithMany()
-                        .HasForeignKey("CompanyID");
+                        .WithOne("Office")
+                        .HasForeignKey("FACILITIES.Models.Office", "CompanyID");
 
                     b.HasOne("FACILITIES.Models.Item", "Item")
                         .WithMany("Offices")

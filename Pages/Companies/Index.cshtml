@@ -89,12 +89,12 @@
                 @Html.DisplayFor(modelItem => item.ApprovedSupplier)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Office.OfficeID)
+                @Html.DisplayFor(modelItem => item.Office.Name)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.CompanyID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.CompanyID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.CompanyID">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.CompanyID"><i class="btn far fa-edit" style="color: #0275d8;"></i></a>
+                <a asp-page="./Details" asp-route-id="@item.CompanyID"><i class="btn fas fa-info" style="color: #0275d8;"></i></a>
+                <a asp-page="./Delete" asp-route-id="@item.CompanyID"><i class="btn far fa-trash-alt" style="color: #d9534f;"></i></a>
             </td>
         </tr>
 }

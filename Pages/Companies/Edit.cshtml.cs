@@ -36,7 +36,7 @@ namespace FACILITIES
             {
                 return NotFound();
             }
-           ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "OfficeID");
+           ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "Name");
             return Page();
         }
 

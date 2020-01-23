@@ -2,14 +2,16 @@
 @model FACILITIES.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Companies";
 }
-
-<h1>Index</h1>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
+<br />
+<div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
+    <h2>Companies</h2>
+    <h4>Summary</h4>
+    <br />
+    <a asp-page="Create" style="color: #0275d8;" class="btn border border-primary"> Create New</a>
+</div>
+<br />
 <table class="table">
     <thead>
         <tr>
@@ -53,50 +55,51 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Company) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Addr1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Addr2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Town)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.City)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Postcode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.County)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telephone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VatNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Website)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ApprovedSupplier)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Office.Name)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.CompanyID"><i class="btn far fa-edit" style="color: #0275d8;"></i></a>
-                <a asp-page="./Details" asp-route-id="@item.CompanyID"><i class="btn fas fa-info" style="color: #0275d8;"></i></a>
-                <a asp-page="./Delete" asp-route-id="@item.CompanyID"><i class="btn far fa-trash-alt" style="color: #d9534f;"></i></a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Company)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Addr1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Addr2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Town)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Postcode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.County)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telephone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VatNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Website)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ApprovedSupplier)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Office.Name)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.CompanyID"><i class="btn far fa-edit" style="color: #0275d8;"></i></a>
+                    <a asp-page="./Details" asp-route-id="@item.CompanyID"><i class="btn fas fa-info" style="color: #0275d8;"></i></a>
+                    <a asp-page="./Delete" asp-route-id="@item.CompanyID"><i class="btn far fa-trash-alt" style="color: #d9534f;"></i></a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

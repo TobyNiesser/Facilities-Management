@@ -45,16 +45,16 @@ body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
     background-size: cover;
+    font-family: 'Raleway', sans-serif;
 }
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
-
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
 }
 
 .container img {
@@ -67,5 +67,7 @@ body {
     left: 0;
 }
 
-
+.css-selector {
+    font-family: 'Raleway', sans-serif;
+}
 

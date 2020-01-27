@@ -15,11 +15,11 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Setting.OfficeID" class="control-label"></label>
+                <label asp-for="Setting.OfficeID" class="control-label">Office Name</label>
                 <select asp-for="Setting.OfficeID" class="form-control" asp-items="ViewBag.OfficeID"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Setting.ItemID" class="control-label"></label>
+                <label asp-for="Setting.ItemID" class="control-label">Select System</label>
                 <select asp-for="Setting.ItemID" class="form-control" asp-items="ViewBag.ItemID"></select>
             </div>
             <div class="form-group">
@@ -33,19 +33,19 @@
                 <span asp-validation-for="Setting.NextDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Setting.FrequencyID" class="control-label"></label>
+                <label asp-for="Setting.FrequencyID" class="control-label">Select Frequency</label>
                 <select asp-for="Setting.FrequencyID" class="form-control" asp-items="ViewBag.FrequencyID"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Setting.CompanyID" class="control-label"></label>
+                <label asp-for="Setting.CompanyID" class="control-label">Select Company</label>
                 <select asp-for="Setting.CompanyID" class="form-control" asp-items="ViewBag.CompanyID"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Setting.ResponsibilityID" class="control-label"></label>
+                <label asp-for="Setting.ResponsibilityID" class="control-label">Set Responsibility</label>
                 <select asp-for="Setting.ResponsibilityID" class="form-control" asp-items="ViewBag.ResponsibilityID"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Setting.StatusID" class="control-label"></label>
+                <label asp-for="Setting.StatusID" class="control-label">Set Status</label>
                 <select asp-for="Setting.StatusID" class="form-control" asp-items="ViewBag.StatusID"></select>
             </div>
             <div class="form-group">

@@ -12,10 +12,11 @@ namespace FACILITIES.Models
     {
         public int CompanyID { get; set; }
 
-        
+        [Required]
         [Display(Name = "Company Name")]
         public string Name { get; set; }
 
+        [Required]
         [Display(Name = "Address Line 1")]
         public string Addr1 { get; set; }
 
@@ -25,13 +26,13 @@ namespace FACILITIES.Models
         
         public string Town { get; set; }
 
-        
+        [Required]
         public string City { get; set; }
 
-        
+        [Required]
         public string Postcode { get; set; }
 
-        
+        [Required]
         public string County { get; set; }
 
         public string Telephone { get; set; }

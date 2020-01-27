@@ -17,22 +17,19 @@
     </environment>
 
 
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/Chart.js/Chart.css" />
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" />
 
-
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:500&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css" rel="stylesheet" />
 
 </head>
 
@@ -91,6 +88,26 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-page="">My Account</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="">Dashboard</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Configure
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" asp-page="/Companies/Index">Companies</a>
+                                    <a class="dropdown-item" asp-page="/Files/Index">Files</a>
+                                    <a class="dropdown-item" asp-page="/Frequencies/Index">Frequencies</a>
+                                    <a class="dropdown-item" asp-page="/ItemConfigs/Index">ItemConfigs</a>
+                                    <a class="dropdown-item" asp-page="/Items/Index">Items</a>
+                                    <a class="dropdown-item" asp-page="/Managers/Index">Managers</a>
+                                    <a class="dropdown-item" asp-page="/Offices/Index">Offices</a>
+                                    <a class="dropdown-item" asp-page="/Permissions/Index">Permissions</a>
+                                    <a class="dropdown-item" asp-page="/Responsibilities/Index">Responsibilities</a>
+                                    <a class="dropdown-item" asp-page="/Status/Index">Status</a>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -102,11 +119,20 @@
                 @RenderBody()
             </main>
         </div>
-
         <br />
         <br />
         <br />
-
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <footer class="border-top footer text-muted mt-4 w-100">
             <div class="container-fluid">
                 &copy; 2019 - FACILITIES - <a asp-area="" asp-page="/Privacy">Privacy</a>
@@ -136,15 +162,7 @@
         @RenderSection("Scripts", required: false)
         <script src="~/Chart.js/Chart.js" asp-append-version="true"></script>
 
-
-        <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>
-
-        @*<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-        <script scr="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>*@
-
-
 
         <script>
             $('.table:not(.notable)').dataTable({

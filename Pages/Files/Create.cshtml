@@ -4,6 +4,11 @@
 @{
     ViewData["Title"] = "Create";
 }
+    <head>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
 <br />
 <div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
     <h2>Files</h2>
@@ -38,6 +43,14 @@
                 <label asp-for="File.StoreLocation" class="control-label"></label>
                 <input asp-for="File.StoreLocation" class="form-control" />
                 <span asp-validation-for="File.StoreLocation" class="text-danger"></span>
+            </div>
+            <br />
+            <br />
+            <div class="default-file-upload">
+                <h6>
+                    Default File Upload
+                </h6>
+                <input id="file-upload1" type="file" />
             </div>
             <br />
             <div class="form-group">

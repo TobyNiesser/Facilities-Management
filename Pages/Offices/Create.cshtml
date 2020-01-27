@@ -70,11 +70,11 @@
                 <span asp-validation-for="Office.LandlordTelephone" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Office.CompanyID" class="control-label"></label>
+                <label asp-for="Office.CompanyID" class="control-label">Company Name</label>
                 <select asp-for="Office.CompanyID" class="form-control" asp-items="ViewBag.CompanyID"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Office.ManagerID" class="control-label"></label>
+                <label asp-for="Office.ManagerID" class="control-label">Office Manager</label>
                 <select asp-for="Office.ManagerID" class="form-control" asp-items="ViewBag.ManagerID"></select>
             </div>
             @*<div class="form-group">

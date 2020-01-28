@@ -41,12 +41,13 @@ namespace FACILITIES.Models
         [Display(Name = "VAT No.")]
         public string VatNumber { get; set; }
 
+        //public string Description { get; set; }
+
         public string Website { get; set; }
 
         [Required]
         [Display(Name = "Approved Supplier?")]
         public bool ApprovedSupplier { get; set; }
-
 
         [ForeignKey("Office")]
         public int? OfficeID { get; set; }

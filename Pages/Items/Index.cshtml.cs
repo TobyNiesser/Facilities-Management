@@ -23,6 +23,8 @@ namespace FACILITIES.Pages.Items
         public async Task OnGetAsync()
         {
             Item = await _context.Item.ToListAsync();
+
+
         }
     }
 }

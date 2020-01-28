@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "/Suppliers/Create"
 @model FACILITIES.CreateModel
 
 @{
@@ -6,8 +6,8 @@
 }
 <br />
 <div style="background-color: #f1f1f2; font-family: 'Raleway', sans-serif;" class="pt-3 pb-3 pl-3 pr-3">
-    <h2>Companies</h2>
-    <h4>Create New Company</h4>
+    <h2>Suppliers</h2>
+    <h4>Create New Supplier</h4>
 </div>
 <br />
 <div class="row">
@@ -15,7 +15,7 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Company.Name" class="control-label"></label>
+                <label asp-for="Company.Name" class="control-label">Supplier Name</label>
                 <input asp-for="Company.Name" class="form-control" />
                 <span asp-validation-for="Company.Name" class="text-danger"></span>
             </div>

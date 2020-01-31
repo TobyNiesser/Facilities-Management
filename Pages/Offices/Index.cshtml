@@ -2,16 +2,14 @@
 @model FACILITIES.Pages.Offices.IndexModel
 
 @{
-    ViewData["Title"] = "Offices";
+    ViewData["Title"] = "Index";
 }
-<br />
-<div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
-    <h2>Offices</h2>
-    <h4>Summary</h4>
-    <br />
-    <a asp-page="Create" style="color: #0275d8;" class="btn border border-primary"> Create New</a>
-</div>
-<br />
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
 <table class="table">
     <thead>
         <tr>
@@ -49,69 +47,80 @@
                 @Html.DisplayNameFor(model => model.Office[0].LandlordTelephone)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Office[0].Sqft)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Office[0].LeaseDate)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Office[0].Company)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Office[0].Manager)
             </th>
-            @*<th>
-                    @Html.DisplayNameFor(model => model.Office[0].Item)
-                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Office[0].Item)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Office)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Addr1)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Addr2)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Town)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.City)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Postcode)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Country)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Telephone)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LandlordName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LandlordEmail)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LandlordTelephone)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Company.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Manager.UserName)
-                </td>
-                @*<td>
-                        @Html.DisplayFor(modelItem => item.Item.ItemName)
-                    </td>*@
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@item.OfficeID"><i class="btn far fa-edit" style="color: #0275d8;"></i></a>
-                    <a asp-page="./Details" asp-route-id="@item.OfficeID"><i class="btn fas fa-info" style="color: #0275d8;"></i></a>
-                    <a asp-page="./Delete" asp-route-id="@item.OfficeID"><i class="btn far fa-trash-alt" style="color: #d9534f;"></i></a>
-                </td>
-            </tr>
-        }
+@foreach (var item in Model.Office) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Addr1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Addr2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Town)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Postcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telephone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LandlordName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LandlordEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LandlordTelephone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sqft)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeaseDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company.Addr1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manager.ManagerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item.ItemID)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.OfficeID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.OfficeID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.OfficeID">Delete</a>
+            </td>
+        </tr>
+}
     </tbody>
 </table>

@@ -47,7 +47,14 @@ namespace FACILITIES.Models
 
         [Display(Name = "Landlord Telephone")]
         public int LandlordTelephone { get; set; }
-        
+
+        [Display(Name = "Office Dimension Sq.ft")]
+        public int Sqft { get; set; }
+
+        [Display(Name = "Lease Date")]
+        [DataType(DataType.Date)]
+        public DateTime LeaseDate { get; set; }
+
         [ForeignKey("Company")]
         public int? CompanyID { get; set; }
         public Company Company { get; set; }

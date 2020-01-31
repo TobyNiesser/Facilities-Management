@@ -25,21 +25,28 @@ namespace FACILITIES.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Addr1");
+                    b.Property<string>("Addr1")
+                        .IsRequired();
 
                     b.Property<string>("Addr2");
 
                     b.Property<bool>("ApprovedSupplier");
 
-                    b.Property<string>("City");
+                    b.Property<string>("City")
+                        .IsRequired();
 
-                    b.Property<string>("County");
+                    b.Property<string>("County")
+                        .IsRequired();
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.Property<int?>("OfficeID");
 
-                    b.Property<string>("Postcode");
+                    b.Property<string>("Postcode")
+                        .IsRequired();
 
                     b.Property<string>("Telephone");
 
@@ -175,11 +182,15 @@ namespace FACILITIES.Migrations
 
                     b.Property<int>("LandlordTelephone");
 
+                    b.Property<DateTime>("LeaseDate");
+
                     b.Property<int?>("ManagerID");
 
                     b.Property<string>("Name");
 
                     b.Property<string>("Postcode");
+
+                    b.Property<int>("Sqft");
 
                     b.Property<string>("Telephone");
 

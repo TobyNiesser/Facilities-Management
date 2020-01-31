@@ -16,6 +16,8 @@ namespace FACILITIES.Models
         [Display(Name = "Company Name")]
         public string Name { get; set; }
 
+        public string Description { get; set; }
+
         [Required]
         [Display(Name = "Address Line 1")]
         public string Addr1 { get; set; }
@@ -41,7 +43,6 @@ namespace FACILITIES.Models
         [Display(Name = "VAT No.")]
         public string VatNumber { get; set; }
 
-        //public string Description { get; set; }
 
         public string Website { get; set; }
 

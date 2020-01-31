@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using FACILITIES.Models;
 
-namespace FACILITIES
+namespace FACILITIES.Pages.Companies
 {
     public class CreateModel : PageModel
     {
@@ -20,7 +20,7 @@ namespace FACILITIES
 
         public IActionResult OnGet()
         {
-        ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "Name");
+        ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "OfficeID");
             return Page();
         }
 

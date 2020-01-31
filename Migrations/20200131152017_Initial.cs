@@ -131,6 +131,8 @@ namespace FACILITIES.Migrations
                     LandlordName = table.Column<string>(nullable: true),
                     LandlordEmail = table.Column<string>(nullable: true),
                     LandlordTelephone = table.Column<int>(nullable: false),
+                    Sqft = table.Column<int>(nullable: false),
+                    LeaseDate = table.Column<DateTime>(nullable: false),
                     CompanyID = table.Column<int>(nullable: true),
                     ManagerID = table.Column<int>(nullable: true),
                     ItemID = table.Column<int>(nullable: true)
@@ -158,13 +160,14 @@ namespace FACILITIES.Migrations
                 {
                     CompanyID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(nullable: true),
-                    Addr1 = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(nullable: false),
+                    Description = table.Column<string>(nullable: true),
+                    Addr1 = table.Column<string>(nullable: false),
                     Addr2 = table.Column<string>(nullable: true),
                     Town = table.Column<string>(nullable: true),
-                    City = table.Column<string>(nullable: true),
-                    Postcode = table.Column<string>(nullable: true),
-                    County = table.Column<string>(nullable: true),
+                    City = table.Column<string>(nullable: false),
+                    Postcode = table.Column<string>(nullable: false),
+                    County = table.Column<string>(nullable: false),
                     Telephone = table.Column<string>(nullable: true),
                     VatNumber = table.Column<string>(nullable: true),
                     Website = table.Column<string>(nullable: true),
@@ -368,7 +371,46 @@ namespace FACILITIES.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-           
+            migrationBuilder.DropForeignKey(
+                name: "FK_Company_Office_OfficeID",
+                table: "Company");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Manager_Office_OfficeID",
+                table: "Manager");
+
+            migrationBuilder.DropTable(
+                name: "File");
+
+            migrationBuilder.DropTable(
+                name: "ItemConfig");
+
+            migrationBuilder.DropTable(
+                name: "Setting");
+
+            migrationBuilder.DropTable(
+                name: "Frequency");
+
+            migrationBuilder.DropTable(
+                name: "Responsibility");
+
+            migrationBuilder.DropTable(
+                name: "Status");
+
+            migrationBuilder.DropTable(
+                name: "Office");
+
+            migrationBuilder.DropTable(
+                name: "Item");
+
+            migrationBuilder.DropTable(
+                name: "Manager");
+
+            migrationBuilder.DropTable(
+                name: "Company");
+
+            migrationBuilder.DropTable(
+                name: "Permission");
         }
     }
 }

@@ -4,12 +4,14 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>Index</h1>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
+<br />
+<div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
+    <h2>Offices</h2>
+    <h4>Summary</h4>
+    <br />
+    <a asp-page="Create" style="color: #0275d8;" class="btn border border-primary"> Upload File</a>
+</div>
+<br />
 <table class="table">
     <thead>
         <tr>
@@ -65,62 +67,63 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Office) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Addr1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Addr2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Town)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.City)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Postcode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Country)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telephone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LandlordName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LandlordEmail)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LandlordTelephone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sqft)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LeaseDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Company.Addr1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Manager.ManagerID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Item.ItemID)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.OfficeID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.OfficeID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.OfficeID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Office)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Addr1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Addr2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Town)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Postcode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telephone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LandlordName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LandlordEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LandlordTelephone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sqft)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LeaseDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Company.Addr1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Manager.ManagerID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Item.ItemID)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.OfficeID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.OfficeID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.OfficeID">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

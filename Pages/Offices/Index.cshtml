@@ -119,9 +119,9 @@
                     @Html.DisplayFor(modelItem => item.Item.ItemID)
                 </td>
                 <td>
-                    <a asp-page="./Edit" asp-route-id="@item.OfficeID">Edit</a> |
-                    <a asp-page="./Details" asp-route-id="@item.OfficeID">Details</a> |
-                    <a asp-page="./Delete" asp-route-id="@item.OfficeID">Delete</a>
+                    <a asp-page="./Edit" asp-route-id="@item.OfficeID"><i class="btn far fa-edit" style="color: #0275d8;"></i></a>
+                    <a asp-page="./Details" asp-route-id="@item.OfficeID"><i class="btn fas fa-info" style="color: #0275d8;"></i></a>
+                    <a asp-page="./Delete" asp-route-id="@item.OfficeID"><i class="btn far fa-trash-alt" style="color: #d9534f;"></i></a>
                 </td>
             </tr>
         }

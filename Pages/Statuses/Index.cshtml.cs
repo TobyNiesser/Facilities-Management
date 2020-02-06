@@ -24,5 +24,6 @@ namespace FACILITIES.Pages.Statuses
         {
             Status = await _context.Status.ToListAsync();
         }
+
     }
 }

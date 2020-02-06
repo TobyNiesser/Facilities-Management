@@ -42,7 +42,7 @@ body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
     background-size: cover;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 .footer {
     position: absolute;
@@ -65,7 +65,7 @@ body {
 }
 
 .css-selector {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 

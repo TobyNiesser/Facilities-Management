@@ -4,6 +4,10 @@
 @{
     ViewData["Title"] = "ItemConfigs";
 }
+<head>
+    <link href="/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style.bundle.css" rel="stylesheet" type="text/css" />
+</head>
 <br />
 <div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
     <h2>Item Configuration</h2>
@@ -22,30 +26,35 @@
                 @Html.DisplayNameFor(model => model.ItemConfig[0].Items_csv)
             </th>
             @*<th>
-                @Html.DisplayNameFor(model => model.ItemConfig[0].Item)
-            </th>*@
+                    @Html.DisplayNameFor(model => model.ItemConfig[0].Item)
+                </th>*@
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model.ItemConfig)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Office.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Items_csv)
-            </td>
-            @*<td>
-                @Html.DisplayFor(modelItem => item.Item.ItemName)
-            </td>*@
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.ItemConfigID"><i class="btn far fa-edit" style="color: #0275d8;"></i></a>
-                <a asp-page="./Details" asp-route-id="@item.ItemConfigID"><i class="btn fas fa-info" style="color: #0275d8;"></i></a>
-                <a asp-page="" asp-route-id=""><i class="btn fas fa-file-export" style="color: #0275d8;"></i></a>
-                <a asp-page="./Delete" asp-route-id="@item.ItemConfigID"><i class="btn far fa-trash-alt" style="color: #d9534f;"></i></a>
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Office.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Items_csv)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Item.ItemName)
+                    </td>*@
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ItemConfigID"><i class="btn far fa-edit" style="color: #36a3f7;"></i></a>
+                    <a asp-page="./Details" asp-route-id="@item.ItemConfigID"><i class="btn far fa-eye" style="color: #36a3f7;"></i></a>
+                    <a asp-page="" asp-route-id=""><i class="btn fas fa-file-export" style="color: #36a3f7;"></i></a>
+                    <a asp-page="./Delete" asp-route-id="@item.ItemConfigID"><i class="btn far fa-trash-alt" style="color: #fd3995;"></i></a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>
+
+
+<script src="/plugins/global/plugins.bundle.js" type="text/javascript"></script>
+<script src="/js/scripts.bundle.js" type="text/javascript"></script>
+<script src="/js/pages/components/keen-datatable/base/data-local.js" type="text/javascript"></script>

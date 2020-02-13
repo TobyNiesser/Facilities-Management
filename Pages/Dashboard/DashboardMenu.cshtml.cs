@@ -19,10 +19,7 @@ namespace FACILITIES
         {
             _context = context;
         }
-        //public void OnGet()
-        //{
-
-        //}
+        
 
         public IActionResult OnGet()
         {
@@ -39,6 +36,9 @@ namespace FACILITIES
         [BindProperty]
         public Setting Setting { get; set; }
 
+        [BindProperty]
+        public Office Office { get; set; }
+
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
@@ -49,7 +49,7 @@ namespace FACILITIES
             _context.Setting.Add(Setting);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Settings/Index");
+            return RedirectToPage("/Dashboard/DashboardMenu");
         }
     }
 

@@ -49,7 +49,7 @@ namespace FACILITIES
             _context.Setting.Add(Setting);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Settings/Index");
         }
     }
 

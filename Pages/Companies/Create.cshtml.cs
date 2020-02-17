@@ -39,5 +39,7 @@ namespace FACILITIES.Pages.Companies
 
             return RedirectToPage("./Index");
         }
+
+
     }
 }

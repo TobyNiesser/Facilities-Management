@@ -25,5 +25,6 @@ namespace FACILITIES.Pages.Companies
             Company = await _context.Company
                 .Include(c => c.Office).ToListAsync();
         }
+
     }
 }

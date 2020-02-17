@@ -31,7 +31,7 @@ namespace FACILITIES.Models
         
         public string Postcode { get; set; }
 
-        
+        [Display(Name = "County")]
         public string Country { get; set; }
 
         

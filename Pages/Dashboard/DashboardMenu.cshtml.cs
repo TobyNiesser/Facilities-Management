@@ -39,6 +39,7 @@ namespace FACILITIES
         [BindProperty]
         public Office Office { get; set; }
 
+
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
@@ -51,6 +52,9 @@ namespace FACILITIES
 
             return RedirectToPage("/Dashboard/DashboardMenu");
         }
+
+
+
     }
 
 

@@ -20,7 +20,7 @@ namespace FACILITIES
             _context = context;
         }
         
-
+        //ADD NEW SYSTEM - SNIPPET -- START
         public IActionResult OnGet()
         {
             ViewData["CompanyID"] = new SelectList(_context.Company, "CompanyID", "Name");
@@ -31,13 +31,14 @@ namespace FACILITIES
             ViewData["StatusID"] = new SelectList(_context.Status, "StatusID", "StatusIndicator");
             return Page();
         }
-
+        //ADD NEW SYSTEM - SNIPPET -- END
 
         [BindProperty]
         public Setting Setting { get; set; }
 
         [BindProperty]
         public Office Office { get; set; }
+
 
 
         public async Task<IActionResult> OnPostAsync()
@@ -54,7 +55,10 @@ namespace FACILITIES
         }
 
 
-
+        public class OfficesModal
+        {
+            public List<Office> Offices { get; set; }
+        }
     }
 
 

@@ -38,5 +38,6 @@ namespace FACILITIES.Pages.Files
 
             return RedirectToPage("./Index");
         }
+
     }
 }

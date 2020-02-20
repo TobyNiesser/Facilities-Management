@@ -39,7 +39,7 @@ namespace FACILITIES.Pages.Offices
             _context.Office.Add(Office);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Edit");
+            return RedirectToPage("./Index");
         }
     }
 }

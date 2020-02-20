@@ -27,6 +27,5 @@ namespace FACILITIES.Pages.Offices
                 .Include(o => o.Item)
                 .Include(o => o.Manager).ToListAsync();
         }
-
     }
 }

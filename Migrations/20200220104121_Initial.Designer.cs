@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FACILITIES.Migrations
 {
     [DbContext(typeof(FACILITIESContext))]
-    [Migration("20200131152017_Initial")]
+    [Migration("20200220104121_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -166,11 +166,13 @@ namespace FACILITIES.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Addr1");
+                    b.Property<string>("Addr1")
+                        .IsRequired();
 
                     b.Property<string>("Addr2");
 
-                    b.Property<string>("City");
+                    b.Property<string>("City")
+                        .IsRequired();
 
                     b.Property<int?>("CompanyID");
 
@@ -180,21 +182,29 @@ namespace FACILITIES.Migrations
 
                     b.Property<string>("LandlordEmail");
 
-                    b.Property<string>("LandlordName");
+                    b.Property<string>("LandlordName")
+                        .IsRequired();
 
                     b.Property<int>("LandlordTelephone");
 
                     b.Property<DateTime>("LeaseDate");
 
+                    b.Property<DateTime>("LeaseEndReview");
+
                     b.Property<int?>("ManagerID");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
-                    b.Property<string>("Postcode");
+                    b.Property<string>("NoticePeriod");
+
+                    b.Property<string>("Postcode")
+                        .IsRequired();
 
                     b.Property<int>("Sqft");
 
-                    b.Property<string>("Telephone");
+                    b.Property<string>("Telephone")
+                        .IsRequired();
 
                     b.Property<string>("Town");
 

@@ -31,7 +31,7 @@ namespace FACILITIES.Models
         public int? FrequencyID { get; set; }
         public Frequency Frequency { get; set; }
 
-        [ForeignKey("Company")]
+        [ForeignKey("Supplier")]
         public int? CompanyID { get; set; }
         public Company Company { get; set; }
 

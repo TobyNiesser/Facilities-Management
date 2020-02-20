@@ -21,6 +21,11 @@
                 <span asp-validation-for="Office.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Office.LandlordName" class="control-label"></label>
+                <input asp-for="Office.LandlordName" class="form-control" />
+                <span asp-validation-for="Office.LandlordName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Office.Addr1" class="control-label"></label>
                 <input asp-for="Office.Addr1" class="form-control" />
                 <span asp-validation-for="Office.Addr1" class="text-danger"></span>
@@ -80,36 +85,50 @@
                 <input asp-for="Office.LeaseDate" class="form-control" />
                 <span asp-validation-for="Office.LeaseDate" class="text-danger"></span>
             </div>
-            @*<div class="form-group">
+            <div class="form-group">
+                <label asp-for="Office.LeaseEndReview" class="control-label"></label>
+                <input asp-for="Office.LeaseEndReview" class="form-control" />
+                <span asp-validation-for="Office.LeaseEndReview" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.NoticePeriod" class="control-label"></label>
+                <input asp-for="Office.NoticePeriod" class="form-control" />
+                <span asp-validation-for="Office.NoticePeriod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Office.CompanyID" class="control-label"></label>
                 <select asp-for="Office.CompanyID" class="form-control" asp-items="ViewBag.CompanyID"></select>
                 <span asp-validation-for="Office.CompanyID" class="text-danger"></span>
-            </div>*@
+            </div>
             <div class="form-group">
                 <label asp-for="Office.ManagerID" class="control-label"></label>
                 <select asp-for="Office.ManagerID" class="form-control" asp-items="ViewBag.ManagerID"></select>
                 <span asp-validation-for="Office.ManagerID" class="text-danger"></span>
             </div>
-            @*<div class="form-group">
+            <div class="form-group">
                 <label asp-for="Office.ItemID" class="control-label"></label>
                 <select asp-for="Office.ItemID" class="form-control" asp-items="ViewBag.ItemID"></select>
                 <span asp-validation-for="Office.ItemID" class="text-danger"></span>
-            </div>*@
+            </div>
 
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
 
+        
+    </div>
+    <div class="col-md-8">
+
         <div class="kt-section">
-            <h3 class="kt-section__title">Live demo</h3>
+            <h3 class="kt-section__title">Add A New Sytem</h3>
             <div class="kt-section__desc">
-                Toggle a working modal demo by clicking the button below. It will slide down and fade in from the top of the page.
+                Customise office by assigning relevant systems
             </div>
-            <div class="kt-section__content kt-section__content--border">
+            <div class="kt-section__content">
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-outline-brand" data-toggle="modal" data-target="#exampleModal">
-                    Add Systems
+                    Add System
                 </button>
 
                 <!-- Modal -->
@@ -117,7 +136,7 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Add System</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
                                 </button>
@@ -183,58 +202,73 @@
                 </div>
             </div>
         </div>
+        <br />
+        <br />
+        <br />
 
+        <h1>Office Systems</h1>
+        <br />
+        <table class="table" id="ItemTable">
+            <thead>
+                <tr>
+                    <th>
+                        System
+                    </th>
+                    <th>
+                        Frequency
+                    </th>
+                    <th>
+                        Service Date
+                    </th>
+                    <th>
+                        Next Date
+                    </th>
+                    <th>
+                        Supplier
+                    </th>
+                    <th>
+                        Responsibility
+                    </th>
+                    <th>
+                        Status
+                    </th>
+                    <th>
+                        Comment
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        test
+                    </td>
+                    <td>
+                        test
+                    </td>
+                    <td>
+                        test
+                    </td>
+                    <td>
+                        test
+                    </td>
+                    <td>
+                        test
+                    </td>
+                    <td>
+                        test
+                    </td>
+                    <td>
+                        test
+                    </td>
+                    <td>
+                        test
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    
-    
-
 </div>
-
-
-<div class="row">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    System
-                </th>
-                <th>
-                    Frequency
-                </th>
-                <th>
-                    Service Date
-                </th>
-                <th>
-                    Next Date
-                </th>
-                <th>
-                    Supplier
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    test
-                </td>
-                <td>
-                    test
-                </td>
-                <td>
-                    test
-                </td>
-                <td>
-                    test
-                </td>
-                <td>
-                    test
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
+<br />
 <div>
     <a asp-page="./Index">Back to List</a>
 </div>
-

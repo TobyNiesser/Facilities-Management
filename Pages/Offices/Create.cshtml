@@ -5,11 +5,10 @@
     ViewData["Title"] = "Create";
 }
 
-<div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
-    <h2>Offices</h2>
-    <h4>Create New Office</h4>
-</div>
-<br />
+<h1>Create</h1>
+
+<h4>Office</h4>
+<hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
@@ -18,6 +17,11 @@
                 <label asp-for="Office.Name" class="control-label"></label>
                 <input asp-for="Office.Name" class="form-control" />
                 <span asp-validation-for="Office.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.LandlordName" class="control-label"></label>
+                <input asp-for="Office.LandlordName" class="form-control" />
+                <span asp-validation-for="Office.LandlordName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Office.Addr1" class="control-label"></label>
@@ -45,7 +49,7 @@
                 <span asp-validation-for="Office.Postcode" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Office.Country" class="control-label">County</label>
+                <label asp-for="Office.Country" class="control-label"></label>
                 <input asp-for="Office.Country" class="form-control" />
                 <span asp-validation-for="Office.Country" class="text-danger"></span>
             </div>
@@ -53,11 +57,6 @@
                 <label asp-for="Office.Telephone" class="control-label"></label>
                 <input asp-for="Office.Telephone" class="form-control" />
                 <span asp-validation-for="Office.Telephone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Office.LandlordName" class="control-label"></label>
-                <input asp-for="Office.LandlordName" class="form-control" />
-                <span asp-validation-for="Office.LandlordName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Office.LandlordEmail" class="control-label"></label>
@@ -80,18 +79,27 @@
                 <span asp-validation-for="Office.LeaseDate" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Office.LeaseEndReview" class="control-label"></label>
+                <input asp-for="Office.LeaseEndReview" class="form-control" />
+                <span asp-validation-for="Office.LeaseEndReview" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.NoticePeriod" class="control-label"></label>
+                <input asp-for="Office.NoticePeriod" class="form-control" />
+                <span asp-validation-for="Office.NoticePeriod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Office.CompanyID" class="control-label"></label>
-                <select asp-for="Office.CompanyID" class="form-control" asp-items="ViewBag.CompanyID"></select>
+                <select asp-for="Office.CompanyID" class ="form-control" asp-items="ViewBag.CompanyID"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Office.ManagerID" class="control-label"></label>
-                <select asp-for="Office.ManagerID" class="form-control" asp-items="ViewBag.ManagerID"></select>
+                <select asp-for="Office.ManagerID" class ="form-control" asp-items="ViewBag.ManagerID"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Office.ItemID" class="control-label"></label>
-                <select asp-for="Office.ItemID" class="form-control" asp-items="ViewBag.ItemID"></select>
+                <select asp-for="Office.ItemID" class ="form-control" asp-items="ViewBag.ItemID"></select>
             </div>
-            
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -99,7 +107,7 @@
     </div>
 </div>
 
-
 <div>
     <a asp-page="Index">Back to List</a>
 </div>
+

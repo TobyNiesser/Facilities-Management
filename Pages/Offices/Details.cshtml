@@ -4,19 +4,24 @@
 @{
     ViewData["Title"] = "Details";
 }
-<br />
-<div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
-    <h2>Offices</h2>
-    <h4>Details</h4>
-</div>
-<br />
+
+<h1>Details</h1>
+
 <div>
+    <h4>Office</h4>
+    <hr />
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Office.Name)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Office.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Office.LandlordName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Office.LandlordName)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Office.Addr1)
@@ -61,12 +66,6 @@
             @Html.DisplayFor(model => model.Office.Telephone)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Office.LandlordName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Office.LandlordName)
-        </dd>
-        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Office.LandlordEmail)
         </dt>
         <dd class="col-sm-10">
@@ -91,6 +90,18 @@
             @Html.DisplayFor(model => model.Office.LeaseDate)
         </dd>
         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Office.LeaseEndReview)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Office.LeaseEndReview)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Office.NoticePeriod)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Office.NoticePeriod)
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Office.Company)
         </dt>
         <dd class="col-sm-10">
@@ -102,12 +113,12 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Office.Manager.ManagerID)
         </dd>
-        @*<dt class="col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Office.Item)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Office.Item.ItemID)
-        </dd>*@
+        </dd>
     </dl>
 </div>
 <div>

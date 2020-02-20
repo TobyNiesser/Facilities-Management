@@ -25,7 +25,6 @@ namespace FACILITIES.Models
         [Display(Name = "Address Line 2")]
         public string Addr2 { get; set; }
 
-        
         public string Town { get; set; }
 
         [Required]

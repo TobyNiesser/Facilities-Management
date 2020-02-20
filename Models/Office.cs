@@ -11,11 +11,15 @@ namespace FACILITIES.Models
     {
         public int OfficeID { get; set; }
 
-        
+        [Required]
         [Display(Name = "Office Name")]
         public string Name { get; set; }
 
-        
+        [Required]
+        [Display(Name = "Tenant Name")]
+        public string LandlordName { get; set; }
+
+        [Required]
         [Display(Name = "Address Line 1")]
         public string Addr1 { get; set; }
 
@@ -25,21 +29,17 @@ namespace FACILITIES.Models
         
         public string Town { get; set; }
 
-        
+        [Required]
         public string City { get; set; }
 
-        
+        [Required]
         public string Postcode { get; set; }
 
         [Display(Name = "County")]
         public string Country { get; set; }
 
-        
+        [Required]
         public string Telephone { get; set; }
-
-        
-        [Display(Name = "Tenant Name")]
-        public string LandlordName { get; set; }
 
         
         [Display(Name = "Landlord Email")]
@@ -51,9 +51,16 @@ namespace FACILITIES.Models
         [Display(Name = "Office Dimension Sq.ft")]
         public int Sqft { get; set; }
 
-        [Display(Name = "Lease Date")]
+        [Display(Name = "Lease Date Start")]
         [DataType(DataType.Date)]
         public DateTime LeaseDate { get; set; }
+
+        [Display(Name = "Lease End / Review")]
+        [DataType(DataType.Date)]
+        public DateTime LeaseEndReview { get; set; }
+
+        [Display(Name = "Notice Period")]
+        public String NoticePeriod { get; set; }
 
         [ForeignKey("Company")]
         public int? CompanyID { get; set; }

@@ -22,6 +22,12 @@ namespace FACILITIES.Pages.Offices
         [BindProperty]
         public Office Office { get; set; }
 
+        [BindProperty]
+        public ItemConfig ItemConfig { get; set; }
+
+        [BindProperty]
+        public Setting Setting { get; set; }
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
@@ -41,6 +47,7 @@ namespace FACILITIES.Pages.Offices
            ViewData["CompanyID"] = new SelectList(_context.Company, "CompanyID", "Name");
            ViewData["ItemID"] = new SelectList(_context.Item, "ItemID", "ItemName");
            ViewData["ManagerID"] = new SelectList(_context.Manager, "ManagerID", "UserName");
+           ViewData["OfficeID"] = new SelectList(_context.Office, "OfficeID", "Name");
             return Page();
         }
 

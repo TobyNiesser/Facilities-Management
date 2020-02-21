@@ -20,12 +20,17 @@ namespace FACILITIES.Pages.Offices
 
         public Office Office { get; set; }
 
+        [BindProperty]
+        public Setting Setting { get; set; }
+
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
+
 
             Office = await _context.Office
                 .Include(o => o.Company)

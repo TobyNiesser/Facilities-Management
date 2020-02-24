@@ -25,10 +25,13 @@
       "FACILITIES/1.0.0": {
         "dependencies": {
           "Chart.js": "2.9.3",
+          "juery": "1.0.1",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.4"
+          "Microsoft.TypeScript.MSBuild": "3.8.2",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.4",
+          "Moment.js": "2.24.0"
         },
         "runtime": {
           "FACILITIES.dll": {}
@@ -38,6 +41,7 @@
         }
       },
       "Chart.js/2.9.3": {},
+      "juery/1.0.1": {},
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "2.8.0",
@@ -73,6 +77,7 @@
           "lib/netstandard1.3/Microsoft.CodeAnalysis.Workspaces.dll": {}
         }
       },
+      "Microsoft.TypeScript.MSBuild/3.8.2": {},
       "Microsoft.VisualStudio.Web.CodeGeneration/2.2.4": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "2.2.0",
@@ -193,6 +198,7 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {}
         }
       },
+      "Moment.js/2.24.0": {},
       "NuGet.Frameworks/4.7.0": {
         "dependencies": {
           "NETStandard.Library": "2.0.3"
@@ -3553,6 +3559,13 @@
       "path": "chart.js/2.9.3",
       "hashPath": "chart.js.2.9.3.nupkg.sha512"
     },
+    "juery/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jJ0xx+Itys9nBrpnoSEmrfLPie2dwz2wFn22g+5obE/TYbipTdtwHzINVQuWeLQh8sxLWpU1luhMfkmhqVtmYQ==",
+      "path": "juery/1.0.1",
+      "hashPath": "juery.1.0.1.nupkg.sha512"
+    },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",
       "serviceable": true,
@@ -3566,6 +3579,13 @@
       "sha512": "sha512-tJlJ99SD8bHBAXShOG/pXQ1K118cnsF01obEf9aAtdgLbw3yEPahZ7qvWeGMjrheUhvOsSkv/wTKYg9euKa8MQ==",
       "path": "microsoft.codeanalysis.workspaces.common/2.8.0",
       "hashPath": "microsoft.codeanalysis.workspaces.common.2.8.0.nupkg.sha512"
+    },
+    "Microsoft.TypeScript.MSBuild/3.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/MTwvjTT0SAvYr1OgZyJ0y/gTScZUxuOPlC18sznPifHQafapOwfgBbqYzJdDrvDOK2EWayfd3KnIhr9UpbRpg==",
+      "path": "microsoft.typescript.msbuild/3.8.2",
+      "hashPath": "microsoft.typescript.msbuild.3.8.2.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Web.CodeGeneration/2.2.4": {
       "type": "package",
@@ -3622,6 +3642,13 @@
       "sha512": "sha512-NFflOxpi1ueszxM/f4yaejbSNI93IennOLD2VNQGkcP/pXm1AlcWro7lB0OeDaVtnJpufoME8Fm2ai0CUfKfow==",
       "path": "microsoft.visualstudio.web.codegenerators.mvc/2.2.4",
       "hashPath": "microsoft.visualstudio.web.codegenerators.mvc.2.2.4.nupkg.sha512"
+    },
+    "Moment.js/2.24.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EklynJ92k3/mjOu+ux0CQvXMZqPkkuuV5SuGQNfAnbsVIdNEa8Lj0HQovfbeK4xRlFJ6BAMQB05esoM1KkyvNg==",
+      "path": "moment.js/2.24.0",
+      "hashPath": "moment.js.2.24.0.nupkg.sha512"
     },
     "NuGet.Frameworks/4.7.0": {
       "type": "package",

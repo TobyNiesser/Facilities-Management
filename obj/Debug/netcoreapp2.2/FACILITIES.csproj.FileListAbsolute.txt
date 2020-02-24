@@ -87,3 +87,4 @@ L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Offices\Details.cshtml.g.cs
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Offices\Edit.cshtml.g.cs
 L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\obj\Debug\netcoreapp2.2\Razor\Pages\Offices\Index.cshtml.g.cs
+L:\INFORMATION SYSTEMS\03_PROJECTS\FACILITIES WEB APP\Facilities-Management\bin\Debug\netcoreapp2.2\package-lock.json

@@ -39,6 +39,34 @@ namespace FACILITIES
         [BindProperty]
         public Office Office { get; set; }
 
+        public List<string> Events { get; set; }
+
+        public JsonResult OnGetEvents(DateTime start, DateTime end)
+        {
+
+            var settingsevents = _context.Setting.Include(s => s.Item).Include(s => s.Office).Where(s => s.NextDate >= start && s.NextDate <= end).Select(m => new
+            {
+                title = m.Item.ItemName,
+                start = m.NextDate,
+                allDay = true,
+                description = m.Item.ItemName + " @ " + m.Office.Name + " Due"
+            }).ToList();
+
+            var officesevents = _context.Office.Where(s => s.LeaseEndReview >= start && s.LeaseEndReview <= end).Select(m => new
+            {
+                title = m.Name + " Lease Due",
+                start = m.LeaseEndReview,
+                allDay = true,
+                description = m.Name + " Lease Due - Contact Landlord: " + m.LandlordName + " (" + m.LandlordTelephone + ", " + m.LandlordEmail + ")"
+            }).ToList();
+
+
+            var events = settingsevents.Concat(officesevents).ToList();
+                                 
+            return new JsonResult(events);
+        }
+
+
 
 
         public async Task<IActionResult> OnPostAsync()

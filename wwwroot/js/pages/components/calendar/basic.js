@@ -43,9 +43,9 @@ var KTCalendarBasic = function() {
                 navLinks: true,
                 events: [
                     {
-                        title: 'National Twat Day',
+                        title: 'Testing',
                         start: YM + '-01',
-                        description: 'Toto lorem ipsum dolor sit incid idunt ut',
+                        description: 'Test Descr',
                         className: "fc-event-danger fc-event-solid-warning"  
                     },
                     {

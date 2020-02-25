@@ -101,125 +101,27 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Office.NoticePeriod)
         </dd>
-        <dt class="col-sm-2">
+        @*<dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Office.Company)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Office.Company.Addr1)
-        </dd>
+        </dd>*@
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Office.Manager)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Office.Manager.ManagerID)
         </dd>
-        <dt class="col-sm-2">
+        @*<dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Office.Item)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Office.Item.ItemID)
-        </dd>
+        </dd>*@
     </dl>
 </div>
 
-<br />
-<br />
-
-
-<div class="kt-section__content kt-section__content--border">
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-outline-brand" data-toggle="modal" data-target="#SystemModal">
-        View All Systems
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="SystemModal" tabindex="-1" role="dialog" aria-labelledby="SystemModalLabel" style="display: none;" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="SystemModalLabel">All Systems</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <!--MODAL BODY-->
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Setting.Office)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Setting.Item)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Setting.DueDate)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Setting.NextDate)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Setting.Frequency)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Setting.Company)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Setting.Responsibility)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Setting.Status)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Setting.Comment)
-                            </th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @*@foreach (var item in Model.Setting)
-                        {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Office.Name)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Item.ItemName)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.DueDate)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.NextDate)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Frequency.FrequencyAmount)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Company.Name)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Responsibility.Name)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Status.StatusIndicator)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Comment)
-                                </td>
-                            </tr>
-                        }*@
-                    </tbody>
-                </table>
-
-                <!--MODAL BODY END-->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-brand" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <br />
 <div>
     <a asp-page="./Edit" asp-route-id="@Model.Office.OfficeID">Edit</a> |

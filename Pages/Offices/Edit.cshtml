@@ -95,21 +95,21 @@
                 <input asp-for="Office.NoticePeriod" class="form-control" />
                 <span asp-validation-for="Office.NoticePeriod" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="Office.CompanyID" class="control-label"></label>
                 <select asp-for="Office.CompanyID" class="form-control" asp-items="ViewBag.CompanyID"></select>
                 <span asp-validation-for="Office.CompanyID" class="text-danger"></span>
-            </div>
+            </div>*@
             <div class="form-group">
                 <label asp-for="Office.ManagerID" class="control-label"></label>
                 <select asp-for="Office.ManagerID" class="form-control" asp-items="ViewBag.ManagerID"></select>
                 <span asp-validation-for="Office.ManagerID" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="Office.ItemID" class="control-label"></label>
                 <select asp-for="Office.ItemID" class="form-control" asp-items="ViewBag.ItemID"></select>
                 <span asp-validation-for="Office.ItemID" class="text-danger"></span>
-            </div>
+            </div>*@
 
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -118,158 +118,11 @@
 
 
     </div>
-    <div class="col-md-8">
-        <h1 class="kt-section__title">Add A New Sytem</h1>
-        <div class="kt-section">
 
-            <div class="kt-section__desc">
-                Customise office by assigning relevant systems
-            </div>
-            <div class="kt-section__content">
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-outline-brand" data-toggle="modal" data-target="#exampleModal">
-                    Add System
-                </button>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Add System</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="kt-portlet__body kt-portlet__body--fluid">
-                                    <form class="kt-form" method="post">
-                                        <div class="kt-porlet__body">
-                                            <div class="kt-section kt-section--first">
-                                                <div class="form-group">
-                                                    <label>Office Name</label>
-                                                    <select asp-for="Setting.OfficeID" class="form-control" asp-items="ViewBag.OfficeID"></select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>System</label>
-                                                    <select asp-for="Setting.ItemID" class="form-control" asp-items="ViewBag.ItemID"></select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label asp-for="Setting.DueDate" class="control-label"></label>
-                                                    <input asp-for="Setting.DueDate" class="form-control" />
-                                                    <span asp-validation-for="Setting.DueDate" class="text-danger"></span>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label asp-for="Setting.NextDate" class="control-label"></label>
-                                                    <input asp-for="Setting.NextDate" class="form-control" />
-                                                    <span asp-validation-for="Setting.NextDate" class="text-danger"></span>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Frequency</label>
-                                                    <select asp-for="Setting.FrequencyID" class="form-control" asp-items="ViewBag.FrequencyID"></select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Supplier</label>
-                                                    <select asp-for="Setting.CompanyID" class="form-control" asp-items="ViewBag.CompanyID"></select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Responsibility</label>
-                                                    <select asp-for="Setting.ResponsibilityID" class="form-control" asp-items="ViewBag.ResponsibilityID"></select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Status</label>
-                                                    <select asp-for="Setting.StatusID" class="form-control" asp-items="ViewBag.StatusID"></select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label asp-for="Setting.Comment" class="control-label"></label>
-                                                    <textarea rows="4" cols="50" asp-for="Setting.Comment" class="form-control">Comment</textarea>
-                                                    <span asp-validation-for="Setting.Comment" class="text-danger"></span>
-                                                </div>
-                                                <div class="form-group">
-                                                    <input type="submit" value="Create" class="btn btn-sm btn-primary" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-brand" data-dismiss="modal">Done</button>
-                                <button type="button" class="btn btn-brand">Add Another</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br />
-        <br />
-        <br />
-
-        <h1>Office Systems</h1>
-        <br />
-
-        <table class="table" id="ItemTable">
-            <thead>
-                <tr>
-                    <th>
-                        System
-                    </th>
-                    <th>
-                        Frequency
-                    </th>
-                    <th>
-                        Service Date
-                    </th>
-                    <th>
-                        Next Date
-                    </th>
-                    <th>
-                        Supplier
-                    </th>
-                    <th>
-                        Responsibility
-                    </th>
-                    <th>
-                        Status
-                    </th>
-                    <th>
-                        Comment
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        test
-                    </td>
-                    <td>
-                        test
-                    </td>
-                    <td>
-                        test
-                    </td>
-                    <td>
-                        test
-                    </td>
-                    <td>
-                        test
-                    </td>
-                    <td>
-                        test
-                    </td>
-                    <td>
-                        test
-                    </td>
-                    <td>
-                        test
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    
 </div>
-<br />
+
+
 <div>
     <a asp-page="./Index">Back to List</a>
 </div>

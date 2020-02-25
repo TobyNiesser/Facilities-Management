@@ -60,15 +60,15 @@
             <th>
                 @Html.DisplayNameFor(model => model.Office[0].NoticePeriod)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.Office[0].Company)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Office[0].Manager)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.Office[0].Item)
-            </th>
+            </th>*@
             <th></th>
         </tr>
     </thead>
@@ -121,15 +121,15 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.NoticePeriod)
                 </td>
-                <td>
+                @*<td>
                     @Html.DisplayFor(modelItem => item.Company.Name)
-                </td>
+                </td>*@
                 <td>
                     @Html.DisplayFor(modelItem => item.Manager.UserName)
                 </td>
-                <td>
+                @*<td>
                     @Html.DisplayFor(modelItem => item.Item.ItemName)
-                </td>
+                </td>*@
                 <td>
                     <a asp-page="./Edit" asp-route-id="@item.OfficeID"><i class="btn far fa-edit" style="color: #36a3f7;"></i></a>
                     <a asp-page="./Details" asp-route-id="@item.OfficeID"><i class="btn far fa-eye" style="color: #36a3f7;"></i></a>

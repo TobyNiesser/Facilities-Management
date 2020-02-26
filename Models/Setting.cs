@@ -19,7 +19,7 @@ namespace FACILITIES.Models
         public int? ItemID { get; set; }
         public Item Item { get; set; }
 
-        [Display(Name ="Due Date")]
+        [Display(Name ="Service Date")]
         [DataType(DataType.Date)]
         public DateTime DueDate { get; set; }
 

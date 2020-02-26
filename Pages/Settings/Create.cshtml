@@ -4,65 +4,69 @@
 @{
     ViewData["Title"] = "Create";
 }
-<br />
-<div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
-    <h1><b>System</b></h1>
-    <h4>Create New System</h4>
-</div>
-<br />
-<div class="row">
-    <div class="col-md-8">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Setting.OfficeID" class="control-label">Office Name</label>
-                <select asp-for="Setting.OfficeID" class="form-control" asp-items="ViewBag.OfficeID"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Setting.ItemID" class="control-label">Select System</label>
-                <select asp-for="Setting.ItemID" class="form-control" asp-items="ViewBag.ItemID"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Setting.DueDate" class="control-label"></label>
-                <input asp-for="Setting.DueDate" class="form-control" />
-                <span asp-validation-for="Setting.DueDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Setting.NextDate" class="control-label"></label>
-                <input asp-for="Setting.NextDate" class="form-control" />
-                <span asp-validation-for="Setting.NextDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Setting.FrequencyID" class="control-label">Select Frequency</label>
-                <select asp-for="Setting.FrequencyID" class="form-control" asp-items="ViewBag.FrequencyID"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Setting.CompanyID" class="control-label">Select Company</label>
-                <select asp-for="Setting.CompanyID" class="form-control" asp-items="ViewBag.CompanyID"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Setting.ResponsibilityID" class="control-label">Set Responsibility</label>
-                <select asp-for="Setting.ResponsibilityID" class="form-control" asp-items="ViewBag.ResponsibilityID"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Setting.StatusID" class="control-label">Set Status</label>
-                <select asp-for="Setting.StatusID" class="form-control" asp-items="ViewBag.StatusID"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Setting.Comment" class="control-label"></label>
-                <textarea rows="4" cols="50" asp-for="Setting.Comment" class="form-control"></textarea>
-                <span asp-validation-for="Setting.Comment" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-sm btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
 
-<div>
-    <a asp-page="Index">Back to List</a>
-</div>
+    <div class="kt-container kt-container--fluid pb-4" style="background-color: #fff;">
+        <br />
+        <div class="pt-3 pb-3 pl-3 pr-3">
+            <h1><b>System</b></h1>
+            <h4>Create New System</h4>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-8">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Setting.OfficeID" class="control-label">Office Name</label>
+                        <select asp-for="Setting.OfficeID" class="form-control" asp-items="ViewBag.OfficeID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Setting.ItemID" class="control-label">Select System</label>
+                        <select asp-for="Setting.ItemID" class="form-control" asp-items="ViewBag.ItemID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Setting.DueDate" class="control-label"></label>
+                        <input asp-for="Setting.DueDate" class="form-control" />
+                        <span asp-validation-for="Setting.DueDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Setting.NextDate" class="control-label"></label>
+                        <input asp-for="Setting.NextDate" class="form-control" />
+                        <span asp-validation-for="Setting.NextDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Setting.FrequencyID" class="control-label">Select Frequency</label>
+                        <select asp-for="Setting.FrequencyID" class="form-control" asp-items="ViewBag.FrequencyID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Setting.CompanyID" class="control-label">Select Company</label>
+                        <select asp-for="Setting.CompanyID" class="form-control" asp-items="ViewBag.CompanyID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Setting.ResponsibilityID" class="control-label">Set Responsibility</label>
+                        <select asp-for="Setting.ResponsibilityID" class="form-control" asp-items="ViewBag.ResponsibilityID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Setting.StatusID" class="control-label">Set Status</label>
+                        <select asp-for="Setting.StatusID" class="form-control" asp-items="ViewBag.StatusID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Setting.Comment" class="control-label"></label>
+                        <textarea rows="4" cols="50" asp-for="Setting.Comment" class="form-control"></textarea>
+                        <span asp-validation-for="Setting.Comment" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-sm btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <a asp-page="Index">Back to List</a>
+        </div>
+    </div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

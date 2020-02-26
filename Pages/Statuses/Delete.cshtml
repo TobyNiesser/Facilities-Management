@@ -4,55 +4,59 @@
 @{
     ViewData["Title"] = "Delete";
 }
-<br />
-<div>
-    <h1><b>Statuses</b></h1>
-    <h4>Delete Status?</h4>
-</div>
-<br />
-<div>
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Status.StatusIndicator)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Status.StatusIndicator)
-        </dd>
-    </dl>
 
-    <!-- Modal Button -->
-    <form method="post">
+    <div class="kt-container kt-container--fluid pb-4" style="background-color: #fff;">
+        <br />
         <div>
-            <input type="hidden" asp-for="Status.StatusID" />
-            <button type="button" value="Delete" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal">
-                Delete
-            </button>
-            <a asp-page="./Index">Back to List</a>
+            <h1><b>Statuses</b></h1>
+            <h4>Delete Status?</h4>
         </div>
-    </form>
+        <br />
+        <div>
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Status.StatusIndicator)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Status.StatusIndicator)
+                </dd>
+            </dl>
+
+            <!-- Modal Button -->
+            <form method="post">
+                <div>
+                    <input type="hidden" asp-for="Status.StatusID" />
+                    <button type="button" value="Delete" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal">
+                        Delete
+                    </button>
+                    <a asp-page="./Index">Back to List</a>
+                </div>
+            </form>
 
 
-    <!-- Modal -->
-    <form method="post">
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to Delete?</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        This action cannot be undone.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Back</button>
-                        <input type="hidden" asp-for="Status.StatusID" />
-                        <input type="submit" value="Delete" class="btn btn-sm btn-danger" />
+            <!-- Modal -->
+            <form method="post">
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to Delete?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                This action cannot be undone.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Back</button>
+                                <input type="hidden" asp-for="Status.StatusID" />
+                                <input type="submit" value="Delete" class="btn btn-sm btn-danger" />
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
-    </form>
-</div>
+
+    </div>

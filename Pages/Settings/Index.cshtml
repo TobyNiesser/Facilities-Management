@@ -8,87 +8,93 @@
         <link href="/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
         <link href="/css/style.bundle.css" rel="stylesheet" type="text/css" />
     </head>
-<br />
-<div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
-    <h2>System</h2>
-    <h4>Summary</h4>
-    <br />
-    <a asp-page="Create" style="color: #0275d8;" class="btn border border-primary"> Create New</a>
-</div>
-<br />
-<table class="table">
-    <thead>
-        <tr>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Setting[0].Office)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Setting[0].Item)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Setting[0].DueDate)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Setting[0].NextDate)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Setting[0].Frequency)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Setting[0].Company)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Setting[0].Responsibility)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Setting[0].Status)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Setting[0].Comment)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Setting)
+
+    <div class="kt-container kt-container--fluid pb-4" style="background-color: #fff;">
+        <br />
+        <div class="pt-3 pb-3 pl-3 pr-3">
+            <h1><b>System</b></h1>
+            <h4>Summary</h4>
+            <br />
+            <a asp-page="Create" style="color: #0275d8;" class="btn border border-primary"> Create New</a>
+        </div>
+        <br />
+        <table class="table" style="background-color: white;">
+            <thead>
+                <tr>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Setting[0].Office)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Setting[0].Item)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Setting[0].DueDate)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Setting[0].NextDate)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Setting[0].Frequency)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Setting[0].Company)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Setting[0].Responsibility)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Setting[0].Status)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Setting[0].Comment)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Setting)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Office.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Item.ItemName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DueDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NextDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Frequency.FrequencyAmount)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Company.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Responsibility.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Status.StatusIndicator)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Comment)
-                </td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@item.SettingID"><i class="btn far fa-edit" style="color: #36a3f7;"></i></a>
-                    <a asp-page="./Details" asp-route-id="@item.SettingID"><i class="btn far fa-eye" style="color: #36a3f7;"></i></a>
-                    <a asp-page="./Delete" asp-route-id="@item.SettingID"><i class="btn far fa-trash-alt" style="color: #fd3995;"></i></a>
-                </td>
-            </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Office.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Item.ItemName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DueDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NextDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Frequency.FrequencyAmount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Company.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Responsibility.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status.StatusIndicator)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Comment)
+                    </td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.SettingID"><i class="btn far fa-edit" style="color: #36a3f7;"></i></a>
+                        <a asp-page="./Details" asp-route-id="@item.SettingID"><i class="btn far fa-eye" style="color: #36a3f7;"></i></a>
+                        <a asp-page="./Delete" asp-route-id="@item.SettingID"><i class="btn far fa-trash-alt" style="color: #fd3995;"></i></a>
+                    </td>
+                </tr>
         }
-    </tbody>
-</table>
+            </tbody>
+        </table>
+
+    </div>
+
+
 
 
 <script src="/plugins/global/plugins.bundle.js" type="text/javascript"></script>

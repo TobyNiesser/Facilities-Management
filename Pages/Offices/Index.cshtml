@@ -4,138 +4,144 @@
 @{
     ViewData["Title"] = "Index";
 }
-<br />
-<div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
-    <h2>Offices</h2>
-    <h4>Summary</h4>
-    <br />
-    <a asp-page="Create" style="color: #0275d8;" class="btn border border-primary"> Create New</a>
-</div>
-<br />
-<table class="table">
-    <thead>
-        <tr>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Office[0].Name)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Office[0].LandlordName)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Office[0].Addr1)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Office[0].Addr2)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Office[0].Town)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Office[0].City)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Office[0].Postcode)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Office[0].Country)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Office[0].Telephone)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Office[0].LandlordEmail)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Office[0].LandlordTelephone)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Office[0].Sqft)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Office[0].LeaseDate)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Office[0].LeaseEndReview)
-            </th>
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Office[0].NoticePeriod)
-            </th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.Office[0].Company)
-            </th>*@
-            <th style="font-weight: 900; font-size:16px;">
-                @Html.DisplayNameFor(model => model.Office[0].Manager)
-            </th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.Office[0].Item)
-            </th>*@
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Office)
+
+    <div class="kt-container kt-container--fluid pb-4" style="background-color: #fff;">
+        <br />
+        <div class="pt-3 pb-3 pl-3 pr-3">
+            <h1><b>Office</b></h1>
+            <h4>Summary</h4>
+            <br />
+            <a asp-page="Create" style="color: #0275d8;" class="btn border border-primary"> Create New</a>
+        </div>
+        <br />
+        <table class="table" style="background-color: white;">
+            <thead>
+                <tr>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Office[0].Name)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Office[0].LandlordName)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Office[0].Addr1)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Office[0].Addr2)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Office[0].Town)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Office[0].City)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Office[0].Postcode)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Office[0].Country)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Office[0].Telephone)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Office[0].LandlordEmail)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Office[0].LandlordTelephone)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Office[0].Sqft)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Office[0].LeaseDate)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Office[0].LeaseEndReview)
+                    </th>
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Office[0].NoticePeriod)
+                    </th>
+                    @*<th>
+                    @Html.DisplayNameFor(model => model.Office[0].Company)
+                </th>*@
+                    <th style="font-weight: 900; font-size:16px;">
+                        @Html.DisplayNameFor(model => model.Office[0].Manager)
+                    </th>
+                    @*<th>
+                    @Html.DisplayNameFor(model => model.Office[0].Item)
+                </th>*@
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Office)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LandlordName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Addr1)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Addr2)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Town)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.City)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Postcode)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Country)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Telephone)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LandlordEmail)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LandlordTelephone)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Sqft)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LeaseDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LeaseEndReview)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NoticePeriod)
-                </td>
-                @*<td>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LandlordName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Addr1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Addr2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Town)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.City)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Postcode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Country)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telephone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LandlordEmail)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LandlordTelephone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sqft)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LeaseDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LeaseEndReview)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NoticePeriod)
+                    </td>
+                    @*<td>
                     @Html.DisplayFor(modelItem => item.Company.Name)
                 </td>*@
-                <td>
-                    @Html.DisplayFor(modelItem => item.Manager.UserName)
-                </td>
-                @*<td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Manager.UserName)
+                    </td>
+                    @*<td>
                     @Html.DisplayFor(modelItem => item.Item.ItemName)
                 </td>*@
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@item.OfficeID"><i class="btn far fa-edit" style="color: #36a3f7;"></i></a>
-                    <a asp-page="./Details" asp-route-id="@item.OfficeID"><i class="btn far fa-eye" style="color: #36a3f7;"></i></a>
-                    <a asp-page="./Delete" asp-route-id="@item.OfficeID"><i class="btn far fa-trash-alt" style="color: #fd3995;"></i></a>
-                </td>
-            </tr>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.OfficeID"><i class="btn far fa-edit" style="color: #36a3f7;"></i></a>
+                        <a asp-page="./Details" asp-route-id="@item.OfficeID"><i class="btn far fa-eye" style="color: #36a3f7;"></i></a>
+                        <a asp-page="./Delete" asp-route-id="@item.OfficeID"><i class="btn far fa-trash-alt" style="color: #fd3995;"></i></a>
+                    </td>
+                </tr>
         }
-    </tbody>
-</table>
+            </tbody>
+        </table>
+
+    </div>
+
+

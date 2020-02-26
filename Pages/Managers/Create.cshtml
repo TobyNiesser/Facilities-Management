@@ -8,40 +8,44 @@
         <link href="/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
         <link href="/css/style.bundle.css" rel="stylesheet" type="text/css" />
     </head>
-<br />
-<div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
-    <h2>Managers</h2>
-    <h4>Create New Manager</h4>
-</div>
-<br />
-<div class="row">
-    <div class="col-md-8">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Manager.UserName" class="control-label"></label>
-                <input asp-for="Manager.UserName" class="form-control" />
-                <span asp-validation-for="Manager.UserName" class="text-danger"></span>
+
+    <div class="kt-container kt-container--fluid pb-4" style="background-color: #fff;">
+        <br />
+        <div class="pt-3 pb-3 pl-3 pr-3">
+            <h1><b>Manager</b></h1>
+            <h4>Create New Manager</h4>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-8">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Manager.UserName" class="control-label"></label>
+                        <input asp-for="Manager.UserName" class="form-control" />
+                        <span asp-validation-for="Manager.UserName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Manager.UserEmail" class="control-label"></label>
+                        <input asp-for="Manager.UserEmail" class="form-control" />
+                        <span asp-validation-for="Manager.UserEmail" class="text-danger"></span>
+                    </div>
+                    @*<div class="form-group">
+                        <label asp-for="Manager.CompanyID" class="control-label"></label>
+                        <select asp-for="Manager.CompanyID" class="form-control" asp-items="ViewBag.CompanyID"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Manager.PermissionID" class="control-label"></label>
+                        <select asp-for="Manager.PermissionID" class="form-control" asp-items="ViewBag.PermissionID"></select>
+                    </div>*@
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-sm btn-primary" />
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label asp-for="Manager.UserEmail" class="control-label"></label>
-                <input asp-for="Manager.UserEmail" class="form-control" />
-                <span asp-validation-for="Manager.UserEmail" class="text-danger"></span>
-            </div>
-            @*<div class="form-group">
-                    <label asp-for="Manager.CompanyID" class="control-label"></label>
-                    <select asp-for="Manager.CompanyID" class="form-control" asp-items="ViewBag.CompanyID"></select>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Manager.PermissionID" class="control-label"></label>
-                    <select asp-for="Manager.PermissionID" class="form-control" asp-items="ViewBag.PermissionID"></select>
-                </div>*@
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-sm btn-primary" />
-            </div>
-        </form>
+        </div>
+
     </div>
-</div>
 
 <div>
     <a asp-page="Index">Back to List</a>

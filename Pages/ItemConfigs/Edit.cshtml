@@ -4,73 +4,77 @@
 @{
     ViewData["Title"] = "Edit";
 }
-<br />
-<div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
-    <h2>Item Configuration</h2>
-    <h4>Edit Configuration</h4>
-</div>
-<br />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="ItemConfig.ItemConfigID" />
-            @*<div class="form-group">
-                    <label asp-for="ItemConfig.Items_csv" class="control-label"></label>
-                    <input asp-for="ItemConfig.Items_csv" class="form-control" />
-                    <span asp-validation-for="ItemConfig.Items_csv" class="text-danger"></span>
-                </div>*@
-            <div class="form-group">
-                <label asp-for="ItemConfig.OfficeID" class="control-label"></label>
-                <select asp-for="ItemConfig.OfficeID" name="select" class="form-control" asp-items="ViewBag.OfficeID"></select>
-                <span asp-validation-for="ItemConfig.OfficeID" class="text-danger"></span>
-            </div>
-            @*<div class="form-group">
-                    <label asp-for="ItemConfig.ItemID" class="control-label"></label>
-                    <select asp-for="ItemConfig.ItemID" class="form-control" asp-items="ViewBag.ItemID"></select>
-                    <span asp-validation-for="ItemConfig.ItemID" class="text-danger"></span>
-                </div>*@
-            <div class="form-group">
-                <h4>Select Applicable Item(s)</h4>
-                <p><font color="red">*Checkbox selection currently not visible</font></p>
-                <br />
 
-                @foreach (var o in ViewBag.ItemID)
-                {
-                    <label>
-                        <input type="checkbox" name="MyItems" value="@o.Value" /><span>@o.Text</span>
-                    </label>
-                    <br />
-                }
+    <div class="kt-container kt-container--fluid pb-4" style="background-color: #fff;">
+        <br />
+        <div class="pt-3 pb-3 pl-3 pr-3">
+            <h1><b>Item Configuration</b></h1>
+            <h4>Edit Configuration</h4>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-4">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="ItemConfig.ItemConfigID" />
+                    @*<div class="form-group">
+                        <label asp-for="ItemConfig.Items_csv" class="control-label"></label>
+                        <input asp-for="ItemConfig.Items_csv" class="form-control" />
+                        <span asp-validation-for="ItemConfig.Items_csv" class="text-danger"></span>
+                    </div>*@
+                    <div class="form-group">
+                        <label asp-for="ItemConfig.OfficeID" class="control-label"></label>
+                        <select asp-for="ItemConfig.OfficeID" name="select" class="form-control" asp-items="ViewBag.OfficeID"></select>
+                        <span asp-validation-for="ItemConfig.OfficeID" class="text-danger"></span>
+                    </div>
+                    @*<div class="form-group">
+                        <label asp-for="ItemConfig.ItemID" class="control-label"></label>
+                        <select asp-for="ItemConfig.ItemID" class="form-control" asp-items="ViewBag.ItemID"></select>
+                        <span asp-validation-for="ItemConfig.ItemID" class="text-danger"></span>
+                    </div>*@
+                    <div class="form-group">
+                        <h4>Select Applicable Item(s)</h4>
+                        <p><font color="red">*Checkbox selection currently not visible</font></p>
+                        <br />
 
-            </div>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">
-                Edit
-            </button>
-            <a class="btn btn-sm btn-primary" asp-page="./Index">Back to List</a>
+                        @foreach (var o in ViewBag.ItemID)
+                        {
+                            <label>
+                                <input type="checkbox" name="MyItems" value="@o.Value" /><span>@o.Text</span>
+                            </label>
+                            <br />
+                        }
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Confirm Changes?</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
-                            <input type="hidden" asp-for="ItemConfig.ItemConfigID" />
-                            <input type="submit" value="Update" class="btn btn-sm btn-primary" />
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Edit
+                    </button>
+                    <a class="btn btn-sm btn-primary" asp-page="./Index">Back to List</a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Confirm Changes?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+                                    <input type="hidden" asp-for="ItemConfig.ItemConfigID" />
+                                    <input type="submit" value="Update" class="btn btn-sm btn-primary" />
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

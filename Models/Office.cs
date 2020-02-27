@@ -38,7 +38,7 @@ namespace FACILITIES.Models
         [Display(Name = "County")]
         public string Country { get; set; }
 
-        [Required]
+        [Display(Name = "Comments")]
         public string Telephone { get; set; }
 
         

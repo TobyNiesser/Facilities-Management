@@ -16,6 +16,7 @@ namespace FACILITIES.Models
         [Display(Name = "Company Name")]
         public string Name { get; set; }
 
+        [Display(Name = "Contact Name / Supplier Description")]
         public string Description { get; set; }
 
         [Required]

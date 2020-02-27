@@ -215,13 +215,16 @@ License: You must have a valid license purchased only from https://themes.getboo
                                         <div class="kt-widget-19">
                                             <div class="kt-widget-19__title">
                                                 <img src="~/media/logos/Office Icon.png" />
-                                                <div class="kt-widget-19__label">40+</div>
+                                                <div class="kt-widget-19__label">70+</div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="kt-portlet__foot">
                                         <div class="row align-items-center">
-                                            <a class="btn btn-sm btn-primary" asp-page="/Offices/Index">View</a>
+                                            <div class="form-group">
+                                                <label asp-for="Setting.OfficeID" class="control-label">Office Name</label>
+                                                <select asp-for="Setting.OfficeID" class="form-control" asp-items="ViewBag.OfficeID"></select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

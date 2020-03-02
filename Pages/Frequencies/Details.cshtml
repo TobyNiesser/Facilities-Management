@@ -20,9 +20,10 @@
                 @Html.DisplayFor(model => model.Frequency.FrequencyAmount)
             </dd>
         </dl>
+        <div>
+            <a class="btn btn-lg btn-success" asp-page="./Edit" asp-route-id="@Model.Frequency.FrequencyID">Edit</a>
+            <a class="btn btn-lg btn-primary" asp-page="./Index">Back to List</a>
+        </div>
     </div>
 
-<div>
-    <a class="btn btn-sm btn-primary" asp-page="./Edit" asp-route-id="@Model.Frequency.FrequencyID">Edit</a>
-    <a class="btn btn-sm btn-primary" asp-page="./Index">Back to List</a>
-</div>
+

@@ -7,7 +7,7 @@
 
     <div class="kt-container kt-container--fluid pb-4" style="background-color: #fff;">
         <br />
-        <div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
+        <div class="pt-3 pb-3 pl-3 pr-3">
             <h1><b>Files</b></h1>
             <h4>Details</h4>
         </div>
@@ -46,11 +46,11 @@
                 </dd>
             </dl>
         </div>
-
+        <div>
+            <a class="btn btn-lg btn-success" asp-page="./Edit" asp-route-id="@Model.File.FileID">Edit</a>
+            <a class="btn btn-lg btn-primary" asp-page="./Index">Back to List</a>
+        </div>
     </div>
 
 
-<div>
-    <a class="btn btn-sm btn-primary" asp-page="./Edit" asp-route-id="@Model.File.FileID">Edit</a>
-    <a class="btn btn-sm btn-primary" asp-page="./Index">Back to List</a>
-</div>
+

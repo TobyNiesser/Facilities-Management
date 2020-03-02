@@ -4,125 +4,121 @@
 @{
     ViewData["Title"] = "Edit";
 }
-<br />
-<div style="background-color: #f1f1f2;" class="pt-3 pb-3 pl-3 pr-3">
-    <h1><b>Office</b></h1>
-    <h4>Edit Office</h4>
-</div>
-<br />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Office.OfficeID" />
-            <div class="form-group">
-                <label asp-for="Office.Name" class="control-label"></label>
-                <input asp-for="Office.Name" class="form-control" />
-                <span asp-validation-for="Office.Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Office.LandlordName" class="control-label"></label>
-                <input asp-for="Office.LandlordName" class="form-control" />
-                <span asp-validation-for="Office.LandlordName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Office.Addr1" class="control-label"></label>
-                <input asp-for="Office.Addr1" class="form-control" />
-                <span asp-validation-for="Office.Addr1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Office.Addr2" class="control-label"></label>
-                <input asp-for="Office.Addr2" class="form-control" />
-                <span asp-validation-for="Office.Addr2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Office.Town" class="control-label"></label>
-                <input asp-for="Office.Town" class="form-control" />
-                <span asp-validation-for="Office.Town" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Office.City" class="control-label"></label>
-                <input asp-for="Office.City" class="form-control" />
-                <span asp-validation-for="Office.City" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Office.Postcode" class="control-label"></label>
-                <input asp-for="Office.Postcode" class="form-control" />
-                <span asp-validation-for="Office.Postcode" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Office.Country" class="control-label"></label>
-                <input asp-for="Office.Country" class="form-control" />
-                <span asp-validation-for="Office.Country" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Office.Telephone" class="control-label"></label>
-                <input asp-for="Office.Telephone" class="form-control" />
-                <span asp-validation-for="Office.Telephone" class="text-danger"></span>
-            </div>
-            @*<div class="form-group">
-                <label asp-for="Office.LandlordName" class="control-label"></label>
-                <input asp-for="Office.LandlordName" class="form-control" />
-                <span asp-validation-for="Office.LandlordName" class="text-danger"></span>
-            </div>*@
-            <div class="form-group">
-                <label asp-for="Office.LandlordEmail" class="control-label"></label>
-                <input asp-for="Office.LandlordEmail" class="form-control" />
-                <span asp-validation-for="Office.LandlordEmail" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Office.LandlordTelephone" class="control-label"></label>
-                <input asp-for="Office.LandlordTelephone" class="form-control" />
-                <span asp-validation-for="Office.LandlordTelephone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Office.Sqft" class="control-label"></label>
-                <input asp-for="Office.Sqft" class="form-control" />
-                <span asp-validation-for="Office.Sqft" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Office.LeaseDate" class="control-label"></label>
-                <input asp-for="Office.LeaseDate" class="form-control" />
-                <span asp-validation-for="Office.LeaseDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Office.LeaseEndReview" class="control-label"></label>
-                <input asp-for="Office.LeaseEndReview" class="form-control" />
-                <span asp-validation-for="Office.LeaseEndReview" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Office.NoticePeriod" class="control-label"></label>
-                <input asp-for="Office.NoticePeriod" class="form-control" />
-                <span asp-validation-for="Office.NoticePeriod" class="text-danger"></span>
-            </div>
-            @*<div class="form-group">
-                <label asp-for="Office.CompanyID" class="control-label"></label>
-                <select asp-for="Office.CompanyID" class="form-control" asp-items="ViewBag.CompanyID"></select>
-                <span asp-validation-for="Office.CompanyID" class="text-danger"></span>
-            </div>*@
-            <div class="form-group">
-                <label asp-for="Office.ManagerID" class="control-label"></label>
-                <select asp-for="Office.ManagerID" class="form-control" asp-items="ViewBag.ManagerID"></select>
-                <span asp-validation-for="Office.ManagerID" class="text-danger"></span>
-            </div>
-            @*<div class="form-group">
-                <label asp-for="Office.ItemID" class="control-label"></label>
-                <select asp-for="Office.ItemID" class="form-control" asp-items="ViewBag.ItemID"></select>
-                <span asp-validation-for="Office.ItemID" class="text-danger"></span>
-            </div>*@
 
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+    <div class="kt-container kt-container--fluid pb-4" style="background-color: #fff;">
+        <br />
+        <div class="pt-3 pb-3 pl-3 pr-3">
+            <h1><b>Office</b></h1>
+            <h4>Edit Office</h4>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-4">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Office.OfficeID" />
+                    <div class="form-group">
+                        <label asp-for="Office.Name" class="control-label"></label>
+                        <input asp-for="Office.Name" class="form-control" />
+                        <span asp-validation-for="Office.Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Office.LandlordName" class="control-label"></label>
+                        <input asp-for="Office.LandlordName" class="form-control" />
+                        <span asp-validation-for="Office.LandlordName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Office.Addr1" class="control-label"></label>
+                        <input asp-for="Office.Addr1" class="form-control" />
+                        <span asp-validation-for="Office.Addr1" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Office.Addr2" class="control-label"></label>
+                        <input asp-for="Office.Addr2" class="form-control" />
+                        <span asp-validation-for="Office.Addr2" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Office.Town" class="control-label"></label>
+                        <input asp-for="Office.Town" class="form-control" />
+                        <span asp-validation-for="Office.Town" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Office.City" class="control-label"></label>
+                        <input asp-for="Office.City" class="form-control" />
+                        <span asp-validation-for="Office.City" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Office.Postcode" class="control-label"></label>
+                        <input asp-for="Office.Postcode" class="form-control" />
+                        <span asp-validation-for="Office.Postcode" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Office.Country" class="control-label"></label>
+                        <input asp-for="Office.Country" class="form-control" />
+                        <span asp-validation-for="Office.Country" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Office.Telephone" class="control-label"></label>
+                        <input asp-for="Office.Telephone" class="form-control" />
+                        <span asp-validation-for="Office.Telephone" class="text-danger"></span>
+                    </div>
+                    @*<div class="form-group">
+                        <label asp-for="Office.LandlordName" class="control-label"></label>
+                        <input asp-for="Office.LandlordName" class="form-control" />
+                        <span asp-validation-for="Office.LandlordName" class="text-danger"></span>
+                    </div>*@
+                    <div class="form-group">
+                        <label asp-for="Office.LandlordEmail" class="control-label"></label>
+                        <input asp-for="Office.LandlordEmail" class="form-control" />
+                        <span asp-validation-for="Office.LandlordEmail" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Office.LandlordTelephone" class="control-label"></label>
+                        <input asp-for="Office.LandlordTelephone" class="form-control" />
+                        <span asp-validation-for="Office.LandlordTelephone" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Office.Sqft" class="control-label"></label>
+                        <input asp-for="Office.Sqft" class="form-control" />
+                        <span asp-validation-for="Office.Sqft" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Office.LeaseDate" class="control-label"></label>
+                        <input asp-for="Office.LeaseDate" class="form-control" />
+                        <span asp-validation-for="Office.LeaseDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Office.LeaseEndReview" class="control-label"></label>
+                        <input asp-for="Office.LeaseEndReview" class="form-control" />
+                        <span asp-validation-for="Office.LeaseEndReview" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Office.NoticePeriod" class="control-label"></label>
+                        <input asp-for="Office.NoticePeriod" class="form-control" />
+                        <span asp-validation-for="Office.NoticePeriod" class="text-danger"></span>
+                    </div>
+                    @*<div class="form-group">
+                        <label asp-for="Office.CompanyID" class="control-label"></label>
+                        <select asp-for="Office.CompanyID" class="form-control" asp-items="ViewBag.CompanyID"></select>
+                        <span asp-validation-for="Office.CompanyID" class="text-danger"></span>
+                    </div>*@
+                    <div class="form-group">
+                        <label asp-for="Office.ManagerID" class="control-label"></label>
+                        <select asp-for="Office.ManagerID" class="form-control" asp-items="ViewBag.ManagerID"></select>
+                        <span asp-validation-for="Office.ManagerID" class="text-danger"></span>
+                    </div>
+                    @*<div class="form-group">
+                        <label asp-for="Office.ItemID" class="control-label"></label>
+                        <select asp-for="Office.ItemID" class="form-control" asp-items="ViewBag.ItemID"></select>
+                        <span asp-validation-for="Office.ItemID" class="text-danger"></span>
+                    </div>*@
+
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-lg btn-success" />
+                    <a class="btn btn-lg btn-primary" asp-page="./Index">Back to List</a>
+                </div>
+                </form>
             </div>
-        </form>
-
-
+        </div>
     </div>
 
-    
-</div>
-
-
-<div>
-    <a asp-page="./Index">Back to List</a>
-</div>

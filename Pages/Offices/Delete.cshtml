@@ -5,12 +5,13 @@
     ViewData["Title"] = "Delete";
 }
     <div class="kt-container kt-container--fluid pb-4" style="background-color: #fff;">
-        <h1><b>Office</b></h1>
 
-        <h3>Are you sure you want to delete this?</h3>
+        <div class="pt-3 pb-3 pl-3 pr-3;">
+            <h1><b>Office</b></h1>
+            <h4>Are you sure you want to delete this?</h4>
+        </div>
+        <br />
         <div>
-            <h4>Office</h4>
-            <hr />
             <dl class="row">
                 <dt class="col-sm-2">
                     @Html.DisplayNameFor(model => model.Office.Name)
@@ -126,10 +127,10 @@
             <form method="post">
                 <div>
                     <input type="hidden" asp-for="Office.OfficeID" />
-                    <button type="button" value="Delete" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" value="Delete" class="btn btn-lg btn-danger" data-toggle="modal" data-target="#exampleModal">
                         Delete
                     </button>
-                    <a asp-page="./Index">Back to List</a>
+                    <a class="btn btn-lg btn-primary" asp-page="./Index">Back to List</a>
                 </div>
             </form>
 

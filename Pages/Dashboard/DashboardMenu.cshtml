@@ -64,174 +64,173 @@ License: You must have a valid license purchased only from https://themes.getboo
     <!-- begin:: Content -->
     <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
         <!--begin::Dashboard 4-->
+
+
         <!--begin::Row-->
         <div class="row">
             <div class="col-lg-4">
-                <div class="row">
-                    <div class="col">
-
-                        <!--VIEW OFFICES PORTLET-->
-                        <div class="kt-portlet kt-portlet--fit kt-portlet--height-fluid">
-                            <div class="kt-portlet__body kt-portlet__body--fluid">
-                                <div class="kt-widget-3 kt-widget-3--brand">
-                                    <div class="kt-widget-3__content">
-                                        <div class="kt-widget-3__content-info">
-                                            <div class="kt-widget-3__content-section">
-                                                <div class="kt-widget-3__content-title">OFFICES</div>
-                                                <div class="kt-widget-3__content-desc">VIEW ALL OFFICES</div>
-                                            </div>
-                                            <div class="kt-widget-3__content-section">
-                                                <img src="~/media/logos/Office Icon.png" />
-                                            </div>
-                                        </div>
-                                        <div class="row align-items-center">
-                                            <div class="form-group">
-                                                <label asp-for="Setting.OfficeID" class="control-label">Office Name</label>
-                                                <select asp-for="Setting.OfficeID" class="form-control" asp-items="ViewBag.OfficeID"></select>
-                                            </div>
-                                        </div>
+                <!--VIEW OFFICES PORTLET-->
+                <div class="kt-portlet kt-portlet--fit kt-portlet--height-fluid">
+                    <div class="kt-portlet__body kt-portlet__body--fluid">
+                        <div class="kt-widget-3 kt-widget-3--brand">
+                            <div class="kt-widget-3__content">
+                                <div class="kt-widget-3__content-info">
+                                    <div class="kt-widget-3__content-section">
+                                        <div class="kt-widget-3__content-title">OFFICES</div>
+                                        <div class="kt-widget-3__content-desc">VIEW ALL OFFICES</div>
+                                    </div>
+                                    <div class="kt-widget-3__content-section">
+                                        <img src="~/media/logos/Office Icon.png" />
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="form-group">
+                                        <label asp-for="Setting.OfficeID" class="control-label">Office Name</label>
+                                        <select asp-for="Setting.OfficeID" class="form-control" asp-items="ViewBag.OfficeID"></select>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--end::Portlet-->
-                    <!--VIEW SYSTEMS PORTLET-->
-                    <div class="col">
-                        <div class="kt-portlet kt-portlet--fit kt-portlet--height-fluid">
-                            <div class="kt-portlet__body kt-portlet__body--fluid">
-                                <div class="kt-widget-3 kt-widget-3--success">
-                                    <div class="kt-widget-3__content">
-                                        <div class="kt-widget-3__content-info">
-                                            <div class="kt-widget-3__content-section">
-                                                <div class="kt-widget-3__content-title">SYSTEMS</div>
-                                                <div class="kt-widget-3__content-desc">VIEW ALL SYSTEMS</div>
-                                            </div>
-                                            <div class="kt-widget-3__content-section">
-                                                <img src="~/media/logos/form.png" />
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end::Portlet-->
-                    <!--TODAYS SCHEDULE PORTLET-->
-                    <div class="col">
-                        <div class="kt-portlet kt-portlet--height-fluid kt-widget-13">
-                            <div class="kt-portlet__body">
-                                <div id="kt-widget-slider-13-3" class="kt-slider carousel slide" data-ride="carousel" data-interval="12000">
-                                    <div class="kt-slider__head">
-                                        <div class="kt-slider__label">Today's Schedule</div>
-                                        <div class="kt-slider__nav">
-                                            <a class="kt-slider__nav-prev carousel-control-prev" href="#kt-widget-slider-13-3" role="button" data-slide="prev">
-                                                <i class="fa fa-angle-left"></i>
-                                            </a>
-                                            <a class="kt-slider__nav-next carousel-control-next" href="#kt-widget-slider-13-3" role="button" data-slide="next">
-                                                <i class="fa fa-angle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-inner">
-
-                                        <div class="carousel-item kt-slider__body">
-                                            <div class="kt-widget-13">
-                                                <div class="kt-widget-13__body">
-                                                    <a class="kt-widget-13__title" href="#">Octa Pre-Launch Meeting</a>
-                                                    <div class="kt-widget-13__desc kt-widget-13__desc--xl kt-font-brand">
-                                                        9:20AM - 10:00AM
-                                                    </div>
-                                                </div>
-                                                <div class="kt-widget-13__foot">
-                                                    <div class="kt-widget-13__label">
-                                                        <i class="fa fa-map-marker-alt kt-label-font-color-2"></i>
-                                                        <span class="kt-label-font-color-2">490 E Main St. Norwich...</span>
-                                                    </div>
-                                                    <div class="kt-widget-13__toolbar">
-                                                        <a href="#" class="btn btn-default btn-sm btn-bold btn-upper">View Map</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="carousel-item kt-slider__body active">
-                                            <div class="kt-widget-13">
-                                                <div class="kt-widget-13__body">
-                                                    <a class="kt-widget-13__title" href="#">UI/UX Design Updates</a>
-                                                    <div class="kt-widget-13__desc kt-widget-13__desc--xl kt-font-brand">
-                                                        11:15AM - 12:30PM
-                                                    </div>
-                                                </div>
-                                                <div class="kt-widget-13__foot">
-                                                    <div class="kt-widget-13__label">
-                                                        <i class="fa fa-map-marker-alt kt-label-font-color-2"></i>
-                                                        <span class="kt-label-font-color-2">246 R St. Manhattan NY...</span>
-                                                    </div>
-                                                    <div class="kt-widget-13__toolbar">
-                                                        <a href="#" class="btn btn-default btn-sm btn-bold btn-upper">View Map</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="carousel-item kt-slider__body">
-                                            <div class="kt-widget-13">
-                                                <div class="kt-widget-13__body">
-                                                    <a class="kt-widget-13__title" href="#">Sales Report Summary Meet-up</a>
-                                                    <div class="kt-widget-13__desc kt-widget-13__desc--xl kt-font-brand">
-                                                        4:30PM - 5:30PM
-                                                    </div>
-                                                </div>
-                                                <div class="kt-widget-13__foot">
-                                                    <div class="kt-widget-13__label">
-                                                        <i class="fa fa-map-marker-alt kt-label-font-color-2"></i>
-                                                        <span class="kt-label-font-color-2">492 F Sub St. Norwich CT...</span>
-                                                    </div>
-                                                    <div class="kt-widget-13__toolbar">
-                                                        <a href="#" class="btn btn-default btn-sm btn-bold btn-upper">View Map</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end::Portlet-->
                 </div>
             </div>
 
-            <div class="col-lg-8">
-                <!--CALENDAR PORTLET-->
-                <div class="kt-portlet" id="kt_portlet">
-                    <div class="kt-portlet__head kt-portlet__head--lg">
-                        <div class="kt-portlet__head-label">
-                            <h3 class="kt-portlet__head-title">
-                                Event Calendar
-                            </h3>
-                        </div>
-                        <div class="kt-portlet__head-toolbar">
-                            <div class="kt-portlet__head-group show">
-                                <button type="button" class="btn btn-brand" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    <i class="la la-plus"></i> Add Event
-                                </button>
+            <!--VIEW SYSTEMS PORTLET-->
+            <div class="col-lg-4">
+                <div class="kt-portlet kt-portlet--fit kt-portlet--height-fluid">
+                    <div class="kt-portlet__body kt-portlet__body--fluid">
+                        <div class="kt-widget-3 kt-widget-3--success">
+                            <div class="kt-widget-3__content">
+                                <div class="kt-widget-3__content-info">
+                                    <div class="kt-widget-3__content-section">
+                                        <div class="kt-widget-3__content-title">SYSTEMS</div>
+                                        <div class="kt-widget-3__content-desc">VIEW ALL SYSTEMS</div>
+                                    </div>
+                                    <div class="kt-widget-3__content-section">
+                                        <img src="~/media/logos/form.png" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <!--end::Portlet-->
+
+
+            <!--TODAYS SCHEDULE PORTLET-->
+            <div class="col-lg-4">
+                <div class="kt-portlet kt-portlet--height-fluid kt-widget-13">
                     <div class="kt-portlet__body">
-                        <div id="calendar"></div>
+                        <div id="kt-widget-slider-13-3" class="kt-slider carousel slide" data-ride="carousel" data-interval="12000">
+                            <div class="kt-slider__head">
+                                <div class="kt-slider__label">Today's Schedule</div>
+                                <div class="kt-slider__nav">
+                                    <a class="kt-slider__nav-prev carousel-control-prev" href="#kt-widget-slider-13-3" role="button" data-slide="prev">
+                                        <i class="fa fa-angle-left"></i>
+                                    </a>
+                                    <a class="kt-slider__nav-next carousel-control-next" href="#kt-widget-slider-13-3" role="button" data-slide="next">
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item kt-slider__body">
+                                    <div class="kt-widget-13">
+                                        <div class="kt-widget-13__body">
+                                            <a class="kt-widget-13__title" href="#">Octa Pre-Launch Meeting</a>
+                                            <div class="kt-widget-13__desc kt-widget-13__desc--xl kt-font-brand">
+                                                9:20AM - 10:00AM
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget-13__foot">
+                                            <div class="kt-widget-13__label">
+                                                <i class="fa fa-map-marker-alt kt-label-font-color-2"></i>
+                                                <span class="kt-label-font-color-2">490 E Main St. Norwich...</span>
+                                            </div>
+                                            <div class="kt-widget-13__toolbar">
+                                                <a href="#" class="btn btn-default btn-sm btn-bold btn-upper">View Map</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item kt-slider__body active">
+                                    <div class="kt-widget-13">
+                                        <div class="kt-widget-13__body">
+                                            <a class="kt-widget-13__title" href="#">UI/UX Design Updates</a>
+                                            <div class="kt-widget-13__desc kt-widget-13__desc--xl kt-font-brand">
+                                                11:15AM - 12:30PM
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget-13__foot">
+                                            <div class="kt-widget-13__label">
+                                                <i class="fa fa-map-marker-alt kt-label-font-color-2"></i>
+                                                <span class="kt-label-font-color-2">246 R St. Manhattan NY...</span>
+                                            </div>
+                                            <div class="kt-widget-13__toolbar">
+                                                <a href="#" class="btn btn-default btn-sm btn-bold btn-upper">View Map</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item kt-slider__body">
+                                    <div class="kt-widget-13">
+                                        <div class="kt-widget-13__body">
+                                            <a class="kt-widget-13__title" href="#">Sales Report Summary Meet-up</a>
+                                            <div class="kt-widget-13__desc kt-widget-13__desc--xl kt-font-brand">
+                                                4:30PM - 5:30PM
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget-13__foot">
+                                            <div class="kt-widget-13__label">
+                                                <i class="fa fa-map-marker-alt kt-label-font-color-2"></i>
+                                                <span class="kt-label-font-color-2">492 F Sub St. Norwich CT...</span>
+                                            </div>
+                                            <div class="kt-widget-13__toolbar">
+                                                <a href="#" class="btn btn-default btn-sm btn-bold btn-upper">View Map</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!--end::Portlet-->
             </div>
         </div>
     </div>
+    <!--end::Portlet-->
+    <!--CALENDAR PORTLET-->
+    <div class="col-lg-8">
+        <div class="kt-portlet" id="kt_portlet">
+            <div class="kt-portlet__head kt-portlet__head--lg">
+                <div class="kt-portlet__head-label">
+                    <h3 class="kt-portlet__head-title">
+                        Event Calendar
+                    </h3>
+                </div>
+                <div class="kt-portlet__head-toolbar">
+                    <div class="kt-portlet__head-group show">
+                        <button type="button" class="btn btn-brand" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <i class="la la-plus"></i> Add Event
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="kt-portlet__body">
+                <div id="calendar"></div>
+            </div>
+        </div>
+    </div>
+    <!--end::Portlet-->
+
 
     <!-- begin:: FOOTER -->
     <!-- end:: FOOTER -->
+
 
     <!-- start::Scrolltop -->
     <div id="kt_scrolltop" class="kt-scrolltop">

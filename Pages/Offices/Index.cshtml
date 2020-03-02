@@ -11,7 +11,7 @@
             <h1><b>Office</b></h1>
             <h4>Summary</h4>
             <br />
-            <a asp-page="Create" style="color: #0275d8;" class="btn border border-primary"> Create New</a>
+            <a asp-page="Create" style="color: white;" class="btn btn-lg btn-success"> Create New</a>
         </div>
         <br />
         <table class="table" style="background-color: white;">
@@ -62,15 +62,9 @@
                     <th style="font-weight: 900; font-size:16px;">
                         @Html.DisplayNameFor(model => model.Office[0].NoticePeriod)
                     </th>
-                    @*<th>
-                    @Html.DisplayNameFor(model => model.Office[0].Company)
-                </th>*@
                     <th style="font-weight: 900; font-size:16px;">
                         @Html.DisplayNameFor(model => model.Office[0].Manager)
                     </th>
-                    @*<th>
-                    @Html.DisplayNameFor(model => model.Office[0].Item)
-                </th>*@
                     <th></th>
                 </tr>
             </thead>
@@ -123,15 +117,9 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.NoticePeriod)
                     </td>
-                    @*<td>
-                    @Html.DisplayFor(modelItem => item.Company.Name)
-                </td>*@
                     <td>
                         @Html.DisplayFor(modelItem => item.Manager.UserName)
                     </td>
-                    @*<td>
-                    @Html.DisplayFor(modelItem => item.Item.ItemName)
-                </td>*@
                     <td>
                         <a asp-page="./Edit" asp-route-id="@item.OfficeID"><i class="btn far fa-edit" style="color: #36a3f7;"></i></a>
                         <a asp-page="./Details" asp-route-id="@item.OfficeID"><i class="btn far fa-eye" style="color: #36a3f7;"></i></a>

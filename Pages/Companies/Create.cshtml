@@ -83,7 +83,7 @@
                         <select asp-for="Company.OfficeID" class="form-control" asp-items="ViewBag.OfficeID"></select>
                     </div>*@
                     <div class="form-group">
-                        <input type="submit" value="Create" class="btn btn-lg btn-success" />
+                        <input type="submit" onClick="unhook()" value="Create" class="btn btn-lg btn-success" />
                         <a class="btn btn-lg btn-primary" asp-page="Index">Back to List</a>
                     </div>
                 </form>
@@ -91,6 +91,19 @@
         </div>
     </div>
 
+
+    <script type="text/javascript">
+        var hook = true;
+        window.onbeforeunload = function () {
+            if (hook) {
+
+                return "Did you save your stuff?"
+            }
+        }
+        function unhook() {
+            hook = false;
+        }
+    </script>
 
 
 

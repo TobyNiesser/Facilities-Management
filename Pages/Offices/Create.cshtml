@@ -112,7 +112,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Create" class="btn btn-lg btn-success" />
+                        <input type="submit" onClick="unhook()" value="Create" class="btn btn-lg btn-success" />
                         <a class="btn btn-lg btn-primary" asp-page="Index">Back to List</a>
                     </div>
                 </form>
@@ -120,17 +120,15 @@
         </div>
     </div>
 
+    <script type="text/javascript">
+        var hook = true;
+        window.onbeforeunload = function () {
+            if (hook) {
 
-    <script>
-        window.onbeforeunload = function (e) {
-            e = e || window.event;
-
-            // For IE and Firefox prior to version 4
-            if (e) {
-                e.returnValue = 'Sure?';
+                return "Did you save your stuff?"
             }
-
-            // For Safari
-            return 'Sure?';
-        };
+        }
+        function unhook() {
+            hook = false;
+        }
     </script>

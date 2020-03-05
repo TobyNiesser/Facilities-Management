@@ -27,10 +27,10 @@
           "Chart.js": "2.9.3",
           "juery": "1.0.1",
           "Microsoft.AspNetCore.App": "2.2.0",
+          "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.TypeScript.MSBuild": "3.8.2",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.1",
           "Moment.js": "2.24.0"
         },
         "runtime": {
@@ -43,17 +43,6 @@
       "Chart.js/2.9.3": {},
       "juery/1.0.1": {},
       "Microsoft.TypeScript.MSBuild/3.8.2": {},
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.1": {
-        "runtime": {
-          "lib/net461/dotnet-aspnet-codegenerator-design.exe": {
-            "assemblyVersion": "3.1.1.0",
-            "fileVersion": "3.100.120.7405"
-          }
-        },
-        "compile": {
-          "lib/net461/dotnet-aspnet-codegenerator-design.exe": {}
-        }
-      },
       "Moment.js/2.24.0": {},
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "dependencies": {
@@ -3277,13 +3266,6 @@
       "sha512": "sha512-/MTwvjTT0SAvYr1OgZyJ0y/gTScZUxuOPlC18sznPifHQafapOwfgBbqYzJdDrvDOK2EWayfd3KnIhr9UpbRpg==",
       "path": "microsoft.typescript.msbuild/3.8.2",
       "hashPath": "microsoft.typescript.msbuild.3.8.2.nupkg.sha512"
-    },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-dPuG5OJUL/1mlToWYhu83qYQymr24n7uDRrSTn46rejVlON6OLtTqZNve5CcppR0NtHkalINrOjlY+0dXNnAKg==",
-      "path": "microsoft.visualstudio.web.codegeneration.design/3.1.1",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.design.3.1.1.nupkg.sha512"
     },
     "Moment.js/2.24.0": {
       "type": "package",

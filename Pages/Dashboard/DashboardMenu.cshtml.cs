@@ -46,7 +46,7 @@ namespace FACILITIES
 
             var settingsevents = _context.Setting.Include(s => s.Item).Include(s => s.Office).Where(s => s.NextDate >= start && s.NextDate <= end).Select(m => new
             {
-                title = m.Item.ItemName,
+                title = m.Item.ItemName + '@' + m.Office.Name,
                 start = m.NextDate,
                 allDay = true,
                 description = m.Item.ItemName + " @ " + m.Office.Name + " Due"

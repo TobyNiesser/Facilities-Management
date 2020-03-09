@@ -231,6 +231,10 @@ License: You must have a valid license purchased only from https://themes.getboo
                     <div class="kt-portlet__body">
                         <div id="calendar"></div>
                     </div>
+                    <br />
+                    <div>
+                        <div id="kt_calendar"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -285,6 +289,7 @@ License: You must have a valid license purchased only from https://themes.getboo
     <!--end::Global Theme Bundle -->
     <!--begin::Page Vendors(used by this page) -->
     <script src="/plugins/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+    <script src="/js/pages/components/calendar/basic.js" type="text/javascript"></script>
     <!--end::Page Vendors -->
     <!--begin::Page Scripts(used by this page) -->
     <script src="/js/pages/dashboard.js" type="text/javascript"></script>
@@ -295,8 +300,9 @@ License: You must have a valid license purchased only from https://themes.getboo
             var calendarEl = document.getElementById('calendar');
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
-                plugins: ['dayGrid', 'timeGrid', 'list'],
-                events: '/Dashboard/DashboardMenu?Handler=Events'
+                plugins: ['dayGrid', 'timeGrid', 'list', 'interaction'],
+                events: '/Dashboard/DashboardMenu?Handler=Events',
+                eventColor: '#fd3995',
             });
 
             calendar.render();
@@ -304,12 +310,7 @@ License: You must have a valid license purchased only from https://themes.getboo
 
     </script>
 
-    <script>
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                plugins: ['bootstrap'],
-                themeSystem: 'kt_calendar'
-            });
-    </script>
+
 
     <!--end::Page Scripts -->
 </body>

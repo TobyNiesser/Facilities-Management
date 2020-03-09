@@ -27,12 +27,6 @@
                 <th style="font-weight: 900; font-size:16px;">
                     @Html.DisplayNameFor(model => model.Manager[0].UserEmail)
                 </th>
-                @*<th>
-                    @Html.DisplayNameFor(model => model.Manager[0].Company)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Manager[0].Permission)
-                </th>*@
                 <th></th>
             </tr>
         </thead>
@@ -46,12 +40,6 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.UserEmail)
                 </td>
-                @*<td>
-                    @Html.DisplayFor(modelItem => item.Company.CompanyID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Permission.PermissionID)
-                </td>*@
                 <td>
                     <a asp-page="./Edit" asp-route-id="@item.ManagerID"><i class="btn far fa-edit" style="color: #36a3f7;"></i></a>
                     <a asp-page="./Details" asp-route-id="@item.ManagerID"><i class="btn far fa-eye" style="color: #36a3f7;"></i></a>

@@ -21,7 +21,7 @@ License: You must have a valid license purchased only from https://themes.getboo
 <head>
     <meta charset="utf-8" />
 
-    <title>Keen | Estates Management Dashboard</title>
+    <title>Estates Management Dashboard</title>
     <meta name="description" content="Latest updates and statistic charts">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -43,7 +43,7 @@ License: You must have a valid license purchased only from https://themes.getboo
     <link href="/css/skins/aside/light.css" rel="stylesheet" type="text/css" />
     <!--end::Layout Skins -->
     <link rel="shortcut icon" href="/media/logos/favicon.ico" />
- </head>
+</head>
 <!-- end::Head -->
 
 
@@ -55,7 +55,7 @@ License: You must have a valid license purchased only from https://themes.getboo
     <div>
         <h1 class="kt-subheader__title">Facilities Management Dashboard</h1>
     </div>
-    
+
     <div class="kt-subheader   kt-grid__item" id="kt_subheader">
         <div class="kt-container  kt-container--fluid ">
             <div class="kt-subheader__main">
@@ -64,8 +64,6 @@ License: You must have a valid license purchased only from https://themes.getboo
         </div>
     </div>
     <!-- end:: Subheader -->
-
-
     <!-- begin:: Content -->
     <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
         <!--begin::Dashboard 4-->
@@ -194,9 +192,9 @@ License: You must have a valid license purchased only from https://themes.getboo
                     </div>
                     <div class="kt-portlet__foot kt-portlet__foot--sm kt-align-right">
                         <div class="dropdown dropdown-inline">
-							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: white;">
-								Add Other
-							</button>
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: white;">
+                                Add Other
+                            </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="">
                                 <a class="dropdown-item" href="/Files/Index">Files</a>
                                 <a class="dropdown-item" href="/Frequencies/Index">Frequencies</a>
@@ -205,7 +203,7 @@ License: You must have a valid license purchased only from https://themes.getboo
                                 <a class="dropdown-item" href="/Responsibilities/Index">Responsibilities</a>
                                 <a class="dropdown-item" href="/Statuses/Index">Statuses</a>
                             </div>
-						</div>
+                        </div>
                     </div>
                 </div>
                 <!--end::Portlet-->
@@ -237,13 +235,11 @@ License: You must have a valid license purchased only from https://themes.getboo
             </div>
         </div>
     </div>
-    
+
 
 
     <!-- begin:: FOOTER -->
     <!-- end:: FOOTER -->
-
-
     <!-- start::Scrolltop -->
     <div id="kt_scrolltop" class="kt-scrolltop">
         <i class="fa fa-arrow-up"></i>
@@ -306,6 +302,13 @@ License: You must have a valid license purchased only from https://themes.getboo
             calendar.render();
         });
 
+    </script>
+
+    <script>
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: ['bootstrap'],
+                themeSystem: 'kt_calendar'
+            });
     </script>
 
     <!--end::Page Scripts -->

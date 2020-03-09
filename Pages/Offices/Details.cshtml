@@ -12,123 +12,129 @@
         <!--OFFICE DETAILS PORTLET-->
 
         <div class="col-lg-4">
-            <div class="kt-portlet pb-4 pt-4 pr-4 pl-4" style="background-color: #fff;">
-                <h1><b>Office</b></h1>
-                <h4>Details</h4>
-                <hr />
-                <dl class="row">
-                    <dt class="col-lg-6">
-                        @Html.DisplayNameFor(model => model.Office.Name)
-                    </dt>
-                    <dd class="col-lg-6">
-                        @Html.DisplayFor(model => model.Office.Name)
-                    </dd>
-                    <dt class="col-sm-6">
-                        @Html.DisplayNameFor(model => model.Office.LandlordName)
-                    </dt>
-                    <dd class="col-sm-6">
-                        @Html.DisplayFor(model => model.Office.LandlordName)
-                    </dd>
-                    <dt class="col-sm-6">
-                        @Html.DisplayNameFor(model => model.Office.Addr1)
-                    </dt>
-                    <dd class="col-sm-6">
-                        @Html.DisplayFor(model => model.Office.Addr1)
-                    </dd>
-                    <dt class="col-sm-6">
-                        @Html.DisplayNameFor(model => model.Office.Addr2)
-                    </dt>
-                    <dd class="col-sm-6">
-                        @Html.DisplayFor(model => model.Office.Addr2)
-                    </dd>
-                    <dt class="col-sm-6">
-                        @Html.DisplayNameFor(model => model.Office.Town)
-                    </dt>
-                    <dd class="col-sm-6">
-                        @Html.DisplayFor(model => model.Office.Town)
-                    </dd>
-                    <dt class="col-sm-6">
-                        @Html.DisplayNameFor(model => model.Office.City)
-                    </dt>
-                    <dd class="col-sm-6">
-                        @Html.DisplayFor(model => model.Office.City)
-                    </dd>
-                    <dt class="col-sm-6">
-                        @Html.DisplayNameFor(model => model.Office.Postcode)
-                    </dt>
-                    <dd class="col-sm-6">
-                        @Html.DisplayFor(model => model.Office.Postcode)
-                    </dd>
-                    <dt class="col-sm-6">
-                        @Html.DisplayNameFor(model => model.Office.Country)
-                    </dt>
-                    <dd class="col-sm-6">
-                        @Html.DisplayFor(model => model.Office.Country)
-                    </dd>
-                    <dt class="col-sm-6">
-                        @Html.DisplayNameFor(model => model.Office.Telephone)
-                    </dt>
-                    <dd class="col-sm-6">
-                        @Html.DisplayFor(model => model.Office.Telephone)
-                    </dd>
-                    <dt class="col-sm-6">
-                        @Html.DisplayNameFor(model => model.Office.LandlordEmail)
-                    </dt>
-                    <dd class="col-sm-6">
-                        @Html.DisplayFor(model => model.Office.LandlordEmail)
-                    </dd>
-                    <dt class="col-sm-6">
-                        @Html.DisplayNameFor(model => model.Office.LandlordTelephone)
-                    </dt>
-                    <dd class="col-sm-6">
-                        @Html.DisplayFor(model => model.Office.LandlordTelephone)
-                    </dd>
-                    <dt class="col-sm-6">
-                        @Html.DisplayNameFor(model => model.Office.Sqft)
-                    </dt>
-                    <dd class="col-sm-6">
-                        @Html.DisplayFor(model => model.Office.Sqft)
-                    </dd>
-                    <dt class="col-sm-6">
-                        @Html.DisplayNameFor(model => model.Office.LeaseDate)
-                    </dt>
-                    <dd class="col-sm-6">
-                        @Html.DisplayFor(model => model.Office.LeaseDate)
-                    </dd>
-                    <dt class="col-sm-6">
-                        @Html.DisplayNameFor(model => model.Office.LeaseEndReview)
-                    </dt>
-                    <dd class="col-sm-6">
-                        @Html.DisplayFor(model => model.Office.LeaseEndReview)
-                    </dd>
-                    <dt class="col-sm-6">
-                        @Html.DisplayNameFor(model => model.Office.NoticePeriod)
-                    </dt>
-                    <dd class="col-sm-6">
-                        @Html.DisplayFor(model => model.Office.NoticePeriod)
-                    </dd>
-                    <dt class="col-sm-6">
-                        @Html.DisplayNameFor(model => model.Office.Manager)
-                    </dt>
-                    <dd class="col-sm-6">
-                        @Html.DisplayFor(model => model.Office.Manager.UserName)
-                    </dd>
-                </dl>
+            <div class="kt-portlet pb-4 pt-4 pr-4 pl-4 text-light" style="background-color: #36a3f7;">
+                <div class="kt-portlet__head">
+                    <h1><b>Office</b></h1>
+                </div>
+                <div class="kt-portlet__body">
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-lg-6">
+                            @Html.DisplayNameFor(model => model.Office.Name)
+                        </dt>
+                        <dd class="col-lg-6">
+                            @Html.DisplayFor(model => model.Office.Name)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.Office.LandlordName)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.Office.LandlordName)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.Office.Addr1)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.Office.Addr1)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.Office.Addr2)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.Office.Addr2)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.Office.Town)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.Office.Town)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.Office.City)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.Office.City)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.Office.Postcode)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.Office.Postcode)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.Office.Country)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.Office.Country)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.Office.Telephone)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.Office.Telephone)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.Office.LandlordEmail)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.Office.LandlordEmail)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.Office.LandlordTelephone)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.Office.LandlordTelephone)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.Office.Sqft)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.Office.Sqft)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.Office.LeaseDate)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.Office.LeaseDate)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.Office.LeaseEndReview)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.Office.LeaseEndReview)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.Office.NoticePeriod)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.Office.NoticePeriod)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.Office.Manager)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.Office.Manager.UserName)
+                        </dd>
+                    </dl>
+                </div>
             </div>
         </div>
 
         <!--SYSTEMS PORTLET-->
         <div class="col-xl-8">
-            <div class="kt-portlet pb-4 pt-4 pr-4 pl-4" style="background-color: #fff;">
-                <h1><b>Systems</b></h1>
-                <div class="kt-portlet__body">
+            <div class="kt-portlet pb-4 pt-4 pr-4 pl-4" style="background-color: #34bfa3;">
+                <div class="kt-portlet__head">
+                    <h1 class="text-light"><b>Systems</b></h1>
+                </div>
+                <br />
+                <div class="kt-portlet__body" style="background-color: #fff;">
                     <table class="table" id="SystemDetails">
                         <thead>
                             <tr>
                                 <th style="font-weight: 900; font-size:16px;">
                                     Office
                                 </th>
-                                <th style="font-weight: 900; font-size:16px;">
+                                <th style="font-weight: 900;font-size: 16px;">
                                     System
                                 </th>
                                 <th style="font-weight: 900; font-size:16px;">
@@ -251,17 +257,10 @@
                                     <td>
                                         @Html.DisplayFor(modelItem => item.Comment)
                                     </td>
-                                    <td>
-                                        <a asp-page="./Edit" asp-route-id="@item.SettingID"><i class="btn far fa-edit" style="color: #36a3f7;"></i></a>
-                                        <a asp-page="./Details" asp-route-id="@item.SettingID"><i class="btn far fa-eye" style="color: #36a3f7;"></i></a>
-                                        <a asp-page="./Delete" asp-route-id="@item.SettingID"><i class="btn far fa-trash-alt" style="color: #fd3995;"></i></a>
-                                    </td>
                                 </tr>
                             }
                         </tbody>
                     </table>*@
-
-
                 </div>
             </div>
         </div>   
@@ -270,30 +269,36 @@
     <div class="row">
         <!--MANAGER PORTLET-->
         <div class="col-lg-4">
-            <div class="kt-portlet pb-4 pt-4 pr-4 pl-4" style="background-color: #fff;">
-                <h1><b>Manager</b></h1>
-                <table class="table" id="ManagerDetails">
-                    <thead>
-                        <tr>
-                            <th style="font-weight: 900; font-size:16px;">
-                                Manager Name
-                            </th>
-                            <th style="font-weight: 900; font-size:16px;">
-                                Manager Email
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                Charles Lowndes
-                            </td>
-                            <td>
-                                charles.lowndes@morson-projects.co.uk
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="kt-portlet pb-4 pt-4 pr-4 pl-4" style="background-color: #36a3f7;">
+                <div class="kt-portlet__head">
+                    <h1 class="text-light"><b>Manager</b></h1>
+                </div>
+                <br />
+                <div class="kt-portlet__body" style="background-color: #fff;">
+                    <table class="table" id="ManagerDetails">
+                        <thead>
+                            <tr>
+                                <th style="font-weight: 900; font-size:16px;">
+                                    Manager Name
+                                </th>
+                                <th style="font-weight: 900; font-size:16px;">
+                                    Manager Email
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Charles Lowndes
+                                </td>
+                                <td>
+                                    charles.lowndes@morson-projects.co.uk
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
             </div>
         </div>
 
@@ -303,36 +308,42 @@
 
         <!--SUPPLIER PORTLET-->
         <div class="col-lg-4">
-            <div class="kt-portlet pb-4 pt-4 pr-4 pl-4" style="background-color: #fff;">
-                <h1><b>Suppliers</b></h1>
-                <table class="table" id="SupplierDetails">
-                    <thead>
-                        <tr>
-                            <th style="font-weight: 900; font-size:16px;">
-                                Supplier Name
-                            </th>
-                            <th style="font-weight: 900; font-size:16px;">
-                                Supplier Website
-                            </th>
-                            <th style="font-weight: 900; font-size:16px;">
-                                Supplier Telephone No.
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                Benchmark Security
-                            </td>
-                            <td>
-                                www.somewebsite.co.uk
-                            </td>
-                            <td>
-                                0161 707 1516
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="kt-portlet pb-4 pt-4 pr-4 pl-4" style="background-color: #36a3f7;">
+                <div class="kt-portlet__head">
+                    <h1 class="text-light"><b>Suppliers</b></h1>
+                </div>
+                <br />
+                <div class="kt-portlet__body" style="background-color: #fff;">
+                    <table class="table" id="SupplierDetails">
+                        <thead>
+                            <tr>
+                                <th style="font-weight: 900; font-size:16px;">
+                                    Supplier Name
+                                </th>
+                                <th style="font-weight: 900; font-size:16px;">
+                                    Supplier Website
+                                </th>
+                                <th style="font-weight: 900; font-size:16px;">
+                                    Supplier Telephone No.
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Benchmark Security
+                                </td>
+                                <td>
+                                    www.somewebsite.co.uk
+                                </td>
+                                <td>
+                                    0161 707 1516
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
             </div>
         </div>
     </div>

@@ -101,17 +101,6 @@
                         <select asp-for="Office.ItemID" class ="form-control" asp-items="ViewBag.ItemID"></select>
                     </div>*@
                     <div class="form-group">
-                        <label class="col-3 col-form-label">Mark As New Item</label>
-                        <div class="col-3">
-                            <span class="kt-switch">
-                                <label>
-                                    <input type="checkbox" name="">
-                                    <span></span>
-                                </label>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="form-group">
                         <input type="submit" onClick="unhook()" value="Create" class="btn btn-lg btn-success" />
                         <a class="btn btn-lg btn-primary" asp-page="Index">Back to List</a>
                     </div>

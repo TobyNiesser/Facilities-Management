@@ -2211,7 +2211,7 @@ textarea.form-control {
 
 a.btn.disabled,
 fieldset:disabled a.btn {
-  pointer-events: none; }
+  pointers: none; }
 
 .btn-primary {
   color: #fff;

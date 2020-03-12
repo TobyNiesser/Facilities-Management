@@ -23,6 +23,8 @@ namespace FACILITIES.Pages.Offices
         [BindProperty]
         public Setting Setting { get; set; }
 
+        public IEnumerable<Setting> Settings { get; set; }
+
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

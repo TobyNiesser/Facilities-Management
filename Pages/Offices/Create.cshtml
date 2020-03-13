@@ -14,92 +14,84 @@
                 <form method="post">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group">
-                        <label asp-for="Office.Name" class="control-label"></label>
+                        <label asp-for="Office.Name" class="control-label font-weight-bold"></label>
                         <input asp-for="Office.Name" class="form-control" />
                         <span asp-validation-for="Office.Name" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Office.LandlordName" class="control-label"></label>
+                        <label asp-for="Office.LandlordName" class="control-label font-weight-bold"></label>
                         <input asp-for="Office.LandlordName" class="form-control" />
                         <span asp-validation-for="Office.LandlordName" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Office.Addr1" class="control-label"></label>
+                        <label asp-for="Office.Addr1" class="control-label font-weight-bold"></label>
                         <input asp-for="Office.Addr1" class="form-control" />
                         <span asp-validation-for="Office.Addr1" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Office.Addr2" class="control-label"></label>
+                        <label asp-for="Office.Addr2" class="control-label font-weight-bold"></label>
                         <input asp-for="Office.Addr2" class="form-control" />
                         <span asp-validation-for="Office.Addr2" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Office.Town" class="control-label"></label>
+                        <label asp-for="Office.Town" class="control-label font-weight-bold"></label>
                         <input asp-for="Office.Town" class="form-control" />
                         <span asp-validation-for="Office.Town" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Office.City" class="control-label"></label>
+                        <label asp-for="Office.City" class="control-label font-weight-bold"></label>
                         <input asp-for="Office.City" class="form-control" />
                         <span asp-validation-for="Office.City" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Office.Postcode" class="control-label"></label>
+                        <label asp-for="Office.Postcode" class="control-label font-weight-bold"></label>
                         <input asp-for="Office.Postcode" class="form-control" />
                         <span asp-validation-for="Office.Postcode" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Office.Country" class="control-label"></label>
+                        <label asp-for="Office.Country" class="control-label font-weight-bold"></label>
                         <input asp-for="Office.Country" class="form-control" />
                         <span asp-validation-for="Office.Country" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Office.Telephone" class="control-label"></label>
+                        <label asp-for="Office.Telephone" class="control-label font-weight-bold"></label>
                         <input asp-for="Office.Telephone" class="form-control" />
                         <span asp-validation-for="Office.Telephone" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Office.LandlordEmail" class="control-label"></label>
+                        <label asp-for="Office.LandlordEmail" class="control-label font-weight-bold"></label>
                         <input asp-for="Office.LandlordEmail" class="form-control" />
                         <span asp-validation-for="Office.LandlordEmail" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Office.LandlordTelephone" class="control-label"></label>
+                        <label asp-for="Office.LandlordTelephone" class="control-label font-weight-bold"></label>
                         <input asp-for="Office.LandlordTelephone" class="form-control" />
                         <span asp-validation-for="Office.LandlordTelephone" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Office.Sqft" class="control-label"></label>
+                        <label asp-for="Office.Sqft" class="control-label font-weight-bold"></label>
                         <input asp-for="Office.Sqft" class="form-control" />
                         <span asp-validation-for="Office.Sqft" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Office.LeaseDate" class="control-label"></label>
+                        <label asp-for="Office.LeaseDate" class="control-label font-weight-bold"></label>
                         <input asp-for="Office.LeaseDate" class="form-control" />
                         <span asp-validation-for="Office.LeaseDate" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Office.LeaseEndReview" class="control-label"></label>
+                        <label asp-for="Office.LeaseEndReview" class="control-label font-weight-bold"></label>
                         <input asp-for="Office.LeaseEndReview" class="form-control" />
                         <span asp-validation-for="Office.LeaseEndReview" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Office.NoticePeriod" class="control-label"></label>
+                        <label asp-for="Office.NoticePeriod" class="control-label font-weight-bold"></label>
                         <input asp-for="Office.NoticePeriod" class="form-control" />
                         <span asp-validation-for="Office.NoticePeriod" class="text-danger"></span>
                     </div>
-                    @*<div class="form-group">
-                        <label asp-for="Office.CompanyID" class="control-label"></label>
-                        <select asp-for="Office.CompanyID" class ="form-control" asp-items="ViewBag.CompanyID"></select>
-                    </div>*@
                     <div class="form-group">
-                        <label asp-for="Office.ManagerID" class="control-label"></label>
+                        <label asp-for="Office.ManagerID" class="control-label font-weight-bold"></label>
                         <select asp-for="Office.ManagerID" class="form-control" asp-items="ViewBag.ManagerID"></select>
                     </div>
-                    @*<div class="form-group">
-                        <label asp-for="Office.ItemID" class="control-label"></label>
-                        <select asp-for="Office.ItemID" class ="form-control" asp-items="ViewBag.ItemID"></select>
-                    </div>*@
                     <div class="form-group">
                         <input type="submit" onClick="unhook()" value="Create" class="btn btn-lg btn-success" />
                         <a class="btn btn-lg btn-primary" asp-page="Index">Back to List</a>
@@ -121,3 +113,5 @@
             hook = false;
         }
     </script>
+
+    <script src="/js/pages/components/forms/widgets/bootstrap-select.js" type="text/javascript"></script>

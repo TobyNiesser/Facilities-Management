@@ -18,7 +18,7 @@
             <a asp-page="Create"  style="color: white;" class="btn btn-lg btn-success"> Upload File</a>
         </div>
         <br />
-        <table class="table" style="background-color: white;">
+        <table class="table table-responsive" style="background-color: white;">
             <thead>
                 <tr>
                     <th style="font-weight: 900; font-size:16px;">
@@ -46,7 +46,7 @@
                 @foreach (var item in Model.File)
         {
                 <tr>
-                    <td>
+                    <td class="font-weight-bold">
                         @Html.DisplayFor(modelItem => item.FileName)
                     </td>
                     <td>

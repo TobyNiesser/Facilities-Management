@@ -26,6 +26,17 @@ namespace FACILITIES.Pages.Offices
         public IEnumerable<Setting> Settings { get; set; }
 
 
+        //------ADDED CODE START------//
+
+        public class SystemTable
+        {
+            public List<Setting> Settings { get; set; }
+            public List<Company> Companies { get; set; } 
+        }
+
+        //------ADDED CODE END------//
+
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)

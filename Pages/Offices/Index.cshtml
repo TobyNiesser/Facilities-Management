@@ -71,9 +71,9 @@
                 </thead>
                 <tbody>
                     @foreach (var item in Model.Office)
-                    {
+                        {
                         <tr>
-                            <td class="font-weight-bold">
+                            <td class="font-weight-bold" style="font-size:18px;">
                                 @Html.DisplayFor(modelItem => item.Name)
                             </td>
                             <td>
@@ -127,7 +127,7 @@
                                 <a asp-page="./Delete" asp-route-id="@item.OfficeID"><i class="btn far fa-trash-alt" style="color: #fd3995;"></i></a>
                             </td>
                         </tr>
-                    }
+                        }
                 </tbody>
             </table>
         </div>

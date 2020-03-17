@@ -28,11 +28,11 @@ namespace FACILITIES.Pages.Offices
 
         //------ADDED CODE START------//
 
-        public class SystemTable
-        {
-            public List<Setting> Settings { get; set; }
-            public List<Company> Companies { get; set; } 
-        }
+        //public class SystemTable
+        //{
+        //    public List<Setting> Settings { get; set; }
+        //    public List<Company> Companies { get; set; } 
+        //}
 
         //------ADDED CODE END------//
 
@@ -49,6 +49,7 @@ namespace FACILITIES.Pages.Offices
                 .Include(o => o.Company)
                 .Include(o => o.Item)
                 .Include(o => o.Manager).FirstOrDefaultAsync(m => m.OfficeID == id);
+                
 
             if (Office == null)
             {
@@ -57,4 +58,5 @@ namespace FACILITIES.Pages.Offices
             return Page();
         }
     }
+
 }
